@@ -4,7 +4,7 @@ Jeg heter Kjetil, og jeg har jobbet innen IT i mange år, hovedsakelig med drift
 
 Denne bloggen vil fungere som min huskelapp for alt som har med skripting å gjøre. Jeg utforsker nå mer av PowerShell i kombinasjon med bruk av GitHub og dokumentasjon i Markdown.
 
-Skulle du ønske å komme i kontakt med meg, kan du sende meg en melding på [LinkedIn](www.linkedin.com/in/kjetil-jacobsen) eller [Mastodon](https://infosec.exchange/@phoney).
+Skulle du ønske å komme i kontakt med meg, kan du sende meg en melding på [LinkedIn](www.linkedin.com/in/kjetil-jacobsen) eller <a rel="me" href="https://infosec.exchange/@phoney">Mastodon</a>.
 
 ## 2024
 
