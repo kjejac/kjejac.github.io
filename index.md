@@ -6,5 +6,6 @@ Kommer ikke til å gjøre noe med utseendet med første, skriver det i enkel mar
 
 Kjetil
 
-### 2024
-- [Lydproblemer med HDMI](/2024/soundproblems/soundtrouble.md)
+## 2024
+
+- [Lydproblemer](/2024/soundproblems/soundtrouble.md) - Lyd ut fra laptop forsvinner når den går ut på HDMI.
