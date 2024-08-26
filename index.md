@@ -9,3 +9,15 @@ Skulle du ønske å komme i kontakt med meg, kan du sende meg en melding på <a 
 ## 2024
 
 - [Lydproblemer](/2024/soundproblems/soundtrouble.md) - Lyd ut fra laptop forsvinner når den går ut på HDMI.
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WREQTJQZWG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WREQTJQZWG');
+</script>
