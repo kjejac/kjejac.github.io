@@ -8,5 +8,6 @@ Skulle du ønske å komme i kontakt med meg, kan du sende meg en melding på <a 
 
 ## 2024
 
+- [GitHub Foundation](/2024/githubfoundations/githubfoundations.md) - Lært litt om git og tatt GitHub Foundations sertifisering.
 - [Lydproblemer](/2024/soundproblems/soundtrouble.md) - Lyd ut fra laptop forsvinner når den går ut på HDMI.
 
