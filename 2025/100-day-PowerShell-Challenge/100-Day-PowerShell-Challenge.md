@@ -1,6 +1,6 @@
 Den siste tiden har jeg hatt en gnagende følelse av at kunnskapen min om PowerShell sakte forsvinner, ettersom jeg ikke har hatt noen prosjekter som engasjerer meg nok til å vedlikeholde den. 
 
-Da jeg så en post fra [Doug Fink](https://www.linkedin.com/in/douglasfinke/) på LinkedIn om "100 dager med PowerShell", tenkte jeg at dette kunne være en god måte å friske opp kunnskapen og samtidig lære noe nytt. Posten inneholdt hovedtemaene, men etter litt frem og tilbake i Copilot fikk jeg utvidet strukturen for å gi meg mer veiledning. Dette kan fortsatt endre seg over etterhvert som jeg jobber med temaene, men så langt virker det som en god plan. 
+Da jeg så en post fra [Doug Fink](https://www.linkedin.com/in/douglasfinke/) på LinkedIn om "100 dager med PowerShell", tenkte jeg at dette kunne være en god måte å friske opp kunnskapen og samtidig lære noe nytt. Posten inneholdt hovedtemaene, men etter litt frem og tilbake i Copilot fikk jeg utvidet strukturen for å gi meg mer veiledning. Dette kan fortsatt endre seg etterhvert som jeg jobber med temaene, men så langt virker det som en god plan. 
 
 Dette er først og fremst mine egne notater, men hvis andre skulle ha nytte av dem, er det bare en bonus – det er ikke hovedhensikten. Jeg har bevisst valgt norsk som språk for teksten, da dette tvinger meg til å tenke mer nøye over innholdet. Og ja, jeg har lagt merke til at noen av oversettelsene så langt har vært, eh, litt spesielle 😆.   
 #### **📌 [Day 1–10: Grunnleggende PowerShell](Day-1–10-Introduction-PowerShell.md)**
