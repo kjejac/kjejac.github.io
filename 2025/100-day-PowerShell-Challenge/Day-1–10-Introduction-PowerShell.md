@@ -1,6 +1,3 @@
-tags:  #Learn/100-Day-Challenge #PowerShell
-
-
 # Kort introduksjon til PowerShell
 
 ## PowerShell
