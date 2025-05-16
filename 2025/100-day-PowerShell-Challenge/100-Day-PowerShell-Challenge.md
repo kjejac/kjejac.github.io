@@ -1,14 +1,19 @@
-#### **📌 [Day 1–10: PowerShell Basics](Day-1–10-Introduction-PowerShell.md)**
+Den siste tiden har jeg hatt en gnagende følelse av at kunnskapen min om PowerShell sakte forsvinner, ettersom jeg ikke har hatt noen prosjekter som engasjerer meg nok til å vedlikeholde den. 
+
+Da jeg så en post fra [Doug Fink](https://www.linkedin.com/in/douglasfinke/) på LinkedIn om "100 dager med PowerShell", tenkte jeg at dette kunne være en god måte å friske opp kunnskapen og samtidig lære noe nytt. Posten inneholdt hovedtemaene, men etter litt frem og tilbake i Copilot fikk jeg utvidet strukturen for å gi meg mer veiledning. Dette kan fortsatt endre seg over etterhvert som jeg jobber med temaene, men så langt virker det som en god plan. 
+
+Dette er først og fremst mine egne notater, men hvis andre skulle ha nytte av dem, er det bare en bonus – det er ikke hovedhensikten. Jeg har bevisst valgt norsk som språk for teksten, da dette tvinger meg til å tenke mer nøye over innholdet. Og ja, jeg har lagt merke til at noen av oversettelsene så langt har vært, eh, litt spesielle 😆.   
+#### **📌 [Day 1–10: Grunnleggende PowerShell](Day-1–10-Introduction-PowerShell.md)**
 - [Kort introduksjon til PowerShell](Day-1–10-Introduction-PowerShell.md)
 - [Forstålese av kommandoskallet, cmdlets, and syntaks](Day-1–10-Shell-Cmdlets-Syntax.md)
 - [Forstå hjelp systemet](Day-1–10-Help.md)
-- [Variabler og data typer](Day-1–10-vars-data.md)
+- Variabler og data typer
 
 #### **🔄 Day 11–20: Control Flow & Script Logic**
 
 - Defining and using functions (`function, return`)
 - Conditional statements (`if`, `switch`)
-- [Loops (`for`, `foreach`, `while`)](Day-11-20-loops.md)
+- Loops (`for`, `foreach`, `while`)
 - Handling user input and script parameters
 
 #### **📦 Day 21–30: Object Manipulation & Formatting**
@@ -58,5 +63,5 @@
 - Performance tuning and script efficiency
 - Writing well-documented and maintainable scripts
 - Contributing to the PowerShell community (sharing scripts, best practices)
-    
+
 
