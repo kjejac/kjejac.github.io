@@ -7,10 +7,11 @@ Denne bloggen vil fungere som min huskelapp for alt som har med skripting å gj�
 Skulle du ønske å komme i kontakt med meg, kan du sende meg en melding på <a rel="me" href="https://www.linkedin.com/in/kjetil-jacobsen">LinkedIn</a>.
 
 ## 2025
-- [100 Days of PowerShell](/2025/100-day-PowerShell-Challenge/100-Day-PowerShell-Challenge.md) - Startet en kombinasjon av oppfriskning og læring av PowerShell. Oppdatert: 20250516
+- [Microsoft Certified: Azure Fundamentals](/2025/AZ-900/az-900.md)
+- [100 Days of PowerShell](/2025/100-day-PowerShell-Challenge/100-Day-PowerShell-Challenge.md) – Startet en kombinasjon av oppfriskning og læring av PowerShell. Oppdatert: 20250516
 
 ## 2024
 
-- [GitHub Foundation](/2024/githubfoundations/githubfoundations.md) - Lært litt om git og tatt GitHub Foundations sertifisering.
-- [Lydproblemer](/2024/soundproblems/soundtrouble.md) - Lyd ut fra laptop forsvinner når den går ut på HDMI.
+- [GitHub Foundation](/2024/githubfoundations/githubfoundations.md) – Lært litt om git og tatt GitHub Foundations sertifisering.
+- [Lydproblemer](/2024/soundproblems/soundtrouble.md) – Lyd ut fra laptop forsvinner når den går ut på HDMI.
 
