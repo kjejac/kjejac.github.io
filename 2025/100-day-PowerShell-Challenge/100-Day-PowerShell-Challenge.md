@@ -4,7 +4,10 @@ Da jeg så en post fra [Doug Fink](https://www.linkedin.com/in/douglasfinke/) p�
 
 Dette er først og fremst mine egne notater, men hvis andre skulle ha nytte av dem, er det bare en bonus – det er ikke hovedhensikten. Jeg har bevisst valgt norsk som språk for teksten, da dette tvinger meg til å tenke mer nøye over innholdet. Og ja, jeg har lagt merke til at noen av oversettelsene så langt har vært, eh, litt spesielle 😆.
 
-Jeg ser at temaet for websiden har problemer med visse markdown-elementer som benyttes, konflikten oppstår mellom Obsidian- og GitHub-Markdown. Jeg må finne en måte å løse dette på etterhvert.
+Jeg ser at temaet for websiden har problemer med visse markdown-elementer som benyttes, konflikten oppstår mellom forskjellene på Obsidian- og GitHub-Markdown. Har lagt dette inn på lista over ting som gjøres
+
+2025-06-21: Ble nødt til å legge prosjektet på hylla en stund, men er igang igjen nå.
+
 #### **📌 [Day 1–10: Grunnleggende PowerShell](Day-1–10-Introduction-PowerShell.md)**
 - [Kort introduksjon til PowerShell](Day-1–10-Introduction-PowerShell.md)
 - [Forstålese av kommandoskallet, cmdlets, and syntaks](Day-1–10-Shell-Cmdlets-Syntax.md)
