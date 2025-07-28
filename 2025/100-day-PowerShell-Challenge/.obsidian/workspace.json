@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "6b0d1e39fa27d155",
+    "id": "b969c774bc5cd991",
     "type": "split",
     "children": [
       {
-        "id": "cd43127fbf6a8cf3",
+        "id": "eacf9f807f092663",
         "type": "tabs",
         "children": [
           {
-            "id": "10cbe514c22b976e",
+            "id": "d3397e68179722d2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day-1–10-vars-data.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Day-1–10-vars-data"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "074d4fe614a78901",
+    "id": "ab79c16bd79fc833",
     "type": "split",
     "children": [
       {
-        "id": "0e6651c94b6e2952",
+        "id": "78d3707cb3e40c2f",
         "type": "tabs",
         "children": [
           {
-            "id": "a29c500580403ec1",
+            "id": "bf9fa2bf77b44965",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,12 +44,12 @@
             }
           },
           {
-            "id": "533904d3c3a88d84",
+            "id": "e0cde9df39a4d933",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "get-member",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "92d998fb704ee40b",
+            "id": "adf93203bfd36fd7",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,19 +74,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "94f5cc44592523bc",
+    "id": "f66541138059c409",
     "type": "split",
     "children": [
       {
-        "id": "a247d8f3276d0dab",
+        "id": "caa6ecfaaa54305c",
         "type": "tabs",
         "children": [
           {
-            "id": "f2dc10c137ac529b",
+            "id": "6c65ed253738e4c9",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -109,21 +104,7 @@
             }
           },
           {
-            "id": "159459d8f46f79d8",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Day-1–10-vars-data.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Day-1–10-vars-data"
-            }
-          },
-          {
-            "id": "da43daf7d0ce9c5e",
+            "id": "08bc19bd0beee823",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -138,7 +119,21 @@
             }
           },
           {
-            "id": "9acd6bd3a35e449b",
+            "id": "82847c5b4bea320a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Day-1–10-vars-data.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Day-1–10-vars-data"
+            }
+          },
+          {
+            "id": "07c2172a04d0449b",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -161,19 +156,28 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
       "command-palette:Open command palette": false
     }
   },
-  "active": "10cbe514c22b976e",
+  "active": "d3397e68179722d2",
   "lastOpenFiles": [
-    "Day-1–10-Help.md",
     "Day-1–10-vars-data.md",
     "100-Day-PowerShell-Challenge.md",
-    "Day-1–10-Introduction-PowerShell.md"
+    "Day-1–10-Help.md",
+    "Day-1–10-Shell-Cmdlets-Syntax.md",
+    "Day-1–10-Introduction-PowerShell.md",
+    "Quest/Knowledge/Tisip/2022_Høst/DRI115 Forvaltning av prog og markedsforståelse/Modul 02 - Suksesskriterier og introduksjon til en fasemodell for produktutvikling/Leksjon 02 Notater.md",
+    "Quest/Knowledge/Tisip/2022_Høst/DRI115 Forvaltning av prog og markedsforståelse/Modul 02 - Suksesskriterier og introduksjon til en fasemodell for produktutvikling/media/Winning with new products.pdf",
+    "Quest/2021 Discover.md",
+    "Quest/Knowledge/2021/2021-08-17 -- PowerShell, Jobbsøk.md",
+    "Quest/Knowledge/2021/2021-08-18 -- PowerShell, Jobbsøk, ToDo.md",
+    "Quest/Knowledge/2021/2021-08-19 -- ToDo.md",
+    "Quest/Knowledge/2021/2021-08-12 -- ToDo, Jobbsøk, PowerShell, Tanker, Tisip.md",
+    "Quest/_Mal.md"
   ]
 }
