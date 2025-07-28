@@ -6,13 +6,13 @@ Dette er først og fremst mine egne notater, men hvis andre skulle ha nytte av d
 
 Jeg ser at temaet for websiden har problemer med visse markdown-elementer som benyttes, konflikten oppstår mellom forskjellene på Obsidian- og GitHub-Markdown. Har lagt dette inn på lista over ting som gjøres
 
-2025-06-21: Ble nødt til å legge prosjektet på hylla en stund, men er igang igjen nå.
+2025-07-28: Nok en lang pause, oppdatert med `data-typer`.
 
 #### **📌 [Day 1–10: Grunnleggende PowerShell](Day-1–10-Introduction-PowerShell.md)**
 - [Kort introduksjon til PowerShell](Day-1–10-Introduction-PowerShell.md)
 - [Forstålese av kommandoskallet, cmdlets, and syntaks](Day-1–10-Shell-Cmdlets-Syntax.md)
 - [Forstå hjelp systemet](Day-1–10-Help.md)
-- [Variabler og data typer](Day-1–10-vars-data.md)
+- [Variabler og data-typer](Day-1–10-vars-data.md)
 
 #### **🔄 Day 11–20: Control Flow & Script Logic**
 
