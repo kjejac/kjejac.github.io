@@ -6,5 +6,11 @@ url: https://www.phoney.no/
 title: [Mitt lille vindu ut i verden]
 description: [Her vil det komme uregelmessige små bloggposter. Mest ment som en huskelapp til meg selv  men kanskje andre kan ha nytte av det også.]
 show_downloads: false
+
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"
+
 ga_tracking: G-WREQTJQZWG
 ga_tracking_anonymize_ip: true
