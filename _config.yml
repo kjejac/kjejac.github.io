@@ -3,5 +3,6 @@ plugins:
 title: [Mitt lille vindu ut i verden]
 description: [Her vil det komme uregelmessige små bloggposter. Mest ment som en huskelapp til meg selv  men kanskje andre kan ha nytte av det også.]
 show_downloads: false
+color_scheme: dark
 ga_tracking: G-WREQTJQZWG
 ga_tracking_anonymize_ip: true
