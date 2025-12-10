@@ -1,3 +1,4 @@
-.obsidian
+.obsidian/
 _config.yml
-.json
+*.json
+*.ps1

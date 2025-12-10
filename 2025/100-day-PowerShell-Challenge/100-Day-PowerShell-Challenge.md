@@ -14,9 +14,9 @@ Jeg ser at temaet for websiden har problemer med visse markdown-elementer som be
 - [Forstå hjelp systemet](Day-1–10-Help.md)
 - [Variabler og data-typer](Day-1–10-vars-data.md)
 
-#### **🔄 Day 11–20: Control Flow & Script Logic**
+#### **🔄 Day 11–20: Kontrollflyt og skriptlogikk**
 
-- Defining and using functions (`function, return`)
+- [Opprette og anvende funksjoner `(functions)`](Day-11–20-functions.md)
 - Conditional statements (`if`, `switch`)
 - Loops (`for`, `foreach`, `while`)
 - Handling user input and script parameters
