@@ -2,6 +2,8 @@ remote_theme: just-the-docs/just-the-docs
 plugins:
 - jekyll-default-layout
 color_scheme: dark
+nav_enabled: false
+
 url: https://www.phoney.no/
 title: [Mitt lille vindu ut i verden]
 description: [Her vil det komme uregelmessige små bloggposter. Mest ment som en huskelapp til meg selv  men kanskje andre kan ha nytte av det også.]
