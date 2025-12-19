@@ -1,7 +1,0 @@
-remote_theme: pages-themes/time-machine@v0.2.0
-plugins:
-- jekyll-remote-theme
-title: [Mitt lille vindu ut i verden]
-description: [Her vil det komme uregelmessige små bloggposter. Mest ment som en huskelapp til meg selv  men kanskje andre kan ha nytte av det også.]
-show_downloads: false
-google_analytics: G-WREQTJQZWG
