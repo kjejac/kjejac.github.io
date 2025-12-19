@@ -1,3 +1,9 @@
+---
+title: Sound problems
+parent: Stuff
+nav_order: 2
+---
+
 # Lydproblemer
 
 20240817

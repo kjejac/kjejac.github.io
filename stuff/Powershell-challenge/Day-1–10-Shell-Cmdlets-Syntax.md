@@ -1,3 +1,9 @@
+---
+title: Shell Cmdlets Syntax
+nav_order: 3
+parent: PowerShell Challenge
+has_children:
+---
 
 # Forstå kommandoskallet, cmdlets og syntaks
 

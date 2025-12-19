@@ -1,16 +1,21 @@
-tags:  #Learn/100-Day-Challenge #PowerShell
+---
+title: Help
+nav_order: 4
+parent: PowerShell Challenge
+has_children:
+---
 
 # Hjelp-systemet
 
 Hjelpesystemet til PowerShell kan deles opp i tre forskjellige cmdlets: `Get-Help`, `Get-Command` og `Get-Member`
-- [`Get-Help`](Day-1–10-Help.md#Get-Help) – Gir en detaljert beskrivelse av cmdlets, parametere, eksempler og konseptuelle PowerShell-emner
-- [`Get-Command`](Day-1–10-Help.md#Get-Command) – Lar deg med å finne og utforske tilgjengelige kommandoer, inkludert cmdlets, aliaser og skript
-- [`Get-Member`](Day-1–10-Help.md#Get-Member)  – Viser detaljer om objektene som returneres av en kommando, inkludert deres egenskaper og metoder.
+- [`Get-Help`](stuff/Powershell-challenge/Day-1–10-Help.md#Get-Help) – Gir en detaljert beskrivelse av cmdlets, parametere, eksempler og konseptuelle PowerShell-emner
+- [`Get-Command`](stuff/Powershell-challenge/Day-1–10-Help.md#Get-Command) – Lar deg med å finne og utforske tilgjengelige kommandoer, inkludert cmdlets, aliaser og skript
+- [`Get-Member`](stuff/Powershell-challenge/Day-1–10-Help.md#Get-Member)  – Viser detaljer om objektene som returneres av en kommando, inkludert deres egenskaper og metoder.
 
 Når du sitter i PowerShell så benyttes kommandoene slik:
-- Bruk [`Get-Command`](Day-1–10-Help.md#Get-Command) for å finne riktig kommando.
-- Bruk [`Get-Help`](Day-1–10-Help.md#Get-Help) for å forstå hvordan en kommando fungerer.
-- Bruk [`Get-Member`](Day-1–10-Help.md#Get-Member) for å undersøke egenskapene til objektene som kommando returnerer.
+- Bruk [`Get-Command`](stuff/Powershell-challenge/Day-1–10-Help.md#Get-Command) for å finne riktig kommando.
+- Bruk [`Get-Help`](stuff/Powershell-challenge/Day-1–10-Help.md#Get-Help) for å forstå hvordan en kommando fungerer.
+- Bruk [`Get-Member`](stuff/Powershell-challenge/Day-1–10-Help.md#Get-Member) for å undersøke egenskapene til objektene som kommando returnerer.
 
 ### Stoppe og starte en tjeneste med PowerShell
 -Hvis tjenesten `Spooler` har hengt seg, kan du bruke PowerShell til å stoppe og starte den på nytt. I denne prosessen vil `Get-Command`**,** `Get-Help` **og** `Get-Member` hjelpe deg med å finne riktig cmdlet, forstå kommandoens bruk og utforske tjenesteobjektet.

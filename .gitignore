@@ -1,1 +1,18 @@
-2025/100-day-PowerShell-Challenge/.obsidian/workspace.json
+# Jekyll build output
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+
+# Ruby / Bundler
+vendor/
+.bundle/
+Gemfile.lock
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+
+# Obsidian
+.obsidian/
+_ob_templates/

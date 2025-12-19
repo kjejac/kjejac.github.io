@@ -1,3 +1,9 @@
+---
+title: Introduction to PowerShell
+nav_order: 2
+parent: PowerShell Challenge
+has_children:
+---
 # Kort introduksjon til PowerShell
 
 ## PowerShell

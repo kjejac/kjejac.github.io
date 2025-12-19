@@ -1,3 +1,10 @@
+---
+title: Functions
+nav_order: 6
+parent: PowerShell Challenge
+has_children:
+---
+
 # Opprette og anvende funksjoner
 ## Introduksjon til funksjoner
 En [funksjon](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-7.5) er som et navngitt verktøy som du selv har laget – en liten kodeblokk som gjør en oppgave for deg, hver gang du kaller den opp. I stedet for å skrive samme kommandoer igjen og igjen, kan du samle dem i en funksjon med et eget navn, og kjøre den når det passer.
