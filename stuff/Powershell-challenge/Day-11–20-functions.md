@@ -16,6 +16,7 @@ PowerShell støtter to typer funksjoner:
 - _Filtre_: Spesialtilpasset for å jobbe med data som kommer via pipelinen. Defineres med nøkkelordet `filter`.
 
 Eksempel på en enkel funksjon: 
+
 ```powershell
 function Skriv-Hilsen {
  "Hei, og velkommen!"
@@ -23,6 +24,7 @@ function Skriv-Hilsen {
 ```
 
 Du kan også lage [avanserte funksjoner](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced?view=powershell-7.5), som oppfører seg som innebygde cmdlets – de tar parametere, støtter pipeline, og kan utvides med validering og egne blokker.
+
 ```powershell
 function Get-Status {
     [CmdletBinding()]
@@ -44,6 +46,7 @@ Du kan velge det navnet du måtte ønske til en funksjon, men skal du dele funks
 Når du definerer en funksjon i PowerShell, følger du en bestemt struktur. Den består av et navn, en valgfri parameterblokk, og en eller flere skriptblokker som styrer hva funksjonen gjør og når. 
 
 Her er et eksempel på syntaksen: 
+
 ```powershell
 function [<scope:>]<name> {
   param([type]$Parameter1 [,[type]$Parameter2])
@@ -63,6 +66,7 @@ function [<scope:>]<name> {
 > **Tips!**
 > PowerShell bruker `end` som standardblokk dersom du ikke spesifiserer noen av de andre. 
 ### Enkel funksjon uten parametere
+
 ```powershell
 function Skriv-Hilsen {
  "Hei, og velkommen!"
@@ -72,8 +76,10 @@ function Skriv-Hilsen {
 Skriv-Hilsen
 Hei, og velkommen!
 ```
+
 Her har funksjonen ingen `param`-blokk eller skriptblokker (`begin`, `process` eller `end`) og vil bare returnere en tekst når funksjonen kalles. For å kalle opp funksjonen skriver du `Hei-Verden` i terminalen.
 ### Avansert funksjon med parametere og skriptblokker
+
 ```powershell
 function Skriv-Hilsen {
     param (
@@ -109,6 +115,7 @@ Klargjøring av hilsen...
 God dag, Kjetil
 Hilsen sendt.
 ```
+
 Funksjonen har en parameterblokk som som gir mulighet for input. Bruken av `begin`, `process` og `end` gir struktur, og er spesielt nyttig ved håndtering av piped input eller prosesser i flere steg. 
 Et [`switch`-parameteret](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-7.5#switch-parameters) slår på en valgmulighet – Det er tilstedeværelsen som avgjør: hvis parameteret er med, er verdien `$true`; hvis den utelates, er verdien `$false`.
 ### `filter`
@@ -119,9 +126,11 @@ Fordi filteret håndterer pipet input automatisk via `$_`, og itererer over elem
 | ---------- | ------------------- | ----------- | ------------ |
 | `function` | Bruker `$Input`     | Langsommere | Mer minne    |
 | `filter`   | Bruker `$_` direkte | Raskere     | Mindre minne |
-Filteret begynner å behandle data **mens** pipeline fylles – funksjoner venter til alt er mottatt.
+
+Filteret begynner å behandle data mens pipeline fylles – funksjoner venter til alt er mottatt.
 
 Et eksempel på bruken av filter
+
 ```powershell
 filter Get-HeavyProcess {
     if ($_.WorkingSet -gt 200MB) {
@@ -131,15 +140,19 @@ filter Get-HeavyProcess {
 Get-Process | Get-HeavyProcess
 ```
 ### Filter syntaks
+
 Et filter i PowerShell ligner på en funksjon, men er optimalisert for å behandle pipeline-data én og én – raskere og mer effektivt enn vanlige funksjoner.
 
 Syntaksen:
+
 ```powershell
 filter <Navn> {
     <kode som bruker $_>
 }
 ```
+
 Enkelt eksempel på bruken av `filter`
+
 ```powershell
 filter MyFilter {
     if ($_ -gt 10) { $_ }
@@ -161,9 +174,11 @@ Du bør benytte parametere fordi det
 
 ### Hvordan kalle funksjoner med parametere
 Parameterene defineres i `param()`-blokk inne i funksjonen. Når du kaller funksjonen, skriver du inn parameternavnet med en bindestrek (`-`) foran, etterfulgt av verdien:
+
 ```powershell
 Skriv-Hilsen -Navn "Kjetil"
 ```
+
 Her kalles funksjonen  `Skriv-Hilsen`, `-Name` er parameteret og `Kjetil` er verdien som sendes inn.
 ### Datatyper for parametere
 Du kan angi hvilken datatype parameteren skal ha, for eksempel:
@@ -188,6 +203,7 @@ PowerShell støtter også mer avanserte parameterkonsepter:
 - _Parameter Sets_ – Lar en funksjon ha flere sett med parametere, slik at du kan tilby ulike måter å bruke funksjonen på.
 ### Eksempel på funksjon med parametere
 Denne funksjonen mottar ett eller flere navn via pipeline og generer en tilpasset hilsen til hver person, basert på flere parametere du kan fylle inn.
+
 ```powershell
 function Skriv-Hilsen {
     [CmdletBinding(SupportsShouldProcess)]
@@ -262,6 +278,7 @@ VERBOSE: Avslutter hilsen-generator. Antall hilsener: 0
 "Kjetil","Tone","Lars" | Skriv-Hilsen  -Alder 40 -Hilsen "top of the morning to you" -Sted "Ålesund"
 Skriv-Hilsen: Cannot validate argument on parameter 'Hilsen'. The argument "top of the morning to you" does not belong to the set "Hei,Hallo,God dag,Heisann" specified by the ValidateSet attribute. Supply an argument that is in the set and then try the command again.
 ```
+
 Funksjonen definerer `[CmdletBinding()]` for å gjøre funksjonen cmdlet-lik og for å gi tilgang tilgang til vanlige parametere som `-Verbose` og støtte for `-WhatIf` via `ShouldProcess`
 
 `param()`-blokken definerer parametere med
@@ -280,16 +297,21 @@ Funksjonen definerer `[CmdletBinding()]` for å gjøre funksjonen cmdlet-lik og 
 I PowerShell bruker vi navngitte parametere for å sende verdier til funksjoner eller cmdlets på en tydelig og fleksibel måte. I stedet for å stole på rekkefølgen som i posisjonelle parametere, navngir vi verdiene slik at koden blir mer lesbar og vedlikeholdbar. 
 
 Med navngitte parametere spesifiserer du både navnet og verdien for hver parameter som du sender inn
+
 ```powershell
 Send-Hilsen -Navn "Kjetil" -Sted "Ålesund" -Alder 43
 ```
+
 Dette står i kontrast til posisjonsbaserte parametere der rekkefølgen av verdiene bestemmer hvilke parametere de blir lagt til. 
+
 ```powershell
 Send-Hilsen "Kjetil" "Ålesund" 43
 ```
+
 Fordelene med navngitte parametere inkluderer økt _lesbarhet_, selv med mange parametere, da koden blir selvforklarende. I tillegg minimeres faren for feil på grunn av rekkefølge da rekkefølgen på parametere ikke har betydning. 
 
 Du finner parameterne i terminalen ved å skrive inn funksjonavnet og `-`. Trykk deretter på `CTRL+SPACE` for å se valgene.
+
 ```powershell
 Skriv-Hilsen -
 Navn 
@@ -303,6 +325,7 @@ Fordelene med å bruke posisjonelle parametere er at du får kortere og mer kons
 For nye bruke kan det bli uklart å forstå hva som går hvor, og endringer i rekkefølgen kan føre til feil. I (komplekse) skript vil dette være mindre lesbart. 
 
 For eksempel hvis vi endrer på parameter-blokken til Skriv-Hilsen for å kunne benytte posisjonelle parametere: 
+
 ```powershell
 function Skriv-Hilsen {
     param (
@@ -337,6 +360,7 @@ Switch parametere i PowerShell-funksjoner (og cmdlets) som ikke krever en verdi.
 Hvis _switch parameteret_ er tilstede når funksjonen kjøres, tolkes det som `$true`. Hvis den utelates, tolkes som `$false`. 
 
 Du deklarerer _switch parametere_ i en funksjon ved å bruke typeakseleratoren `[switch]`: 
+
 ```powershell
 function Skriv-Hilsen {
     param (
@@ -356,6 +380,7 @@ Velkommen (True)
 Skriv-Hilsen
 Hei (False)
 ```
+
 Her er _switch parameteret_ benyttet med et `if`-uttrykk for å styre oppførselen.
 #### Vanlige switch-parametere i avanserte funksjoner
 Når du bruker `[CmdletBinding]` i  funksjonen, får du tilgang til flere innebygde _switch-parametere_: 
@@ -374,7 +399,9 @@ Fra tidligere eksempel i funksjonen `Skriv-Hilsen` vil man fylle ut parameterne 
 ```powershell
 Skriv-Hilsen -Navn "Kjetil" -Sted "Ålesund" -Alder 43
 ```
+
 Ved å bruke _splatting_ vil det kunne se slik ut:
+
 ```powershell
 $Parametre = @{
 	Navn = "Kjetil"
@@ -383,6 +410,7 @@ $Parametre = @{
 }
 Skriv-Hilsen @Parametre
 ```
+
 Her brukes `@Parametre` for å sende inn alle verdiene til funksjonen som en enhet. Dette gjør koden mer kompakt og tydelig – selv i et lite eksempel som dette – og gir ekstra verdi når funksjonen har mange parametere eller brukes flere steder.
 
 Det finnes tre metoder som kan benyttes når du bruker _splatting_ i PowerShell: 
@@ -393,14 +421,17 @@ Det finnes tre metoder som kan benyttes når du bruker _splatting_ i PowerShell:
 _Splatting_ lar deg sende inn parameterverdier til en funksjon på en mer strukturert måte. Du kan bruke både _hashtabeller_ og _arrays_, avhengig av om du jobber med navngitte eller posisjonelle parametere.
 
 Generell syntaks for _splatting_:
+
 ```powershell
 <CommandName> <optional parameters> @<HashTable> <optional parameters>
 <CommandName> <optional parameters> @<Array> <optional parameters>
 ```
+
 - `@<HashTable>` brukes når du vil sende inn `navn-verdi`-par for parametere
 - `@<Array>` brukes når du sender inn posisjonelle verdier, altså når rekkefølgen er viktig og parameternavn ikke kreves
 #### Splatting med hash tables
 Som nevnt så bruker du [hashtabeller](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_hash_tables?view=powershell-7.5#syntax) når du vil sende inn `navn-verdi`-par til funksjonens  parametere, og kan brukes for alle parameter typer, inkludert posisjonelle og switch. 
+
 ```powershell
 $Parametre = @{
 	Navn = "Kjetil"
@@ -409,13 +440,16 @@ $Parametre = @{
 }
 Skriv-Hilsen @Parametre
 ```
+
 Hvis navnene ikke stemmer, vil funksjonen ikke motta verdien.
 #### Splatting med arrays
 Når du sender inn posisjonelle verdier gjennom `arrays` kreves det ikke parameternavn, men verdiene i listen må komme i riktig rekkefølge.
+
 ```powershell
 $Parametre = @("Kjetil", "Ålesund", 43)
 Skriv-Hilsen @Parametre
 ```
+
 Array-splatting fungerer kun hvis funksjonen har parametere definert med posisjonsindekser, eller hvis du stoler på standard rekkefølge. Det er mer sårbart for feil enn hashtabeller.
 #### Bruk av `[PSCustomObject]` med splatting
 [`[PSCustomObject]`](https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-pscustomobject?view=powershell-7.5) brukes oftest når du jobber med data som skal behandles videre, lagres, eller sendes mellom funksjoner – det er ikke nødvendig for enkel parameterinnsending.
@@ -432,6 +466,7 @@ Dette er nyttig hvis du skal jobbe med
 Du deklarerer objektet ved å tilføye `[PSCustomObject]` foran `@{}`.
 
 Under er et eksempel på hvordan du kan opprette et objekt, legge til en metode og kalle opp objektet. Det demonstrer hvordan du kan jobbe med strukturert data og utvide objekter med egenskaper og funksjonalitet. 
+
 ```PowerShell
 function Skriv-Hilsen {
     param (
@@ -455,7 +490,9 @@ $Objekt | Add-Member -MemberType ScriptMethod -Name "Hilsen" -Value {
 $Objekt.Hilsen()
 Hei Kjetil fra Ålesund!
 ```
+
 Eksemplet viser ikke direkte bruk av splatting, ettersom `[PSCustomObject]` ikke støtter splatting inn i funksjoner uten å først bli konvertert til en hashtabell. 
+
 ```powershell
 # Konverter objektet til hashtabell for splatting
 $Parametre = @{}
@@ -468,11 +505,13 @@ Skriv-Hilsen @Parametre
 Hei Kjetil fra Ålesund, du er 43 år gammel.
 ```
 #### Sammenligning 
+
 | Type               | Bruksområde                              | Fordeler                                                          | Begrensninger                                                  |
 | ------------------ | ---------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------- |
 | **Hashtabell**     | Navngitte parametere (`navn = verdi`)    | Lesbart, fleksibelt, støtter alle parametertyper                  | Må matche parameternavn nøyaktig                               |
 | **Array**          | Posisjonelle verdier (rekkefølge viktig) | Kort og enkel syntaks                                             | Rekkefølge må være korrekt, ingen støtte for switch-parametere |
 | **PSCustomObject** | Strukturert data med egenskaper          | Kan brukes som input og output, støtter metoder og typedefinisjon | Litt mer kompleks syntaks, krever forståelse av objekter       |
+
 ### Pipeline og input
 
 #### Piping objects
@@ -520,6 +559,7 @@ Blokkene definerer _tre faser_ i en funksjon
 | `begin`   | Før første input mottas      | Initialisering, åpne ressurser       |
 | `process` | For hver pipet verdi         | Utføre operasjon per input           |
 | `end`     | Etter all input er behandlet | Avslutning, oppsummering, opprydding |
+
 PowerShells blokkstruktur med `begin`, `process` og `end` gir funksjoner en modulær og oversiktlig oppbygning. 
 I `begin` kan du forberede alt som trengs før behandlingen starter – for eksempel åpne filer eller initialisere variabler som trengs før behandlingen starter. 
 Deretter håndterer `process` hver verdi som kommer gjennom en pipe, slik at funksjonen effektivt kan operere på flere elementer. 

@@ -3,7 +3,7 @@ _site/
 .jekyll-cache/
 .sass-cache/
 .jekyll-metadata
-
+stuff/Powershell-challenge/Scripts_Do_Not_Upload.ps1
 # Ruby / Bundler
 vendor/
 .bundle/

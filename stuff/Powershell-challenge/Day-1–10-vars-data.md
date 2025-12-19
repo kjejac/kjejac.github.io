@@ -22,12 +22,14 @@ Når du oppretter en ny variabel kan du tildele den en verdi. Tildeler du ikke e
 For en komplett liste over alle variablene i en sesjon benyttes kommandoen [`Get-Variable`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-variable?view=powershell-7.5). Variabelnavnene vises uten `$`.
 
 Ønsker du å opprette en variabel med egne verdier gjør du følgende
+
 ```powershell
 $MyVariable = 1, 2, 3
 $MyPath = "C:\Windows\System32"
 ```
 
 For å lagre resultatet av en kommando gjør du følgende
+
 ```PowerShell
 $Processes = Get-Process
 
@@ -35,10 +37,13 @@ $Today = (Get-Date).DateTime
 ```
 
 For å hente verdiene i variablene skriver du inn variabelnavnet
+
 ```powershell
 $MyVariable
 ```
+
 Resultat
+
 ```powershell
 1
 2
@@ -46,6 +51,7 @@ Resultat
 ```
 
 Skulle du ønske å endre verdien i variabelen tildeler du ny verdi på samme måte som da du opprettet den
+
 ```PowerShell
 $MyVariable = "Kaffe er dagens viktigste måltid"
 
@@ -54,6 +60,7 @@ Kaffe er dagens viktigste måltid
 ```
 
 Ønsker du å _slette verdien_ i en variabel benyttes kommandoen [`Clear-Variable`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/clear-variable?view=powershell-7.5), dette setter verdien i variabelen til `$null`. Du kan også gjøre som over og sette verdien til `$null`.
+
 ```powershell
 Clear-Variable -Name MyVariable
 
@@ -61,6 +68,7 @@ $MyVariable = $null
 ```
 
 For å slette variabelen kan dette gjøres med på to forskjellige kommandoer; [`Remove-Variable`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/remove-variable?view=powershell-7.5)  og [`Remove-Item`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7.5)
+
 ```powershell
 Remove-Variable -Name MyVariable
 
@@ -69,17 +77,19 @@ Remove-Item -Path Variable:\MyVariable
 
 Det er mulig å sette verdier til flere variabler i samme uttrykk.
 For eksempel hvis du vil sette verdien `0` til tre forskjellige variabler
+
 ```powershell
 $a = $b = $c = 0
 ```
 
 Vil du sette flere verdier til flere variabler samtidig
+
 ```PowerShell
 $i,$j,$k = 10, "red", $true    # $i is 10, $j is "red", $k is True
 $i,$j = 10, "red", $true       # $i is 10, $j is [Object[]], Length 2
 ```
-En detaljert forklaring på dette temaet finner i [about_Assignment_Operators](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_assignment_operators?view=powershell-7.5#assigning-multiple-variables).
 
+En detaljert forklaring på dette temaet finner i [about_Assignment_Operators](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_assignment_operators?view=powershell-7.5#assigning-multiple-variables).
 ## Variabeltyper
 Du kan lagre alle typer objekter i en variabel, inkludert heltall, strenger, tabeller og hashtabeller. Du kan også lagre objekter som representerer for eksempel prosesser og tjenester.
 
@@ -128,12 +138,14 @@ For å bruke variabler i kommandoer eller i uttrykk skrives variabelnavnet med e
 Hvis variabelnavnet med dollartegnet ikke er omsluttet av anførselstegn, enkle eller doble, vil verdien av variabelen bli brukt i kommandoen. For mer informasjon om bruk av anførselstegn
 
 Eksempel på bruk av doble anførselstegn `"`
+
 ```powershell
 $name = "Kjetil"
 Write-Output "Hei, $name!"   # Output: Hei, Kjetil!
 ```
 
 Eksempel på bruk av enkle anførselstegn `'`
+
 ```powershell
 $name = "Kjetil"
 Write-Output 'Hei, $name!'   # Output: Hei, $name!
@@ -162,9 +174,11 @@ Lager du en funksjon med variabler er disse kun tilgjengelige inne i funksjonen.
 Hvis du derimot _dot-sourcer_ et skript, vil variabelen bli lagt til gjeldende omfang som du jobber i.
 
 Du kan bruke en omfangsmodifikator for å endre standard-omfanget til variabelen.
+
 ```powershell
 $Global:Computers = "Server01"
 ```
+
 Uttrykket over oppretter en variabel med navnet `Computers` ved hjelp av omfangsmodifikatoren `Global:`. Variabelen får dermed globalt omfang, selv når den er opprettet i et skript eller funksjon.
 
 Ved kjøring utenfor nåværende sesjon, som ved remoting eller bakgrunnsjobber, må `Using:` brukes for å hente variabler fra det gjeldende omfanget. Du kan lese mer om dette i [about_Remote_Variables](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_variables?view=powershell-7.5).
@@ -177,11 +191,13 @@ Variabler du oppretter er som standard kun tilgjengelige i den aktive sesjonen. 
 
 En PowerShell-profil er et skript som kjøres automatisk når du starter PowerShell. Du kan bruke den til å forhåndsdefinere variabler, aliaser, funksjoner og innstillinger som du vil ha tilgjengelig i hver økt.
 For eksempel – dersom du vil endre standardverdien til `$VerbosePreference`, kan du legge til følgende linje i profilen din:
+
 ```powerShell
 $VerbosePreference = "Continue"
 ```
 
 Du åpner profilen med følgende kommando:
+
 ```powershell
 notepad.exe $PROFILE
 ```
@@ -193,11 +209,13 @@ PowerShells variabelleverandør oppretter en `Variable:`-stasjon som ser ut og o
 Stasjonen er en del av PowerShells _PSProvider-system_, som gjør det mulig å navigere i ulike datastrukturer (som `Env:`, `Alias:`, `Function:` og `Variable:`) som om de var filsystemer.
 
 For å gå til `Variable:`-stasjonen brukes følgende kommando:
+
 ```PowerShell
 Set-Location Variable:
 ```
 
 Du kan vise innholdet i stasjonen ved å bruke kommandoene `Get-Item` eller `Get-ChildItem`
+
 ```PowerShell
 Get-ChildItem Variable:
 
@@ -208,6 +226,7 @@ DebugPreference                SilentlyContinue
 ```
 
 For mer informasjon om `Variable:`-stasjonen variabelleverandør, bruk kommandoen `Get-Help`
+
 ```powershell
 Get-Help Variable
 ```
@@ -264,6 +283,7 @@ Her er noen typiske bruksområder for vanlige datatyper, slik de ofte brukes i P
 | `[regex]`       | Mønstersøk i tekst, f.eks. . e-postvalidering eller nummerformat                           |
 ### Hvordan finne datatypen
 For å finne datatypen til en variabel eller verdi kan man benytte metoden `.GetType()` sammen med egenskapen `Name`:
+
 ```PowerShell
 $a = 42
 $a.GetType().Name
@@ -271,6 +291,7 @@ Int32 # Datatypen er heltall, vist her med PowerShells kortform ([Int])
 ```
 
 For å hente ut fullt typenavn kan du bytte ut egenskapen `Name` med `FullName`
+
 ```PowerShell
 $a.GetType().FullName
 System.Int32 # Den fullstendige .NET-typen for heltall
@@ -282,6 +303,7 @@ Heltall, eller `Integer`, er tall uten desimaler og kan enten være både positi
 - Typen [byte] bruker _8 bits_, og har et omfang fra 0 til 255
 
 Du kan bruke bruke de innebygde statiske egenskapene `MaxValue` og `MinValue` for å finne grensene direkte – uten å opprette en variabel først: 
+
 ```powershell
 [int]::MaxValue
 2147483647
@@ -289,6 +311,7 @@ Du kan bruke bruke de innebygde statiske egenskapene `MaxValue` og `MinValue` fo
 [int]::MinValue
 -2147483648
 ```
+
 [byte], [int] og [long] er _typeakseleratorer_ for henholdsvis `System.Byte`, `System.Int32` og `System.Int64`.
 #### Syntaks
 Slik ser syntaksen ut for å deklarere et heltall i PowerShell:
@@ -298,6 +321,7 @@ Slik ser syntaksen ut for å deklarere et heltall i PowerShell:
 
 #### Automatisk typekonvertering
 Selv uten `[int]` vil PowerShell vanligvis tolke verdier som heltall når det er naturlig
+
 ```powershell
 $X = 100
 $X.GetType().Name
@@ -305,6 +329,7 @@ Int32 # resultat
 ```
 #### Konvertering fra tekst til heltall
 Ved input fra filer, API-er eller brukere kommer tall ofte som tekst, og må konverteres før du kan gjøre beregninger. 
+
 ```powershell
 $Input = "123"
 [int]$Verdi = $Input # Sikker eksplisitt konvertering
@@ -349,6 +374,7 @@ Verdigen 75 er innenfor grensen. # resultat
 Et _usignert heltall_ (unsigned integer) er en heltallsverdi som kun kan være null eller positiv – altså fra 0 og oppover.  Dette kan fvære nyttig i situasjoner der du vet at negative tall er utgyldige – for eksempel antall, ID-er eller byteverdier. 
 
 PowerShell har ikke en typeakselerator for dette, så du må bruke  .Net-typen `[System.UInt32]`: 
+
 ```powershell
 [System.UInt32]$Verdi = 100
 ```
@@ -360,6 +386,7 @@ Flyttall, altså `Float` og `Double`, brukes til å representere tall med desima
 Begge typene brukes i PowerShell via .NET-systemet, og tolkes som henholdsvis `System.Single` og `System.Double`.
 #### Syntaks
 Slik deklarerer du `Float` og `Double` i PowerShell:
+
 ```PowerShell
 [float]$FloatVariable = 3.14
 [double]$DoubleVarible = 3.141592653589793
@@ -397,10 +424,12 @@ I motsetning til `float`og `double`, lagres `decimal`med høyere nøyaktighet, m
 
 Desimaltall uten typeangivelse tolkes som regel automatisk som `double`, så du bør bruke `[decimal]` eksplisitt når nøyaktighet er viktig.
 #### Syntaks
+
 ```powershell
 [decimal]$DecimalVariable = 42.42
 ```
 #### Eksempel: Presis desimalberegning
+
 ```powershell
 [decimal]$Pris = 99.95
 [decimal]$Mva = 0.25
@@ -409,12 +438,14 @@ Write-Output $Total
 
 124.9375 
 ```
+
 Hvis samme beregning gjøres med `float`, kan resultatet se slik ut: 124,937496185303 – en liten, men potensielt viktig avrundingsfeil.
 ### Tekst – `String`
 `String` er en sekvens av tegn som representerer tekst. I PowerShell er tekst av typen `[string]`. Strenger støtter en rekke metoder, inkludert sammenslåting (`concatenation`), uttrekk av delstrenger (`substring extraction`) og mønstergjenkjenning (pattern matching).
 
 #### Syntaks
 Slik deklarerer du en `string` i PowerShell
+
 ```powershell
 [string]$StringVariable = "Hello, World!"
 ```
@@ -426,8 +457,10 @@ PowerShell støtter to typer anførselstegn for å definere tekststrenger.
 | ------------- | ----------------------------------------------------- |
 | `"` _(doble)_ | Streng med variabeltolkning (interpolasjon)           |
 | `'` _(enkle)_ | Streng uten variabeltolkning – alt tolkes bokstabelig |
+
 Bruk doble `"` når du vil sette sammen tekst dynamisk med variabler. 
 Bruk enkle `'` når du vil bevare tekst nøyaktig som den er – for eksempel når du jobber med regex eller filbaner som inneholder `$`.
+
 ```powershell
 $name = "Kjetil"
 
@@ -440,6 +473,7 @@ Hei, Kjetil!
 Hei, $name! # resultat
 ```
 #### Eksempel: Slå sammen tekst
+
 ```powershell
 [string]$Greeting = "Hello"
 [string]$Name = "World"
@@ -449,6 +483,7 @@ Write-Output $FullGreeting
 Hello, World! # resultat
 ```
 #### Eksempel: Finne lengden på en streng
+
 ```powershell
 [string]$Tekst = "Hello, World!"
 $Lengde = $Tekst.Length
@@ -456,8 +491,10 @@ Write-Output $Lengde
 
 13 # lengden på strengen
 ```
+
 `Length`-egenskapen gir antall tegn i strengen, inkludert mellomrom og skilletegn.
 #### Eksempel: Hente ut en del av strengen (substring)
+
 ```powershell
 [string]$Tekst = "PowerShell"
 $DelStreng = $Tekst.Substring(0,5)
@@ -476,6 +513,7 @@ Navnet starter med Kj # resultat
 ```
 `-like` bruker `*` som jokertegn – nyttig for enkel mønstermatching.
 #### Eksempel: Erstatte tekst med `.Replace()`
+
 ```Powershell
 [string]$Streng = "Hei, verden!"
 $Streng = $Streng.Replace("verden", "PowerShell")
@@ -484,6 +522,7 @@ Hei, PowerShell!
 ```
 Perfekt for små justeringer i tekststrenger.
 #### Eksempel: Sjekke om en streng inneholder et ord
+
 ```powershell
 [string]$Streng = "Velkommen til PowerShell-kurset"
 if ($Streng.Contains("PowerShell")) {
@@ -496,11 +535,13 @@ Dette er raskt og lettfattelig når du skal test tilstedeværelse.
 Boolske verdier representerer sant eller usanne usant, og brukes i logiske operasjoner og kontrollflyt. I PowerShell er boolske verdier av typen `[bool]`. De er helt sentrale når du skal ta beslutninger i skript – for eksempel i `if`-setninger og løkker – der koden skal oppføre seg ulikt basert på bestemte vilkår.
 #### Syntaks
 Slik deklarerer du boolske verdier i PowerShell
+
 ```PowerShell
 [bool]$BooleanVariable = $true
 ```
 
 #### Eksempel: Bruk av `bool` i en betingelse
+
 ```PowerShell
 [bool]$IsTrue = $true
 [bool]$IsFalse = $false
@@ -514,6 +555,7 @@ if ($IsTrue) {
 Dette er sant. # reslultat
 ```
 #### Eksempel: Boolean fra sammenligning
+
 ```powershell
 [int]$Alder = 20
 [bool]$ErMyndig = $Alder -ge 18
@@ -522,6 +564,7 @@ True # resultat
 ```
 PowerShell evaluerer uttrykket `$Alder -ge 18` og lagrer resultatet som en boolsk verdi.
 #### Eksempel: Snu en boolsk verdi med `-not`
+
 ```powershell
 [bool]$HarTilgang = $false
 if (-not $HarTilgang) {
@@ -531,6 +574,7 @@ Tilgang nektes # resultat
 ```
 `-not` brukes for å snu en boolsk verdi.
 #### Eksempel: Kombinere betingelser med `-and` og `-or`
+
 ```powershell
 [int]$Alder = 25
 [bool]$ErMedlem = $true
@@ -539,8 +583,10 @@ if ($Alder -ge 18 -and $ErMedlem) {
 }
 Du har tilgang til tjenesten # resultat
 ```
+
 Du kan kombinere flere vilkår i en betingelse med `-and`, `-or` og `-xor`.
 #### Eksempel: Boolean som løkkekontroll
+
 ```powershell
 [bool]$Fortsett = $true
 [int]$Teller = 0
@@ -555,8 +601,10 @@ Itereasjon 0 # resultat
 Itereasjon 1 # resultat
 Itereasjon 2 # resultat
 ```
+
 Den boolske variabelen brukes for å styre når løkken skal avsluttes.
 #### Eksempel: Funksjon som returnerer boolsk verdi
+
 ```powershell
 function Er-Myndig {      
     param (
@@ -573,8 +621,10 @@ if (Er-Myndig -Alder 16) {
 }
 Du er ikke myndig. # resultat
 ```
+
 Funksjonen sjekker om en brukers alder er over grensen for myndighet og returnerer en boolsk verdi. Resultatet fra funksjonen brukes direkte i en `if`-setning for å bestemme hva som skal vises.
 #### Eksempel: Funksjon som reagerer på en boolsk parameter
+
 ```powershell
 function Vis-Hilsen {
     param (
@@ -594,15 +644,18 @@ God dag, og velkommen. # resultat
 Vis-Hilsen -Formell $false
 Hei, så hyggelig å se deg! # resultat
 ```
+
 Dette demonstrerer hvordan boolske verdier ikke bare brukes i logiske uttrykk, men også som en enkel måte å styre funksjoners oppførsel på – elegant og leservennlig.
 Variabelen `$Formell` avgjør hvordan funksjonen svarer, og basert på om denne bestemmes det hvilken hilsen som skal benyttes. 
 ### Dato og klokkeslett – `DateTime`
 Datoer representerer dato og tid verdier. I PowerShell er datoer av typen `[datetime]`, som gir tilgang til en rekke egenskaper (f.eks. `Day`, `Month`, `Year`) og metoder (f.eks. `AddDays(), `ToString()`), slik at du kan manipulerer og formatere dato og tid på en fleksibel måte.
 #### Syntaks – hente dagens dato
 Slik deklarerer du `[datetime]`
+
 ```PowerShell
 [datetime]$DatoVariabel = Get-Date
 ```
+
 Dette lagrer gjeldende dato og klokkeslett i variabelen `$DatoVariabel`.
 #### Eksempel: Utskrift av dagens dato og tid
 ```powershell
@@ -612,6 +665,7 @@ Write-Output $Now
 mandag 30. juni 2025 15:40:59 # resultat
 ```
 #### Eksempel: Lage en spesifikk dato
+
 ```powershell
 [datetime]$StartDato = [datetime]"2025.01.01"
 Write-Output $StartDato
@@ -619,6 +673,7 @@ Write-Output $StartDato
 onsdag 1. januar 2025 00:00:00 # resultat
 ```
 #### Eksempel: Trekke ut deler av datoen
+
 ```powershell
 $Day = $StartDato.Day
 1 # resultat
@@ -630,6 +685,7 @@ $Year = $StartDato.Year
 2025 # resultat
 ```
 #### Eksempel: Regne med datoer
+
 ```powershell
 $NextWeek = $Now.AddDays(7)
 Write-Output $NextWeek
@@ -643,6 +699,7 @@ Write-Output $NextWeek
 07.07.2025 # Resultat
 ```
 #### Eksempel: Beregne alder ut fra fødselsdato
+
 ```PowerShell
 [datetime]$BirthDay = [datetime]"2000.06.30"
 [datetime]$Now = Get-Date
@@ -652,6 +709,7 @@ Write-Output "Du er $Age år gammel."
 Du er 25 år gammel. # Resultat
 ```
 #### Eksempel: Dager igjen til jul
+
 ```powershell
 [datetime]$Today = Get-Date
 [datetime]$Christmas = [datetime]::ParseExact("24.12.$($Today.Year)", "dd.MM.yyyy", $null)
@@ -664,6 +722,7 @@ Write-Output "Det er $DaysLeft dager igjen til jul."
 Det er 176 dager igjen til jul. # resultat
 ```
 #### Eksempel: Oppetid på systemet
+
 ```powershell
 [datetime]$LastBoot = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime
 [timespan]$Uptime = (Get-Date) - $LastBoot  
@@ -672,7 +731,9 @@ Write-Output "Systemet har vært oppe i $($Uptime.Days) dager og $($Uptime.Hours
 Systemet har vært oppe i 17 dager og 3 timer.  # resultat
 ```
 #### Eksempel: Tilpasset datoformat med `.ToString()`
+
 Når du bruker `.ToString()` vil standarden gi deg full dato og klokkeslett med tidssone. 
+
 ```powershell
 [datetime]$Now = Get-Date
 
@@ -696,8 +757,10 @@ $Now.ToString("dd.MM.yyyy HH:mm")
 $Now.ToString("dddd d. MMMM yyyy", [System.Globalization.CultureInfo]::GetCultureInfo("nb-NO"))
 mandag 30. juni 2025  # resultat
 ```
+
 Det nederste eksemplet viser hvordan du kan tilpasse formateringen med kulturinfo for å få språk og rekkefølge riktig.
 #### Eksempel: Lage filnavn med tidsstempel
+
 ```powershell
 # Hent tidspunktet nå
 $Now = Get-Date
@@ -711,6 +774,7 @@ Write-Output $LogFileName
 log_20250630_173903.txt # resultat
 ```
 #### Vanlige `datetime`-formateringskoder
+
 | Formatkode           | Hva den betyr                   | Eksempelresultat   |
 | -------------------- | ------------------------------- | ------------------ |
 | `"yyyy"`             | Fire-sifret år                  | `2025`             |
@@ -730,21 +794,27 @@ log_20250630_173903.txt # resultat
 | `"dd.MM.yyyy"`       | Norsk datoformat                | `30.06.2025`       |
 | `"dddd d. MMMM"`     | Ukedag, dag og måned (tekstlig) | `Monday 30. June`  |
 | `"dd.MM.yyyy HH:mm"` | Dato og klokkeslett             | `30.06.2025 16:57` |
+
 ### Liste – `Array` 
 En array er en variabel som inneholder flere verdier – enten tall, tekst eller objekter – samlet på ett sted. I PowerShell brukes `[array]`-typen til å håndtere slike lister, og det gjør det enkelt å jobbe med data i grupper. 
 
 Skal du sende inn flere filnavn til en kommando, gjennomgå en liste med brukernavn i en `foreach`-løkke, eller filtrere ut prosesser med høy ressursbruk, er arrayen din beste venn. Du kan også kombinere arrays, hente ut enkeltverdier via indekser, telle antall elementer, og legge til nye – alt med ren, lesbar og effektiv kode.
 #### Syntaks
+
 ```powershell
 [array]$ArrayVariable = @(1,2,3,4,5,6)
 ```
+
 `[array]` sier hvilken datatype variabelen skal være og `@(...)` lager listen. Det holder å benytte en av dem, men ved å benytte begge gir de både klar struktur og tydelig typekontroll.
 #### Eksempel: Lagre flere verdier
+
 ```powershell
 $Array = @(1, 2, 3)
 ```
+
 Samler data i en variabel.
 #### Eksempel: Iterere med `foreach`
+
 ```powershell
 foreach ($Item in $Array) {
 	Write-Output $Item
@@ -754,22 +824,28 @@ foreach ($Item in $Array) {
 2  # resultat
 3  # resultat
 ```
+
 Går igjennom hvert element i listen og skriver den ut.
 #### Eksempel: Finne antall elementer
+
 ```powershell
 $Array.Count
 
 3  # resultat
 ```
+
 Gir lengden på listen.
 #### Eksempel: Filtrere med `Where-Object`
+
 ```powershell
 $Array | Where-Object { $_ -gt 2 }
 
 3  # resultat
 ```
+
 Henter verdier større enn 2.
 #### Eksempel: Legge til verdier
+
 ```powershell
 $Array += 4
 $Array
@@ -779,15 +855,19 @@ $Array
 3
 4  
 ```
+
 Legger til nytt element på slutten (4).
 #### Eksempel: Hente spesifikk verdi
+
 ```powershell
 $Array[0]
 
 1  # resultat
 ```
+
 Gir første element.
 #### Eksempel: Endre element
+
 ```powershell
 $Array[1] = 99
 $Array
@@ -797,8 +877,10 @@ $Array
 3
 4
 ```
+
 Bytter ut verdien på indeks 1.
 #### Eksempel: Kombinere lister
+
 ```powershell
 $Combined = $Array + @(100, 200)
 $Combined
@@ -810,8 +892,10 @@ $Combined
 100
 200
 ```
+
 Slår sammen to lister.
 #### Eksempel: Bruke som input
+
 ```powershell
 Get-Process -Name @("explorer", "notepad")
 Get-Process: Cannot find a process with the name "notepad". Verify the process name and call the cmdlet again.
@@ -820,8 +904,10 @@ Get-Process: Cannot find a process with the name "notepad". Verify the process n
  ------    -----      -----     ------      --  -- -----------
     269   398,69     223,12   8 583,33   10332   1 explorer
 ```
+
 Sender en liste inn i kommandoen. 
 #### Eksempel: Lage en liste over filstier
+
 ```powershell
 $LogFiles = @(
     "C:\Logs\App1.log",
@@ -841,8 +927,10 @@ C:\Logs\App1.log finnes.
 C:\Logs\App2.log mangler.
 C:\Logs\App3.log mangler.
 ```
+
 Sjekke om filer eksisterer.
 #### Eksempel: Enkel tekstmeny med `array`
+
 ```powershell
 # Liste med alternativer
 $options = @("Start", "Stop", "Restart", "Status")
@@ -867,22 +955,28 @@ Skriv inn nummeret på ønsket handling: 1
 
 Du valgte: Start
 ```
+
 Listen inneholder menyvalg, brukeren skriver inn et nummer og valget hentes fra listen og vises tilbake. 
 #### Noen fallgruver med arrays i PowerShell
 ##### Mangler `@(...)` rundt liste
+
 ```powershell
 $ArrayVariable = (1,2,3)
 ```
+
 Dette gir ikke en liste, men returnerer bare siste elementet. Riktig måte er `@(1,2,3)`
 ##### Arrays av en verdi oppfører annerledes
+
 ```powershell
 $Array = "Hello"
 $Array.Count
 
 5 # resultat gir antall tegn, ikke ett objekt
 ```
+
 Når du har en verdi og mangler `@(...)`, kan PowerShell feiltolke det som en skalar. 
 ##### Forsøker å bruke `.Add()` på array
+
 ```powershell
 $array = @(1, 2)
 $array.Add(3)
@@ -893,14 +987,17 @@ Line |
      |  ~~~~~~~~~~~~~
      | Exception calling "Add" with "1" argument(s): "Collection was of a fixed size."
 ```
+
 Arrays har ikke metoden `.Add()`, og du må benytte `+=` for å legge til elementer i et array.
 ### Nøkkel-verdi-samling – `Hashtable`
 En `hashtable` er en samling av nøkkel-verdi-par, der hver nøkkel er unik og brukes til å slå opp tilhørende verdi. I PowerShell er en hashtable av typen `[hashtable]`, og den er ideell når du trenger raske oppslag, fleksibel struktur og enkel lagring av konfigurasjoner eller data – for eksempel innstillinger, brukerinformasjon eller oversettelsestabeller.
 #### Syntaks
+
 ```powershell
 [hashtable]$HashTableVariable = @{Key1 = 'Verdi1'; Key2 = 'Verdi2'}
 ```
 #### Eksempel: Konfigurasjon og innstillinger
+
 ```powershell
 $Settings = @{
     Theme = 'Dark'
@@ -911,8 +1008,10 @@ Write-Output "Språk valgt: $($Settings['Language'])"
 
 Språk valgt: no-NO  # resultat
 ```
+
 Brukes når du trenger å lagre parametere eller innstillinger som skal brukes i skript.
 #### Eksempel: Kartlegging eller oversettelse
+
 ```powershell
 $CountryCodes = @{
     NO = 'Norway'
@@ -923,8 +1022,10 @@ $Code = 'SE'
 Write-Output $CountryCodes[$Code]
 Sweden
 ```
+
 Praktisk for å slå opp verdier basert på en nøkkel.
 #### Eksempel: Brukerprofiler 
+
 ```powershell
 $User = @{
     Name = 'Kjetil'
@@ -935,8 +1036,10 @@ Write-Output "$($User['Name']) har rollen som $($User['Role'])"
 
 Kjetil har rollen som Administrator  # resultat
 ```
+
 Lar deg samle og aksessere strukturert informasjon om en enhet.
 #### Eksempel: Argumenter til funksjoner
+
 ```powershell
 $Parameters = @{
     Path = "C:\Logs\status.txt"
@@ -944,8 +1047,10 @@ $Parameters = @{
 }
 Remove-Item @Parameters
 ```
+
 Hash tables brukes ofte for å sende inn named arguments med `@` foran, noe som gir fleksibilitet og ryddig kode.
 #### Eksempel: Oppbevare tallverdier med nøkkel
+
 ```powershell
 $Inventory = @{
     Apples = 13
@@ -961,8 +1066,10 @@ Apples                         13
 Bananas                        9
 Oranges                        7
 ```
+
 Kan fungere for enkle databaser eller telling der hver nøkkel har tilhørende tall.
 #### Eksempel: Dynamisk rapportkonfigurasjon
+
 ```powershell
 # Definer innstillinger for rapporter
 $ReportSettings = @{
@@ -999,9 +1106,11 @@ Opprettet: 2025-07-01
  – Kommentarer
 📈 Graf inkluderes i rapporten.
 ```
+
 Du kan bruke `hashtable`- struktur til å definere innstillinger som enkelt kan endres, bygges videre på, eller eksporteres. Det gir fleksibilitet for alt fra dokumentgenerering og dataanalyse, til systemkonfigurasjon og automatisering – spesielt når du kombinerer det med arrays og logiske tester.
 #### Typiske `hashtable`-feil
 ##### Prøver å hente en nøkkel som ikke finnes
+
 ```powershell
 $Settings = @{
     Mode = "Auto"
@@ -1017,6 +1126,7 @@ Auto  # resultat
 ```
 
 ##### Skriver over en eksisterende nøkkel ved et uhell
+
 ```powershell
 $Settings["Mode"] = "Manual"  # overstyrer "Auto"
 
@@ -1026,6 +1136,7 @@ if (-not $Settings.ContainsKey("Mode")) {
 }
 ```
 ##### Loop uten å håndtere nøklene riktig
+
 ```powershell
 foreach ($Item in $Settings) {
     $Item  
@@ -1049,6 +1160,7 @@ Et [`PSCustomObject`](https://learn.microsoft.com/en-us/powershell/scripting/lea
 
 Et `PSCustomObject` oppfører seg som et vanlig objekt – du kan hente egenskaper med `$Object.Navn`, sortere og filtrere i lister, og bruke det i rapporter og eksport som om det var bygget inn i PowerShell.
 #### Syntaks
+
 ```powershell
 # Opprettelse ved bruk av `New-Object` (legacy)
 $CustomObject = New-Object PSObject -Property @{
@@ -1075,6 +1187,7 @@ Bruk `Hashtable` når du trenger rask og enkel nøkkelbasert oppslag eller konfi
 | **Bruk i lister**     | Vanskelig å kombinere flere hashtables      | Enklere å samle i arrays for filtrering og sortering |
 | **Lesbarhet**         | Tekniske nøkkelverdier                      | Mer selvforklarende og rapportvennlig struktur       |
 | **Ytelse**            | Rask og lettvekts                           | Litt tyngre, men kraftigere for strukturert data     |
+
 #### Eksempel: Representere en person eller enhet
 ```powershell
 $User = [PSCustomObject]@{
@@ -1083,8 +1196,10 @@ $User = [PSCustomObject]@{
     Role = "Admin"
 }
 ```
+
 Brukes når du trenger strukturert informasjon i rapportering, logging eller behandling.
 #### Eksempel: 
+
 ```powershell
 $People = @(
     [PSCustomObject]@{Name = "Lene"; Age = 29},
@@ -1096,8 +1211,10 @@ Name Age
 ---- ---
 Tom   36
 ```
+
 Filtrering, sortering og eksport av tabell-lignende data gjøres enkelt med egendefinerte objekter.
 #### Eksempel: Dynamisk utvidelse og opprydning av `PSCustomObject`
+
 ```powershell
 # Start med et enkelt objekt
 $User = [PSCustomObject]@{
@@ -1129,8 +1246,10 @@ Name Status
 ---- ------
 Kari Aktiv
 ```
+
 Vi bygger et `PSCustomObject` trinnvis: først starter vi med et enkelt objekt med to egenskaper, deretter legger vi til en ny egenskap kalt `"Status"` ved hjelp av `Add-Member`, og til slutt fjerner vi egenskapen `"Email"` ved å bruke `.psobject.Properties.Remove()`. Det illustrerer hvordan strukturen i objektet kan tilpasses dynamisk etter behov – noe som er nyttig i skript der innholdet kan variere, eller man ønsker å tilpasse hva som skal inkluderes i en rapport, eksport eller visning
 #### Eksempel: Eksportere til CSV eller JSON
+
 ```powershell
 $People | Export-Csv -Path "people.csv" -NoTypeInformation
 "Name","Age"
@@ -1149,8 +1268,10 @@ $People | ConvertTo-Json
   }
 ]
 ```
+
 `PSCustomObject` gir pene og komplette data ved eksport – i motsetning til `Hashtable`.
 #### Eksempel: Samle loggstatistikk med `PSCustomObject`
+
 ```powershell
 # Simuler noen logglinjer
 $Logs = @(
@@ -1192,6 +1313,7 @@ ERROR        2
 INFO         2
 WARN         1
 ```
+
 Skriptet går gjennom en liste med logglinjer, deler hver linje opp i dato, loggnivå og melding, og teller hvor mange ganger hvert loggnivå forekommer (f.eks. ERROR, INFO). Resultatet lagres som en liste med `PSCustomObject`-objekter – ett per nivå – og vises ryddig i tabellform, sortert etter antall. Det gir en rask og strukturert oversikt over loggstatus, klar for videre visning eller eksport.
 ## Vanlige feil med datatyper i PowerShell
 ### Sammenligning mellom tekst og tall
@@ -1208,6 +1330,7 @@ False # Verdiene er ikke like pga. forskjellig datatype
 Selv om `$a` og `$b` ser like ut, er `$a` en streng (`System.String`) og `$b`er et heltall (`System.Int32`). PowerShell prøver ikke automatisk å konvertere `$a` til tall i dette tilfellet – og derfor gir sammenligningen `False`.
 
 For at sammenligningen skal være `True` må begge verdier ha samme type før sammenligningen
+
 ```powershell
 [int]$a = "42"
 $b = 42
@@ -1217,6 +1340,7 @@ True # Verdiene er like
 ```
 ### Desimaltall er ikke alltid `decimal`
 Hvis du trenger nøyaktig desimalberegninger – for eksempel ved valutaberegninger, avrundinger eller eksakte tallverdier – må du angi `decimal` typen eksplisitt:
+
 ```Powershell
 $verdi = 3.14
 $verdi.GetType().Name
@@ -1228,6 +1352,7 @@ Decimal # Nøyaktig desimaltype
 ```
 ### Dato behandles som tekst
 PowerShell tolker ikke automatisk tekst som ser ut som dato, som en faktisk `DateTime`-verdi – med mindre du spesifiserer det eksplisitt:
+
 ```PowerShell
 $date = "2024-01-01"
 $date.GetType().Name
@@ -1237,23 +1362,28 @@ String # Datoen tolkes som tekst ([string])
 $date.GetType().Name
 DateTime # PowerShell tolker nå verdien som en dato
 ```
+
 Det verdt å merke deg at dette gjelder særlig ved input fra filer, API-er eller brukerdata – hvor verdien ofte kommer som tekst. Bruk `[DateTime]` for å sikre riktig tolkning. 
 ### Bruk av operatoren `+=` på strenger 
 Når du benytter operatoren `+=` mellom ulike datatyper forsøker PowerShell å finne en felles type – og ofte ender det med at verdien konverteres til tekst. Dette kan føre til uventet oppførsel hvis du forventer videre beregninger: 
+
 ```powershell
 $a = 42
 $a += "1"
 $a.GetType().Name
 String # Du forventer [int], men verdien er nå tekst
 ```
+
 Pass på hvilken rekkefølge og type du kombinerer. Hvis du først setter et tall og så legger til en streng, blir resultatet en streng – og videre utregninger vil feile eller gi rare resultater.
 
 En [_operator_](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.5) er et symbol eller funksjon som brukes til å utføre en operasjon – for eksempel legge sammen verdier  ( `+` ), sammen ligne dem (`-eq`) eller tilordne verdier til variabler ( `=`). 
 
 ### Tomme verdier er ikke det samme som `$null`
 I PowerShell kan en variabel enten inneholde en tom streng ( `""` ), eller være `$null` – altså helt uten verdi. Dette er to forskjellige ting, og sammenligningen mellom dem kan gi overraskende resultater hvis du ikke er bevisst på forskjellen.
+
 ```PowerShell
 $value = $null
 if ($value -eq "") { "Tomme strenger er ikke null!" }
 ```
+
 Her får du ingen utskrift – fordi betingelsen er `False`. `$null` er _ikke_ lik `""`. En tom streng har et gyldig innhold (tekst uten tegn), mens `$null` betyr at verdien mangler helt.

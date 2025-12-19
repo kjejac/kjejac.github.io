@@ -28,6 +28,7 @@ For å gjøre dette må du finne ut:
 #### Finn tjenesten
 Task Manager har en 'Services'-fane som kan gi hint om riktig cmdlet. PowerShell cmdlets følger et `verb-substantiv`-navnesystem, der kommandoene er i entall. 
 Ved å benytte `Get-Command` kan vi søke etter kommandoer, enten ved hele eller deler av navnet. Vi forsøker med substantivet `Service*`, etterfulgt av jokertegnet 
+
 ```powershell
 Get-Command -Noun Service*
 
@@ -85,6 +86,8 @@ Selv om dette ikke er strngt tatt nødvendig for å fulleføre oppgaven, gir det
 `Get-Service` returnerer et ServiceController-objekt, og `Get-Member` lar deg se hvilke egenskaper og metoder som er tilgjengelige for dette objektet. Dette kan hjelpe deg med å forstå: 
 - **Tilgjengelige metoder** – Du får bekreftet at metoder som `Start()` og `Stop()` eksisterer. 
 - **Egenskaper** – Du ser hvilke data du kan hente ut, som `Status`, `ServiceType` og `DependentServices`
+
+
 ```PowerShell
 Get-Service -Name Spooler | Get-Member
 
@@ -130,6 +133,7 @@ Status                    Property      System.ServiceProcess.ServiceControllerS
 UserName                  Property      System.String {get;set;}
 ToString                  ScriptMethod  System.Object ToString();
 ```
+
 
 Med `Get-Member` kan du se metodene og egenskapene i tjenesteobjektet, inkludert `Stop()` og `Start()`. Hvis du ønsker mer kontroll, kan du bruke tjenesteobjektet direkte:
 ```powershell
@@ -568,6 +572,7 @@ Det finnes to typer metoder:
 `NoteProperty` brukes ofte for å legge til egendefinerte statiske data til et objekt. Det skiller seg fra `Property` ved at den ikke er knyttet til en metode eller beregning - den inneholder bare en verdi og kan være nyttig for skript og rapportering. Den er også enkel å manipulere da den kan legges til, endres og fjernes uten å påvirke objektes funksjonalitet.
 
 Du henter opp alle `NoteProperty`-egenskapene til et objekt ved å:
+
 ```powershell
 # Vise kun NoteProperty
 Get-Process | Get-Member -MemberType NoteProperty
@@ -579,6 +584,7 @@ __NounName NoteProperty string __NounName=Process
 ```
 
 For å å legge til en `NoteProperty` benyttes `Add-Member` for å legge til en ny egenskap i et objekt:
+
 ```PowerShell
 # Opprett nytt objekt
 $obj = New-Object -TypeName PSObject
@@ -592,6 +598,7 @@ $obj.Status
 # Output
 Aktiv
 ```
+
 ### `Property`
 `Property` er standard egenskapene til et objekt, som `Name`, `Status`, `Id`. Disse egenskapene lagrer informasjon om objektet, og enten være kun lesbare `get` eller skrivbare `set`.
 Kjennetegn for `Property`-membertypen:
@@ -628,6 +635,7 @@ Kjennetegn på `ScriptProperty`:
 - Kan legges til objekter med `Add-member`
 
 For å lage en `ScriptProperty`, eller legge det til et objekt brukes `Add-Member`.
+
 ```powershell
 # Opprett et objekt
 $Obj = New-Object -TypeName PSObject
