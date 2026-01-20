@@ -3,7 +3,7 @@ title: Enterprise Mobility Management
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Enterprise Mobility Managment (EMM) refererer til prosesser, teknologier og policyer som en organisasjon bruker for å administrere og sikre enheter, applikasjoner og data.
 Målet med EMM er å beskytte virksomhetens data samtidig som ansatte får fleksibilitet til å arbeide fra forskjellige lokasjoner og enheter.

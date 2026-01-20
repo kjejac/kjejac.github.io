@@ -3,7 +3,7 @@ title: Microsoft Entra ID
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Microsoft Entra ID er Microsofts skybaserte løsning for identitets- og tilgangsadministrasjon. Den leverer identiteter, autentisering, policyer og sikkerhetsmekanismer som beskytter brukere, applikasjoner og ressurser. 
 Entra ID er en del av [Microsoft Entra produktfamilien], som omfatter flere tjenester innen identitet, tilgang og nettverkssikkerhet. 

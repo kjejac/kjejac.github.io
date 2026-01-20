@@ -3,7 +3,7 @@ title: Microsoft Intune
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Microsoft Intune er et skybasert verktøy for en helhetlig enhetshåndtering, app-styring og sikkerhet. 
 Støtter både BYOD- og bedriftseide-enheter. 

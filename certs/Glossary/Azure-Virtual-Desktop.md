@@ -3,7 +3,7 @@ title: Azure Virtual Desktop
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Azure Virtual Desktop, AVD,  er en tjeneste for virtuelle skrivebord og applikasjoner som kjører på Azure. Den gjør det mulig å levere Windowsmaskiner og apper til brukere uansett hvor de befinner seg, sikkert og skarbart fra skyen.
 

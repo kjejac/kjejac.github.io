@@ -3,7 +3,7 @@ title: Enterprise Desktop Lifecycle
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 tags:
   - MD-102/EDL
 ---

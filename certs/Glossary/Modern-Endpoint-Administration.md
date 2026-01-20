@@ -3,7 +3,7 @@ title: Modern Endpoint Administration
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 ### Enkelt å rulle ut og administrere
 Tradisjonell OSD (operating system deployment) er kompleks og tidkrevende. Windows Autopilot, integrert med Entra ID og Intune, gjør utrullingen enklere. Enheter kobles automatisk til Entra ID, registreres i Intune og får apper, innstillinger og sikkerhetspolicyer uten at OS-images må tilpasses.

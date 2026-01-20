@@ -3,7 +3,7 @@ title: Microsoft Security Graph
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 (Microsoft Graph Security API)
 

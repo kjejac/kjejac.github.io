@@ -3,7 +3,7 @@ title: Conditional Access
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 **Conditional Access** er Microsoft Entra IDs policy‑motor for [Zero Trust](Zero-Trust.md)
 . Den kombinerer signaler som bruker, enhet, lokasjon, risiko og app, og tar beslutninger om tilgang basert på _if‑then‑logikk_.

@@ -3,7 +3,7 @@ title: Mobile Application Management (MAM)
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Mobile Application Management (MAM) fokuserer på administrasjon og sikring av apper på mobile enheter.
 Dette muliggjør blant annet:

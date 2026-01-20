@@ -3,7 +3,7 @@ title: Entra ID Protection
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Entra ID Protection oppdager, undersøker og håndterer identitetsbaserte risikoer ved hjelp av maskinlæring og signaler fra Microsofts globale sikkerhetsplattform.
 - Oppdager risikable pålogginger og brukere

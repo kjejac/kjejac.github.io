@@ -3,7 +3,7 @@ title: Zero Trust
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Zero Trust er en sikkerhetsstrategi, ikke et produkt eller en tjeneste. Det er entilnærmingen til hvordan man utformer og implementeringen sikkerhet basert på et sett med grunnleggende prinsipper. 
 

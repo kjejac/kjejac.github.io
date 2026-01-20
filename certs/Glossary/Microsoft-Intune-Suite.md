@@ -3,7 +3,7 @@ title: Microsoft Intune Suite
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 En samling av avanserte add-ons til [Microsoft Intune](Microsoft-Intune.md) som gir ekstra funksjonalitet innen avansert administrasjon, support og sikkerhet. 
 

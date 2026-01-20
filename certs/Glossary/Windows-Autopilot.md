@@ -3,9 +3,9 @@ title: Windows Autopilot
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
-Windows Autopilot er nn samling av teknologier som brukes til å sette opp og forhåndskonfigurere nye Windows-enheter slik at de er klare til bruk med minimal innsats fra IT.
+Windows Autopilot er en samling av teknologier som brukes til å sette opp og forhåndskonfigurere nye Windows-enheter slik at de er klare til bruk med minimal innsats fra IT.
 
 Autopilot kan også brukes til å nullstille, klargjøre på nytt eller gjenopprette eksisterende enheter. Fordelen at IT-avdelingen trenger svært lite lokal infrastruktur, samtidig som prosessen blir enkel og forutsigbar for både brukere og administratorer.
 

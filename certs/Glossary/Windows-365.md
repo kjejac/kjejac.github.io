@@ -3,7 +3,7 @@ title: Windows 365
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Windows 365 er en skybasert Software-as-a-Service (SaaS) tjeneste som leverer en personlig, og vedvarende Windowsmaskin direkte fra Azure. Tjenesten oppretter automatisk en virtuelle Windows PC for hver bruker, og gir  tilgang til Windows 10/11 fra ulike enheter gjennom en nettleser eller RDP-klient.
 

@@ -3,7 +3,7 @@ title: Microsoft Purview Information Protection
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Microsoft Purview Information Protection hjelper virksomheter med å oppdage, klassifisere og beskytte sensitiv informasjon, uansett hvor den befinner seg.
 - Sensitivitetsmerking og dataklassifisering

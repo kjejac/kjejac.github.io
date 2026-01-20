@@ -3,7 +3,7 @@ title: Microsoft Defender for Endpoint
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Microsoft Defender for Endpoint (Defender ATP) er en avansert sikkerhetsplattform for endepunkter, utviklet for større organisasjoner. Løsningen forebygger, oppdager, undersøker og responderer på moderne trusler mot enheter som laptop-er, telefoner, PC-er, aksesspunkter, routere og brannvegger.
 

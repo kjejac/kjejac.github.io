@@ -3,7 +3,7 @@ title: Microsoft Copilot for Security
 nav_order:
 parent:
 has_children:
-nav_exclude:
+nav_exclude: true
 ---
 Microsoft Copilot for Security er en generativ AI-drevet sikkerhetsløsning som hjelper sikkerhetsteam med å analysere, forstå og respondere på trusler raskere.
 
