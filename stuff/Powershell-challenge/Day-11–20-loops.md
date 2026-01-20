@@ -3,6 +3,7 @@ title: Loops
 nav_order: 7
 parent: PowerShell Challenge
 has_children:
+nav_exclude: true
 ---
 
 Bruk eksempel på 
