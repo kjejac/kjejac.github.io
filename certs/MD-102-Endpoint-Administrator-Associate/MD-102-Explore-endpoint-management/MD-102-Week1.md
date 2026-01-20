@@ -10,7 +10,6 @@ has_children: true
 - **Refleksjon** (forståelse, utfordringer, videre arbeid)
 
 # Læringsmål
-Explore Endpoint Mangement har som mål å gi kurstaker kunnskap innen:
 - Planlegge og gjennomføre en strategi for utrulling av endepunkter 
 	- Bruk av moderne distribusjonsteknikker
 	- Bruk av gode metoder for oppdateringshåndtering
@@ -34,7 +33,6 @@ Teknologiene som utforskes er:
 - Microsoft Intune
 - Microsoft Endpoint
 
-Selvfølgelig, Kjetil — her får du **læringsmålene for “Explore Endpoint Management”** presentert som en **klar og praktisk sjekkliste**, basert på innholdet i Microsoft Learn‑modulen.
 
 ---
 
