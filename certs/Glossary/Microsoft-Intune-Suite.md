@@ -25,4 +25,4 @@ Pakken inkluderer:
 
 Add-ons legges til i [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under *Tenant administration --> Intune add-ons*. Tilleggene kan være tilgjengelige som prøveversjoner eller som lisensierte moduler.
 
-[Use Intune Suite add-on capabilities - Microsoft Intune | Microsoft Learn](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/intune-add-ons)
+[Use Intune Suite add-on capabilities](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/intune-add-ons)
