@@ -25,7 +25,7 @@ Modulen forklarer [Microsoft Entra ID](../../Glossary/Microsoft-Entra-ID.md), og
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/1-introduction)
 Microsoft Entra ID er en skybasert løsning som samler identitets- og tilgangsadministrasjon, og sørger for å sikre tilganger og beskytte applikasjoner og data både i skyen og i lokale miljøer.
 ## [Examine Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/2-examine-azure-active-directory)
-Active Directory Domain Services, AD DS, er den tradisjonelle katalogtjenesten i Windows-miljøer. Den lagrer og publiserer informasjon om brukerkontoer, passord og enhetsdata, og kjører på Windows Server som en domenekontroller.
+Active Directory Domain Services, AD DS, er den tradisjonelle katalogtjenesten i Windows-miljøer. Den lagrer og publiserer informasjon om brukerkontoer, passord og enhetsdata, og kjører på Windows Server som en domenekontroller. 
 
 Entra ID er en skybasert katalogtjeneste levert som PaaS. Den driftes av Microsoft, noe som gjør at kunden ikke behøver å administrere infrastruktur, oppsett og vedlikehold selv. Tjenesten tilbyr funksjoner som ikke finnes i AD DS, som flerfaktorautentisering, identitetbeskyttelse og selvbetjent passordtilbakestilling.
 

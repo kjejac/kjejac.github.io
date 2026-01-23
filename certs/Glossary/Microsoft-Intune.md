@@ -28,4 +28,4 @@ Støtter både BYOD- og bedriftseide-enheter.
 - Reduserer behovet for lokal infrastruktur
 - Tett integrert med Microsoft 365, Entra ID og sikkerhetsverktøy
 
-[Microsoft Intune documentation - Microsoft Intune | Microsoft Learn](https://learn.microsoft.com/en-us/intune/intune-service/)
+[Microsoft Intune](https://learn.microsoft.com/en-us/intune/intune-service/)

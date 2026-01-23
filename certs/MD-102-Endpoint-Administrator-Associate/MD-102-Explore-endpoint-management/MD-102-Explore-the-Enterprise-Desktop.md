@@ -27,13 +27,13 @@ Dette gjør IT-drift mer komplekst og dynamisk.
 
 ### Behovet for moderne endpoint-administrasjon
 Dagens fleksible og varierte enhetsmiljøer støttes ikke med tradisjonelle administrasjonmetoder. [Moderne endpoint-administrasjon](../../Glossary/Modern-Endpoint-Administration.md) har nye teknikker og konsepter for utrulling, drift og vedlikehold av enheter i et stadig utviklende landskap.
-### Enterprise Deployment Lifecycle 
-[*Enterprise Deployment Lifecycle* (EDL)](../../Glossary/Enterprise-Deployment-Lifecycle.md) er et rammeverk som beskriver alle prosesser som er knyttet til hele livsløpet til en enhet: 
+### Enterprise Deployment Lifecycle
+[Enterprise Deployment Lifecycle (EDL)](../../Glossary/Enterprise-Deployment-Lifecycle.md) er et rammeverk som beskriver alle prosesser som er knyttet til hele livsløpet til en enhet:
 - Planlegging (av hele livssyklusen)
 - Anskaffelse (av enheter)
 - (Selve) utrullingsprossesen
 - Oppfølging (etter utrulling)
-- Løpende støtte og oppgraderinger 
+- Løpende støtte og oppgraderinger
 - Utfasing (av enheter)
 
 ### Læringsmål
@@ -51,15 +51,15 @@ Tradisjonell administrasjon av IT-infrastruktur og PC-er krevde mye manuelt arbe
 
 ### Hovedpillarene i moderne administrasjon
 #### Enkelt å rulle ut og administrere
-Tradisjonell OSD (operating system deployment) er kompleks og tidkrevende. [Windows Autopilot](../../Glossary/Windows-Autopilot.md), integrert med[Entra ID](../../Glossary/Microsoft-Entra-ID.md) og [Intune](../../Glossary/Microsoft-Intune.md), gjør utrullingen enklere. Enheter kobles automatisk til Entra ID, registreres i Intune og får apper, innstillinger og sikkerhetspolicyer uten at OS-images må tilpasses.
+Tradisjonell OSD (operating system deployment) er kompleks og tidkrevende. [Windows Autopilot](../../Glossary/Windows-Autopilot.md), integrert med [Entra ID](../../Glossary/Microsoft-Entra-ID.md) og [Intune](../../Glossary/Microsoft-Intune.md), gjør utrullingen enklere. Enheter kobles automatisk til Entra ID, registreres i Intune og får apper, innstillinger og sikkerhetspolicyer uten at OS-images må tilpasses.
 
 #### Alltid oppdatert
 For å møte nye sikkerhetstrusler og sikre produktivitet må Windows og Microsoft 365-apper oppdateres hyppigere. Med skybasert innsikt og [EMS (Enterprise Mobility + Security)](../../Glossary/Enterprise-Mobility+Security-(EMS).md) kan oppdateringer styres enklere, uten lokal infrastruktur.
 
 #### Intelligent, innebygd sikkerhet
 Microsoft 365 har sikkerhet integrert i plattformen gjennom teknologier som [Windows Hello](../../Glossary/Windows-Hello.md), [Defender ATP](../../Glossary/Microsoft-Defender-for-Endpoint-(Defender-ATP).md), [Information Protection](../../Glossary/Microsoft-Purview-Information-Protection-(MPIP).md), [Entra Identity Protection](../../Glossary/Entra-Identity-Protection.md), [Conditional Access](../../Glossary/Conditional-Access.md) med mer. Disse funksjonene bruker [Microsoft Intelligent Security Graph](../../Glossary/Microsoft-Security-Graph.md), som analyserer milliarder av signaler og forbedrer maskinlæring kontinuerlig.
-#### Proaktive innsikter 
-Skybasert telemetri gjør det mulig å oppdage problemer før brukerne merker dem. Dette gir tryggere OS-oppdateringer, bedre sikkerhetsarbeid og mer effektiv feilsøking. 
+#### Proaktive innsikter
+Skybasert telemetri gjør det mulig å oppdage problemer før brukerne merker dem. Dette gir tryggere OS-oppdateringer, bedre sikkerhetsarbeid og mer effektiv feilsøking.
 ## [Examine the enterprise desktop life-cycle model](https://learn.microsoft.com/en-us/training/modules/explore-enterprise-desktop/3-examine-enterprise-desktop-life-cycle-model/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.explore-endpoint-management)
 
 [_Enterprise Desktop Life-cycle_-modellen](../../Glossary/Enterprise-Desktop-Lifecycle-(EDL).md) er en etablert enhetslivssyklus som sikrer at virksomheten har riktig teknologi tilgjengelig slik at brukerne er produktive og utstyr som når slutten av levetiden ikke blir en belastning. Ved bruk av BYOD i virksomheten, blir også disse en del av livssyklusen.
@@ -68,7 +68,7 @@ Fordelene ved å bruke denne modellen:
 - Støtte brukere på tvers av enheter og lokasjoner
 - Arbeide mer effektivt med færre ressurser
 - Sikre at enheter er produktive og ikke blir en risiko ved end-of-life
-- Inkludere både bedrifts- og private enheter 
+- Inkludere både bedrifts- og private enheter
 
 Livssyklusen består av fasene:
 - _Planlegging_: Utarbeide strategi for systemadministrasjon
@@ -176,7 +176,7 @@ _Contoso is starting to allow employees to enroll their personal mobile devices 
 Modulen tok for seg hvordan _Enterprise Desktop Life-cycle_ har utviklet seg og hvilke utfordringer IT-avdelinger møter når de skal administrere og støtte den.
 Den introduserer moderne metoder for _endpoint managment_, som er nødvendig for å distribuere og vedlikehold enheter i et stadig skiftende miljø.
 
-Enterprise Desktop Life-cycle består av 
+Enterprise Desktop Life-cycle består av
 - Planlegging
 - Anskaffelse
 - Distribusjon
@@ -184,7 +184,7 @@ Enterprise Desktop Life-cycle består av
 - Oppgradering
 - Utfasing
 
-Modulen har har gitt bedre forståelse for 
+Modulen har har gitt bedre forståelse for
 - Moderne endpoint-administrasjon
 - Livssyklusmodellen for enheter
 - Strategier for maskinvareoppgraderinger
