@@ -33,7 +33,7 @@ Sørge for at brukere og enheter kun får nødvendig tilgang, særdeles viktig i
 - App-basert Conditional Access-policyer
 - Begrenset tilgang til ressurser basert på risiko
 - Intune-policyer som styrer hva enheter kan gjøre
-- [MAM-policyer](Mobile-Application-Management-(MAM).md) som beskytter data uten å gi full enhetskontroll
+- [MAM-policyer](Mobile-Application-Management.md) som beskytter data uten å gi full enhetskontroll
 
 ##### JIT/JEA
 > _“Least privilege access means users and devices only get the access they need, when they need it.”_

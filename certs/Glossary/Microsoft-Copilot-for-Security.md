@@ -12,4 +12,4 @@ Ved å bruke plugins som datakilder får sikkerhetsanalytikere bedre innsikt og 
 
 Security Copilot integrerer med blant annet [Microsoft Intune](Microsoft-Intune.md) og [Microsoft Entra ID](Microsoft-Entra-ID.md), noe som gjør den relevant i moderne endepunkt- og identitetsadministrasjon.
 
-[Microsoft Security Copilot documentation | Microsoft Learn](https://learn.microsoft.com/en-us/copilot/security/)
+[Microsoft Security Copilot documentation](https://learn.microsoft.com/en-us/copilot/security/)

@@ -376,7 +376,7 @@ Nøkkelkonseptene i Azure-arkitekturen inkluderer:
 Ved å forstå disse konseptene kan organisasjoner optimalisere sine skybaserte løsninger, forbedre pålitelighet og ytelse, og sikre kontinuerlig drift selv under uforutsette hendelser.
 
 [Global Network](https://azure.microsoft.com/en-us/explore/global-infrastructure/global-network/)
-[Describe Azure architecture and services | Microsoft Press Store](https://www.microsoftpressstore.com/articles/article.aspx?p=3150381)
+[Describe Azure architecture and services](https://www.microsoftpressstore.com/articles/article.aspx?p=3150381)
 ### Describe Azure regions, region pairs, and sovereign regions
 Azure består av datasentre over hele verden, koblet sammen med høyhastighetsfiber for optimal ytelse og tilgjengelighet. Microsoft har definert grenser, kalt _geographies_, hvor datasenterne er plassert. Disse grensene samsvarer ofte med landegrenser, slik at Microsoft kan overholde nasjonale reguleringer for data-behandling og sikre at kundedata håndteres i samsvar med lokale lover.
 
@@ -574,8 +574,8 @@ _Azure Networking_ gir infrastrukturen du trenger for å koble sammen, beskytte 
 du kan opprette virtuelle nettverk, etablere sikker tilkobling mellom lokale og skybaserte systemer, og dra nytte av lastbalansering og innholdslevering for optimal ytelse. Azure har også nettverkssikkerhetstjenester, som beskytter data og applikasjoner mot trusler og uautorisert tilgang.
 _Azure Networking_ lar deg tilpasse nettverksoppsettet, enten du driver intern applikasjonskommunikasjon, hybride skyløsninger, eller global distribusjon av tjenester.
 
-[Azure networking documentation | Microsoft Learn](https://learn.microsoft.com/en-us/azure/networking/)
-[Azure Virtual Network – Virtual Private Cloud | Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-network/)
+[Azure networking documentation](https://learn.microsoft.com/en-us/azure/networking/)
+[Azure Virtual Network – Virtual Private Cloud](https://azure.microsoft.com/en-us/products/virtual-network/)
 ### Compare compute types, including containers, virtual machines, and functions
 
 Databehandling (_Compute_) er avgjørende for å organisere, analysere og behandle data og ressurser. Den gir nødvendig kapasitet for å drive applikasjoner og å drive applikasjoner og håndtere informasjonsflyt enten i lokal miljøer, hybride systemer eller skyløsninger.
@@ -633,10 +633,10 @@ _Functions_ skaleres automatisk basert på behov, slik at du kun betaler for res
 
 _Azure Functions_ støtter flere programmeringsspråk, inkludert C#, JavaScript, Python og PowerShell, noe som gjør dme fleksible for ulike utviklingsbehov.
 
-[AZ-900 Series 2.7: Comparison of Compute Types | by CyberSecRealm | Medium](https://medium.com/@cybersecrealm/comparison-of-compute-types-79a92f657a68)
+[AZ-900 Series 2.7: Comparison of Compute Types](https://medium.com/@cybersecrealm/comparison-of-compute-types-79a92f657a68)
 [Compare compute types, including container instances, virtual machines (VMs), and functions - Learn The Content](https://learnthecontent.com/exam/azure/az-900-microsoft-azure-fundamentals/s/compare-compute-types-including-container-instances-virtual-machines-vms-and-functions)
-[Containers vs. virtual machines | Microsoft Learn](https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/containers-vs-vm)
-[What is Compute | HPE](https://www.hpe.com/us/en/what-is/compute.html#:~:text=Compute%20is%20essential%20for%20organizing,%20processing,%20and%20retrieving,enables%20vital%20operations%20by%20supplying%20information%20and%20applications).
+[Containers vs. virtual machines](https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/containers-vs-vm)
+[What is Compute](https://www.hpe.com/us/en/what-is/compute.html#:~:text=Compute%20is%20essential%20for%20organizing,%20processing,%20and%20retrieving,enables%20vital%20operations%20by%20supplying%20information%20and%20applications).
 ### Describe virtual machine options, including Azure virtual machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
 _Azure Virtual Machines_ tilbyr on-demand, skalerbare datakraft med valget av enten Windows- eller Linux-operativsystemer. VM-ene kan tilpasses et bredt spekter av løsninger, inkludert hosting av applikasjoner, utviklings- og testmiljø og utvidelse av datasenter-infrastruktur.
 
@@ -648,7 +648,7 @@ For mer effektiv administrasjon og skalering finnes også:
 - _Azure Virtual Desktop_ – Gir en virtualisert desktop-løsning til større bedrifter som trenger en VDI-løsning med skalerbarhet for fjernarbeid og sikker applikasjonstilgang
 
 [Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets,availability sets, and Azure Virtual Desktop - Learn The Content](https://learnthecontent.com/exam/azure/az-900-microsoft-azure-fundamentals/s/Describe-VM-options-including-Azure-Virtual-Machines-Azure-Virtual-Machine-Scale-Setsavailability-sets-and-Azure-Virtual-Desktop)
-[Azure Virtual Machine Scale Sets overview - Azure Virtual Machine Scale Sets | Microsoft Learn](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview)
+[Azure Virtual Machine Scale Sets overview - Azure Virtual Machine Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview)
 ### Describe the resources required for virtual machines
 _Azure Virtual Machines_ er en av flere typer on-demand, skalerbare databehandlingsressurser som Azure leverer. Du velger en virtuell maskin når du trenger mer kontroll over datamiljøet enn hva de andre tjenestene tilbyr.
 En Azure VM gir deg fleksibiliteten til virtualisering uten å måtte anskaffe og drifte den fysisk maskinvaren som kjører den. Du må fortsatt administrere operativsystemet, konfigurere innstillinger og utføre patching og installere programvaren den skal kjøre.
@@ -811,10 +811,10 @@ Viktige funksjoner i _ExpressRoute_:
 - _ExpressRoute Global Reach_ – Lar bedrifter koble sammen flere lokale nettverk via Microsoft backbone
 - _Høy tilgjengelighet og redundans_ – _ExpressRoute_ tilbyr innebygd redundans via flere tilkoblingspunkt
 
-[What is Azure Virtual Network? | Microsoft Learn](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
-[Azure Virtual Network peering | Microsoft Learn](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview)
+[What is Azure Virtual Network?](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
+[Azure Virtual Network peering](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview)
 [Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute - Learn The Content](https://learnthecontent.com/exam/azure/az-900-microsoft-azure-fundamentals/s/describe-virtual-networking-including-the-purpose-of-azure-virtual-networks-azure-virtual-subnets-peering-azure-dns-azure-vpn-gateway-and-azure-expressroute)
-[Microsoft Azure – Virtual Network | GeeksforGeeks](https://www.geeksforgeeks.org/microsoft-azure-virtual-network/)
+[Microsoft Azure – Virtual Network](https://www.geeksforgeeks.org/microsoft-azure-virtual-network/)
 ### Define public and private endpoints
 _Public Endpoints_ og _Private Endpoints_ er begreper som ofte blir brukt innen sky- og nettverks arkitektur. Begge er tilkoblingspunkter for tjenester, men skiller seg når det gjelder tilgjengelighet, sikkerhet og anvendelse.
 

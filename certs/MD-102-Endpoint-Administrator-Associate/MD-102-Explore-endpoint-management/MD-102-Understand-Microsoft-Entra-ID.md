@@ -123,7 +123,7 @@ Microsoft tilbyr en gratis prøveperiode for å teste full P2 funksjonalitet.
 - _Selvbetjent gruppeadministrasjon_: Brukere kan opprette og administrere grupper, samt be om medlemskap som gruppeeier kan godkjenne
 - _Avanserte sikkerhetsrapporter og varsler_: Maskinlæringsbaserte rapporter som avdekker unormal aktivitet og forbedrer sikkerheten
 - _Full MFA støtte_: Fungerer med lokale apper (VPN, RADIUS), Azure, Microsoft 365, Dynamics 365 og tredepartsapper i Entra galleriet
-- _[Microsoft Identity Manager (MIM)](../../Glossary/Microsoft-Identity-Manager-(MIM).md)_: Gir hybrid identitet ved å koble lokale kataloger (AD DS, LDAP, Oracle) med Entra ID
+- _[Microsoft Identity Manager (MIM)](../../Glossary/Microsoft-Identity-Manager.md)_: Gir hybrid identitet ved å koble lokale kataloger (AD DS, LDAP, Oracle) med Entra ID
 - _99,9% SLA_: Garantert tilgjengelighet for P1/P2 (samme som Entra Free)
 - _Passordtilbakestilling med writeback_: Selvbetjente passordreset følger lokal AD policy
 - _Cloud App Discovery_: Identifiserer ofte brukte skyapper

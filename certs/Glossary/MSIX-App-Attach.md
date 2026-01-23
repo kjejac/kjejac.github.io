@@ -12,5 +12,5 @@ MSIX App Attach er en Microsoft teknologi som gjør det mulig å levere apper ti
 Nøkkelfunksjoner:
 - _Dynamisk levering_: Apper kobles dynamisk til brukersesjoner, noe som forenkler distribusjon og reduserer administrasjon
 - _Containerisering_: Bruker containerteknologi for å håndtere apper, noe som gir større fleksibilitet og enklere image håndtering
-- _Effektivitet_: Reduserer størrelsen på OS image og gir raskere pålogging, noe som er positivt for virtuelle skrivebordsmiljøer som [Azure Virtual Desktop](Azure-Virtual-Desktop-(AVD).md)
+- _Effektivitet_: Reduserer størrelsen på OS image og gir raskere pålogging, noe som er positivt for virtuelle skrivebordsmiljøer som [Azure Virtual Desktop](Azure-Virtual-Desktop.md)
 - _Integrasjon_: Integrerer sømløst med AVD og andre løsninger, og forbedrer appadministrasjon

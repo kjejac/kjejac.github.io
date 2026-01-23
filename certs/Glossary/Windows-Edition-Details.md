@@ -14,7 +14,7 @@ Rettet mot privatbrukere, og har funksjoner som
 - Edge, Windows Hello, virtuelle skrivebord
 - Innebygde apper (Mail, kalender, foto)
 - Enhetskryptering, brannmur, virusbeskyttelse
-- [Always on VPN](./Always-on-VPN-(AON).md)
+- [Always on VPN](Always-on-VPN.md)
 - Automatiske oppdateringer
 
 ### Windows Pro

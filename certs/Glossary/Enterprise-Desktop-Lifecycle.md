@@ -124,13 +124,13 @@ Apper kan leveres på flere måter:
 #### [Microsoft Intune](Microsoft-Intune.md)
 Har støtte for sentralisert administrasjon av apper:
 - Støtter mange installasjonstyper (Office, MSI, Win32, LOB-apper, innebygde apper)
-- Kan beskytte data vi app-policyer ([MAM](Mobile-Application-Management-(MAM).md))
+- Kan beskytte data vi app-policyer ([MAM](Mobile-Application-Management.md))
 - Sikrer at kun compliant enheter får tilgang til appdata
 
 #### Virtual Application Delivery
 Brukes når klienten ikke kan kjøre appen lokalt
 - Apper kjøres på server eller Cloud PC
-- [Azure Virtual Desktop](Azure-Virtual-Desktop-(AVD).md) eller [Windows 365](Windows-365.md) gir full desktop opplevelse
+- [Azure Virtual Desktop](Azure-Virtual-Desktop.md) eller [Windows 365](Windows-365.md) gir full desktop opplevelse
 - Nyttig for midlertidige brukere 
 
 ### Plan for upgrades and retirement

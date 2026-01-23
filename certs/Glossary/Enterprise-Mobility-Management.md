@@ -14,7 +14,7 @@ Målet med EMM er å beskytte virksomhetens data samtidig som ansatte får fleks
 - Compliance and Risk administrasjon
 
 ### Nøkkelkomponenter i EMM
-- [Mobile Device Management (MDM)](Mobile-Device-Management-(MDM).md)
-- [Mobile Application Management (MAM)](Mobile-Application-Management-(MAM).md)
-- [Mobile Content Management (MCM)](Mobile-Content-Management-(MCM).md)
-- [Identity and Access Management (IAM)](Identity-And-Access-Management-(IAM).md)
+- [Mobile Device Management (MDM)](Mobile-Device-Management.md)
+- [Mobile Application Management (MAM)](Mobile-Application-Management.md)
+- [Mobile Content Management (MCM)](Mobile-Content-Management.md)
+- [Identity and Access Management (IAM)](Identity-And-Access-Management.md)
