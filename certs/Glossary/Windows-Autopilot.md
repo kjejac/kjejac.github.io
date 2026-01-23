@@ -19,7 +19,7 @@ Under _deploy_-fasen blir denne tilpasset til organisasjonens oppsett:
 - Apps blir installert
 - Windowsversjonen aktiveres med organisasjonens lisens 
 
-![](Pasted%20image%2020260113124934.png)
+![](assets/Pasted%20image%2020260113124934.png)
 
 Når første fase er fullført, kan enheten administreres med:
 - [Microsoft Intune](Microsoft-Intune.md)

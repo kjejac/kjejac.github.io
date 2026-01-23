@@ -12,7 +12,7 @@ tags:
 ---
 # MD-102 – Understand Microsoft Entra ID
 
-Modulen forklarer [Microsoft Entra ID](certs/Glossary/Microsoft-Entra-ID.md), og sammenligner Entra ID med Active Directory Domain Services. Den gir også en oversikt over abonnementene Entra ID P1 og P2, samt Entra Domain Services for administrasjon av domain-joined enheter og apper i skyen.
+Modulen forklarer [Microsoft Entra ID](../../Glossary/Microsoft-Entra-ID.md), og sammenligner Entra ID med Active Directory Domain Services. Den gir også en oversikt over abonnementene Entra ID P1 og P2, samt Entra Domain Services for administrasjon av domain-joined enheter og apper i skyen.
 
 ### Learning objectives
 - Beskrive Microsoft Entra ID
@@ -35,19 +35,19 @@ Entra ID brukes til å sikre tilgang til skyressurser gjennom:
 - klargjøring av brukere
 - identitetstyring og federering
 - overvåkning av uvanlig påloggingsaktivitet
-- MFA, [Conditional Access](certs/Glossary/Conditional-Access.md) og [Application Proxy](Microsoft-Entra-Application-Proxy.md)
+- MFA, [Conditional Access](../../Glossary/Conditional-Access.md) og [Application Proxy](../../Glossary/Microsoft-Entra-Application-Proxy.md)
 - Integrasjon med lokal AD DS via Entra Connect
 
-![](Pasted-image-20260120195313.png)
+![](assets/Pasted-image-20260120195313.png)
 
-Entra ID er en egen Azure-tjeneste. Alle Azure-abonnement får en gratis [Entra-Tenant](certs/Glossary/Tenant.md) automatisk. Mer avanserte funksjoner kreve betalte nivåer.
+Entra ID er en egen Azure-tjeneste. Alle Azure-abonnement får en gratis [Entra-Tenant](../../Glossary/Tenant.md) automatisk. Mer avanserte funksjoner kreve betalte nivåer.
 Microsoft 365-abonement inkluderer også Entra-funksjonalitet.
 
 I motsetning til AD DS er Entra ID multi-tenant, og hver tenant er isolert. En tenant representerer en organisasjon eller en individuell Entra-instans. 
 Et Entra-abo må alltid være knyttet til en tenant, men et tenant kan brukes av flere abonnementer. Hver tenant får et standarddomene (_prefix.onmicrosoft.com), og man kan legge til egne domener.
 
-[Entra-skjemaet](certs/Glossary/Entra-Schema.md) har færre objekttyper enn AD DS. Det mangler blant annet _computer_-klassen, men har _device_-klassen. Enheter kobles til Entra ID på en annen måte enn tradisjonell domain join. 
-Entra ID støtter ikke GPO eller OU-struktur da moderne administrasjon skjer via gruppebasert organisering og verktøy som [Intune](certs/Glossary/Microsoft-Intune.md). 
+[Entra-skjemaet](../../Glossary/Entra-Schema.md) har færre objekttyper enn AD DS. Det mangler blant annet _computer_-klassen, men har _device_-klassen. Enheter kobles til Entra ID på en annen måte enn tradisjonell domain join. 
+Entra ID støtter ikke GPO eller OU-struktur da moderne administrasjon skjer via gruppebasert organisering og verktøy som [Intune](../../Glossary/Microsoft-Intune.md). 
 
 For at en app skal kunne brukes på tvers av flere tenants blir de representert av to objekter:
 - _Application_ (definisjon)
@@ -85,8 +85,8 @@ Viktige kjennetegn ved Entra ID:
 - Entra ID er primært en identitetsløsning for internettbaserte applikasjoner og bruker HTTP/HTTPS
 - Er en _multi tenant_ katalogtjeneste
 - Brukere og grupper ligger i en flat struktur (har ikke OUs eller GPOer)
-- Kan ikke spørres via LDAP, bruker [_REST API_](certs/Glossary/REST-API.md) over HTTP/HTTPS
-- Bruker ikke _Kerberos_, autentisering skjer via [SAML](certs/Glossary/SAML.md), [WS-Federation](certs/Glossary/WS-Federation.md) og [OpenID Connect](certs/Glossary/OpenID-Connect.md) og autorisasjon via [OAuth](certs/Glossary/OAuth.md)
+- Kan ikke spørres via LDAP, bruker [_REST API_](../../Glossary/REST-API.md) over HTTP/HTTPS
+- Bruker ikke _Kerberos_, autentisering skjer via [SAML](../../Glossary/SAML.md), [WS-Federation](../../Glossary/WS-Federation.md) og [OpenID Connect](../../Glossary/OpenID-Connect.md) og autorisasjon via [OAuth](../../Glossary/OAuth.md)
 - Har innebygde federeringstjenester, og mange tredjepartsleverandører, som f.eks. Facebook som stoler på Entra ID.
 
 ### Oppsummert
@@ -123,7 +123,7 @@ Microsoft tilbyr en gratis prøveperiode for å teste full P2 funksjonalitet.
 - _Selvbetjent gruppeadministrasjon_: Brukere kan opprette og administrere grupper, samt be om medlemskap som gruppeeier kan godkjenne
 - _Avanserte sikkerhetsrapporter og varsler_: Maskinlæringsbaserte rapporter som avdekker unormal aktivitet og forbedrer sikkerheten
 - _Full MFA støtte_: Fungerer med lokale apper (VPN, RADIUS), Azure, Microsoft 365, Dynamics 365 og tredepartsapper i Entra galleriet
-- _[Microsoft Identity Manager (MIM)](certs/Glossary/Microsoft-Identity-Manager-(MIM).md)_: Gir hybrid identitet ved å koble lokale kataloger (AD DS, LDAP, Oracle) med Entra ID
+- _[Microsoft Identity Manager (MIM)](../../Glossary/Microsoft-Identity-Manager-(MIM).md)_: Gir hybrid identitet ved å koble lokale kataloger (AD DS, LDAP, Oracle) med Entra ID
 - _99,9% SLA_: Garantert tilgjengelighet for P1/P2 (samme som Entra Free)
 - _Passordtilbakestilling med writeback_: Selvbetjente passordreset følger lokal AD policy
 - _Cloud App Discovery_: Identifiserer ofte brukte skyapper
@@ -144,7 +144,7 @@ Begge alternativer gir ekstra kostnader og administrasjon.
 
 Entra Domain Services (en del av Entra ID P1/P2) tilbyr et enklere alternativ. Tjenesten gir domenefunksjoner som GPO, domain join og Kerberos autentisering direkte i Entra-tenantet, uten behov for domenekontrollere i skyen. Den er fullt kompatibel med lokal AD DS.
 
-![](Pasted-image-20260120224601.png)
+![](assets/Pasted-image-20260120224601.png)
 
 Når Entra ID integreres med lokal AD DS via Entra Connect, kan brukere benytte samme legitimasjon både lokalt og i Entra Domain Services. Tjenesten kan også brukes som en ren skybasert løsning uten lokal AD DS. 
 En organisasjon kan f.eks. opprette en Entra-tenant, aktivere Entra Domain Services og koble den til et virtuelt nettverk som lokale ressurser kan bruke.

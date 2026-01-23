@@ -12,7 +12,7 @@ tags:
 ---
 # MD-102 – Manage Microsoft Entra identities
 
-Modulen gir en praktisk innføring i effektiv bruk av Microsoft Entra ID, inkludert [RBAC](certs/Glossary/Role-based-Access-Control-(RBAC).md), brukerroller, opprettelse og administrasjon av brukere og grupper, bruk av PowerShell-cmdlets og synkronisering av objekter fra AD DS til Entra ID.
+Modulen gir en praktisk innføring i effektiv bruk av Microsoft Entra ID, inkludert [RBAC](../../Glossary/Role-based-Access-Control-(RBAC).md), brukerroller, opprettelse og administrasjon av brukere og grupper, bruk av PowerShell-cmdlets og synkronisering av objekter fra AD DS til Entra ID.
 
 [Microsoft Learn – Manage Microsoft Entra identities](https://learn.microsoft.com/en-us/training/modules/manage-azure-active-directory-identities/)
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/manage-azure-active-directory-identities/1-introduction)
@@ -69,7 +69,7 @@ flowchart LR
 - Tre typer kontoer kan brukes:
 	- Organisasjonskontoer i tenantet
 	- Kontoer fra andre Entra-tenants
-	- [Microsoft kontoer](certs/Glossary/Microsoft-Account.md)
+	- [Microsoft kontoer](../../Glossary/Microsoft-Account.md)
 - For å administrere Entra ID må du være _Global Administrator_ eller få delegert en adminrolle
 - Begrensede adminroller inkluderer blanet annet:
 	- Exchange Admin
@@ -299,7 +299,7 @@ flowchart TD
 - Du kobler til Entra ID med `Connect-MgGraph` og angir nødvendige scopes
 - Graph PowerShell gir fleksibilitet og automatisering på tvers av Microsoft 365 miljøet
 
-Du kan administrere brukere, grupper og enheter i Entra ID ved hjelp av [Microsoft Graph PowerShell SDK](certs/Glossary/Microsoft-Graph-PowerShell-SDK.md). Dette gir en enhetlig og effektiv måte automatisere administrasjon på tvers av Microsoft 365 tjenester.
+Du kan administrere brukere, grupper og enheter i Entra ID ved hjelp av [Microsoft Graph PowerShell SDK](../../Glossary/Microsoft-Graph-PowerShell-SDK.md). Dette gir en enhetlig og effektiv måte automatisere administrasjon på tvers av Microsoft 365 tjenester.
 
 For å bruke SDKen kreves det:
 - Windows 10 eller nyere
@@ -332,7 +332,7 @@ flowchart TD
 ## [Synchronize objects from AD DS to Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/manage-azure-active-directory-identities/6-synchronize-objects-active-directory-domain-services)
 
 - Synkronisering mellom AD DS og Entra ID gir enhetlig identitet på tvers av lokalt og sky miljø
-- [Entra Connect](certs/Glossary/Entra-Connect.md) håndterer synkronisering, filtrering og autentiseringsvalg
+- [Entra Connect](../../Glossary/Entra-Connect.md) håndterer synkronisering, filtrering og autentiseringsvalg
 - Fire autentiseringsvalg
 	- separate passord
 	- hash-sync

@@ -92,7 +92,7 @@ Planleggingen består av tre hovedfaser:
 Applikasjonskompatiblitet kan påvirke hele virksomheten. God planlegging reduserer risikoen
 - Windows-oppgraderinger påvirker sjelden kompatibiliteten, men unntak finnes (f.eks. antivirus)
 - Første steg er å samle et _applikasjonsinventar_
-- Verktøy som [_Microsoft Intune Suite](certs/Glossary/Microsoft-Intune-Suite.md) kan kartlegge applikasjoner
+- Verktøy som [_Microsoft Intune Suite](Microsoft-Intune-Suite.md) kan kartlegge applikasjoner
 - I store miljøer bør det gjennomføres kompatibilitetsprosjekt for å redusere antall apper
 - Standardisering av applikasjonsversjoner reduserer kompleksitet og kostnader
 - Nye apper kan erstatte gamle, fjerner lisens og supportkostnader
@@ -121,16 +121,16 @@ Apper kan leveres på flere måter:
 - Vurder støtte for apper på BYOD
 	- Vanlige scenarier: epost på mobil, line-of-business (LOB)-apper
 
-#### [Microsoft Intune](certs/Glossary/Microsoft-Intune.md)
+#### [Microsoft Intune](Microsoft-Intune.md)
 Har støtte for sentralisert administrasjon av apper:
 - Støtter mange installasjonstyper (Office, MSI, Win32, LOB-apper, innebygde apper)
-- Kan beskytte data vi app-policyer ([MAM](certs/Glossary/Mobile-Application-Management-(MAM).md))
+- Kan beskytte data vi app-policyer ([MAM](Mobile-Application-Management-(MAM).md))
 - Sikrer at kun compliant enheter får tilgang til appdata
 
 #### Virtual Application Delivery
 Brukes når klienten ikke kan kjøre appen lokalt
 - Apper kjøres på server eller Cloud PC
-- [Azure Virtual Desktop](Azure-Virtual-Desktop-(AVD).md) eller [Windows 365](certs/Glossary/Windows-365.md) gir full desktop opplevelse
+- [Azure Virtual Desktop](Azure-Virtual-Desktop-(AVD).md) eller [Windows 365](Windows-365.md) gir full desktop opplevelse
 - Nyttig for midlertidige brukere 
 
 ### Plan for upgrades and retirement

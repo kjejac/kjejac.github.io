@@ -95,7 +95,7 @@ Du kan lagre alle typer objekter i en variabel, inkludert heltall, strenger, tab
 
 PowerShell-variabler er ikke begrenset til en bestemt objekttype. En enkelt variabel kan inneholde en samling – eller en array – av forskjellige objekttyper.
 
-Datatypen til en variabel bestemmes av _.NET-typen_ til verdien den inneholder. For å vise objekttypen til en variabel, kan du bruke kommandoen [`Get-Member`](stuff/Powershell-challenge/Day-1–10-Help.md#Get-Member).
+Datatypen til en variabel bestemmes av _.NET-typen_ til verdien den inneholder. For å vise objekttypen til en variabel, kan du bruke kommandoen [`Get-Member`](Day-1–10-Help.md#Get-Member).
 
 ```powershell
 $a = 12                         # System.Int32

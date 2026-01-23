@@ -17,13 +17,13 @@ Jeg ser at temaet for websiden har problemer med visse markdown-elementer som be
 
 #### **📌 [Day 1–10: Grunnleggende PowerShell](Day-1–10-Introduction-PowerShell.md)**
 - [Kort introduksjon til PowerShell](Day-1–10-Introduction-PowerShell.md)
-- [Forstålese av kommandoskallet, cmdlets, and syntaks](stuff/Powershell-challenge/Day-1–10-Shell-Cmdlets-Syntax.md)
-- [Forstå hjelp systemet](stuff/Powershell-challenge/Day-1–10-Help.md)
-- [Variabler og data-typer](stuff/Powershell-challenge/Day-1–10-vars-data.md)
+- [Forstålese av kommandoskallet, cmdlets, and syntaks](Day-1–10-Shell-Cmdlets-Syntax.md)
+- [Forstå hjelp systemet](Day-1–10-Help.md)
+- [Variabler og data-typer](Day-1–10-vars-data.md)
 
 #### **🔄 Day 11–20: Kontrollflyt og skriptlogikk**
 
-- [Opprette og anvende funksjoner `(functions)`](stuff/Powershell-challenge/Day-11–20-functions.md)
+- [Opprette og anvende funksjoner `(functions)`](Day-11–20-functions.md)
 - Conditional statements (`if`, `switch`)
 - Loops (`for`, `foreach`, `while`)
 - Handling user input and script parameters

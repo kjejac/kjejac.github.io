@@ -14,7 +14,7 @@ tags:
 ---
 # MD-102 – Explore Windows Editions
 
-Modulen gir en helhetlig forståelse av enterprise-klienter, Windows-klienter og [Microsoft Entra ID](certs/Glossary/Microsoft-Entra-ID.md).
+Modulen gir en helhetlig forståelse av enterprise-klienter, Windows-klienter og [Microsoft Entra ID](../../Glossary/Microsoft-Entra-ID.md).
 Den gjennomgår ulike Windows-versjoner, hvilke funksjoner de tilbyr og hvordan de installeres. I tillegg belyser modulen Microsoft Entra ID, med fokus på likheter og forskjeller fra AD DS samt hvordan identiteter administreres i Entra ID.
 
 [Microsoft Learn – Explore Windows Editions](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/)
@@ -22,7 +22,7 @@ Den gjennomgår ulike Windows-versjoner, hvilke funksjoner de tilbyr og hvordan 
 Windows 10 og 11 benyttes på en rekke forskjellige typer enheter. Modulen gir en klar oversikt over de ulike Windows-utgavene, hvilke funksjoner de tilbyr og hvordan de installeres. Den gir også innsikt i når det er riktig å velge en bestemt versjon, basert på krav, behov og bruksområde.
 ## [Examine Windows client editions and capabilities](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/2-examine-client-editions-capabilities)
 
-[Windows finnes i flere utgaver](certs/Glossary/Windows-Edition-Details.md), utviklet for ulike målgrupper og behov. For å velge riktig Windows-utgaven er det viktig å ha oversikt over hvilke funksjoner hver versjon tilbyr, og vurdere hvilken som dekker kravene, behovene og bruksområdet i den aktuelle installasjonen.
+[Windows finnes i flere utgaver](../../Glossary/Windows-Edition-Details.md), utviklet for ulike målgrupper og behov. For å velge riktig Windows-utgaven er det viktig å ha oversikt over hvilke funksjoner hver versjon tilbyr, og vurdere hvilken som dekker kravene, behovene og bruksområdet i den aktuelle installasjonen.
 
 - Windows finnes i flere utgaver, hver rettet mot ulike behov, fra privatbrukt til store organisasjoner og spesialiserte enheter
 - Home dekker grunnleggende behov, Pro gir avansert administrasjon, og Enterprise tilbyr full kontroll og sikkerhet for større organisasjoner
@@ -145,7 +145,7 @@ Krever NVMe og DirectX 12 GPU med Shader Model 6.0
 
 ### Check for Hyper-V compability
 For å sjekke kompatibilitet, benytt PowerShell og kjør kommandoen `systeminfo.exe` . Hvis alle Hyper-V krav viser _Yes_, kan maskinen kjøre Hyper-V rollen.
-![](Pasted-image-20260119143512.png)
+![](assets/Pasted-image-20260119143512.png)
 
 ## [Module assessment](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/5-knowledge-check)
 

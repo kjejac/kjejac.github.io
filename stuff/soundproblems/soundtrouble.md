@@ -18,7 +18,7 @@ Etter litt søking på nettet virket dette som et kjent problem når maskinen ha
 
 Jeg tippet på at **_High Definition Audio Controller_** under **_System Devices_** kunne ha innvirkning på hvorfor valget for lyd ut på HDMI forsvant. Det eneste valget var lyd ut på høytaleren på laptop'en.
 
-![Device Manager](./assets/devicemanager.jpg)
+![Device Manager](assets/devicemanager.jpg)
 
 Tok en omstart av de to og mulighet for å velge ekstern lydkilde kom tilbake.
 
