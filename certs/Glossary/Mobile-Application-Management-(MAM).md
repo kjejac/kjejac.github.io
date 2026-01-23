@@ -4,6 +4,9 @@ nav_order:
 parent:
 has_children:
 nav_exclude: true
+tags:
+  - MD-102
+  - MD-102/MAM
 ---
 Mobile Application Management (MAM) fokuserer på administrasjon og sikring av apper på mobile enheter.
 Dette muliggjør blant annet:

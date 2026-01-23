@@ -3,6 +3,8 @@ title: PowerShell Challenge
 parent: Stuff
 nav_order: 1
 has_children: true
+has_toc: false
+layout: default
 ---
 
 Den siste tiden har jeg hatt en gnagende følelse av at kunnskapen min om PowerShell sakte forsvinner, ettersom jeg ikke har hatt noen prosjekter som engasjerer meg nok til å vedlikeholde den.

@@ -130,7 +130,7 @@ Har støtte for sentralisert administrasjon av apper:
 #### Virtual Application Delivery
 Brukes når klienten ikke kan kjøre appen lokalt
 - Apper kjøres på server eller Cloud PC
-- [Azure Virtual Desktop](certs/Glossary/Azure-Virtual-Desktop.md) eller [Windows 365](certs/Glossary/Windows-365.md) gir full desktop opplevelse
+- [Azure Virtual Desktop](Azure-Virtual-Desktop-(AVD).md) eller [Windows 365](certs/Glossary/Windows-365.md) gir full desktop opplevelse
 - Nyttig for midlertidige brukere 
 
 ### Plan for upgrades and retirement

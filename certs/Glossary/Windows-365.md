@@ -4,6 +4,9 @@ nav_order:
 parent:
 has_children:
 nav_exclude: true
+tags:
+  - MD-102
+  - MD-102/Windows365
 ---
 Windows 365 er en skybasert Software-as-a-Service (SaaS) tjeneste som leverer en personlig, og vedvarende Windowsmaskin direkte fra Azure. Tjenesten oppretter automatisk en virtuelle Windows PC for hver bruker, og gir  tilgang til Windows 10/11 fra ulike enheter gjennom en nettleser eller RDP-klient.
 

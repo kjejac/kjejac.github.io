@@ -1,9 +1,12 @@
 ---
-title: Microsoft Purview Information Protection
+title: Microsoft Purview Information Protection (MPIP)
 nav_order:
 parent:
 has_children:
 nav_exclude: true
+tags:
+  - MD-102
+  - MD-102/MPIP
 ---
 Microsoft Purview Information Protection hjelper virksomheter med å oppdage, klassifisere og beskytte sensitiv informasjon, uansett hvor den befinner seg.
 - Sensitivitetsmerking og dataklassifisering

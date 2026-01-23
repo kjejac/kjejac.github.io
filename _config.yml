@@ -88,7 +88,15 @@ compress_html:
   # ignore:
   #   envs: all
 
+# Disable Table of Contents
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      has_toc: false
+
 
 # Google Analytics
-# ga_tracking: G-WREQTJQZWG
+# ga_tracking:
 # ga_tracking_anonymize_ip: true

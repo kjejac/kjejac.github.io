@@ -38,7 +38,7 @@ Dagens fleksible og varierte enhetsmiljøer støttes ikke med tradisjonelle admi
 
 ### Læringsmål
 - Beskrive fordelene med [Modern Endpoint Managment](Modern-Endpoint-Administration.md)
-- Forklare [Enterprise Desktop Lifecycle](Enterprise-Desktop-Lifecycle.md) modellen
+- Forklare [Enterprise Desktop Lifecycle](Enterprise-Desktop-Lifecycle-(EDL).md) modellen
 - Forstå viktige hensyn ved planleggingen av maskinvarestrategier
 - Beskrive trinnene i planlegging av OS- og app-utrulling
 - Forstå hensyn knyttet til etterforvaltning og utfasing av enheter
@@ -57,12 +57,12 @@ Tradisjonell OSD (operating system deployment) er kompleks og tidkrevende. [Wind
 For å møte nye sikkerhetstrusler og sikre produktivitet må Windows og Microsoft 365-apper oppdateres hyppigere. Med skybasert innsikt og [EMS (Enterprise Mobility + Security)](Enterprise-Mobility+Security-(EMS).md) kan oppdateringer styres enklere, uten lokal infrastruktur.
 
 #### Intelligent, innebygd sikkerhet
-Microsoft 365 har sikkerhet integrert i plattformen gjennom teknologier som [Windows Hello](Windows-Hello.md), [Defender ATP](certs/MD-102-Endpoint-Administrator-Associate/MD-102-Abbreviations/certs/MD-102-Endpoint-Administrator-Associate/MD-102-Abbreviations/Microsoft-Defender-for-Endpoint-(Defender-ATP).md), [Information Protection](Microsoft-Purview-Information-Protection.md), [Entra Identity Protection](Entra-Identity-Protection.md), [Conditional Access](Conditional-Access.md) med mer. Disse funksjonene bruker [Microsoft Intelligent Security Graph](Microsoft-Security-Graph.md), som analyserer milliarder av signaler og forbedrer maskinlæring kontinuerlig.
+Microsoft 365 har sikkerhet integrert i plattformen gjennom teknologier som [Windows Hello](Windows-Hello.md), [Defender ATP](certs/Glossary/Microsoft-Defender-for-Endpoint-(Defender-ATP).md), [Information Protection](Microsoft-Purview-Information-Protection-(MPIP).md), [Entra Identity Protection](Entra-Identity-Protection.md), [Conditional Access](Conditional-Access.md) med mer. Disse funksjonene bruker [Microsoft Intelligent Security Graph](Microsoft-Security-Graph.md), som analyserer milliarder av signaler og forbedrer maskinlæring kontinuerlig.
 #### Proaktive innsikter 
 Skybasert telemetri gjør det mulig å oppdage problemer før brukerne merker dem. Dette gir tryggere OS-oppdateringer, bedre sikkerhetsarbeid og mer effektiv feilsøking. 
 ## [Examine the enterprise desktop life-cycle model](https://learn.microsoft.com/en-us/training/modules/explore-enterprise-desktop/3-examine-enterprise-desktop-life-cycle-model/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.explore-endpoint-management)
 
-[_Enterprise Desktop Life-cycle_-modellen](certs/Glossary/Enterprise-Desktop-Lifecycle.md) er en etablert enhetslivssyklus som sikrer at virksomheten har riktig teknologi tilgjengelig slik at brukerne er produktive og utstyr som når slutten av levetiden ikke blir en belastning. Ved bruk av BYOD i virksomheten, blir også disse en del av livssyklusen.
+[_Enterprise Desktop Life-cycle_-modellen](Enterprise-Desktop-Lifecycle-(EDL).md) er en etablert enhetslivssyklus som sikrer at virksomheten har riktig teknologi tilgjengelig slik at brukerne er produktive og utstyr som når slutten av levetiden ikke blir en belastning. Ved bruk av BYOD i virksomheten, blir også disse en del av livssyklusen.
 
 Fordelene ved å bruke denne modellen:
 - Støtte brukere på tvers av enheter og lokasjoner
@@ -78,42 +78,42 @@ Livssyklusen består av fasene:
 - _Brukerstøtte_: Lære opp brukere og gi nødvendig støtte
 - _Oppgradering og avhending_: Erstatte enheter, fjerne utdatert maskinvare eller fjerne dem fra administrasjon
 
-![](Pasted%20image%2020260116121630.png)
+![](Pasted-image-20260116121630.png)
 
 ## [Examine planning and purchasing](https://learn.microsoft.com/en-us/training/modules/explore-enterprise-desktop/4-examine-plan-purchase/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.explore-endpoint-management)
 
-### [Planlegging](certs/Glossary/Enterprise-Desktop-Lifecycle.md#Planning)
+### [Planlegging](Enterprise-Desktop-Lifecycle-(EDL).md#Planning)
 - Definere strategier for maskinvare, image, BYOD og utskiftningssyklus
 - Velge maskinvare, programvare og tilbehør
 - Velge distribusjonsmetoder (cloud, lokal, hybrid)
 - Forutsi fremtidige behov
 - Bestemme konfigurasjon og nye funksjoner
-### [Innkjøp](certs/Glossary/Enterprise-Desktop-Lifecycle.md#Purchasing)
+### [Innkjøp](Enterprise-Desktop-Lifecycle-(EDL).md#Purchasing)
 - Forhandlinger, kontrakter, leverandørhåndtering
 - Kostnadsdrivere: maskinvare, programvare, tilbehør
 - Distribusjonskostnader (lagring, båndbredde, medier)
 - Klargjøring av maskinvare før utrulling
 ## [Examine desktop deployment](https://learn.microsoft.com/en-us/training/modules/explore-enterprise-desktop/5-examine-desktop-deployment/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.explore-endpoint-management)
 
-### [Building](certs/Glossary/Enterprise-Desktop-Lifecycle.md#Building)
+### [Building](Enterprise-Desktop-Lifecycle-(EDL).md#Building)
 - Automatisering
 - Velge metode (image / Autopilot)
 - Testing (VM + fysisk)
 - Standardisert konfigurasjon
 - Logistikk og klargjøring
 
-### [Deployment](certs/Glossary/Enterprise-Desktop-Lifecycle.md#Deployment)
+### [Deployment](Enterprise-Desktop-Lifecycle-(EDL).md#Deployment)
 - Fasebasert utrulling
 - Stabilisering per fase
 - Validering av profiler, apper og brukeropplevelse
 
-### [Enrollment](certs/Glossary/Enterprise-Desktop-Lifecycle.md#Enrollment)
+### [Enrollment](Enterprise-Desktop-Lifecycle-(EDL).md#Enrollment)
 - Ingen reinstallasjon
 - Enheten registreres og konfigureres
 - Brukes for Windows, mobil og BYOD
 - Varierende krav per gruppe
 
-### [Data Migration](certs/Glossary/Enterprise-Desktop-Lifecycle.md#data-migration)
+### [Data Migration](Enterprise-Desktop-Lifecycle-(EDL).md#data-migration)
 - Flytt data til skyen (KFM, OneDrive)
 - Bruk in-place upgrade når mulig
 - USMT for avansert migrering
@@ -122,44 +122,44 @@ Planleggingen består av tre hovedfaser:
 - Application inventory and Compatibility
 - Packaging applications
 - Life-cycle support
-### [Application inventory and compatibility](certs/Glossary/Enterprise-Desktop-Lifecycle.md#application-inventory-and-compatibility)
+### [Application inventory and compatibility](Enterprise-Desktop-Lifecycle-(EDL).md#application-inventory-and-compatibility)
 - Kartlegging av apper
 - Standardiser versjoner
 - Redusere antall apper
 - Analysere kompatibilitet
 - Intune Suite kan brukes
-### [Application packaging](certs/Glossary/Enterprise-Desktop-Lifecycle.md#application-packaging)
+### [Application packaging](Enterprise-Desktop-Lifecycle-(EDL).md#application-packaging)
 - Stille installasjoner
 - MSI-pakker
 - Repacking ved behov
-- App-V fases ut til fordel for MSIX app attach
-### [Application life-cycle support](certs/Glossary/Enterprise-Desktop-Lifecycle.md#application-life-cycle-support)
+- App-V fases ut til fordel for [[MSIX-App-Attach]]
+### [Application life-cycle support](Enterprise-Desktop-Lifecycle-(EDL).md#application-life-cycle-support)
 - Nye apper må testes
 - Nye versjoner må planlegges og testes
 - Oppdateringer skjer hyppigere, men krever mindre testing
-### [Application Delivery](certs/Glossary/Enterprise-Desktop-Lifecycle.md#application-delivery)
+### [Application Delivery](Enterprise-Desktop-Lifecycle-(EDL).md#application-delivery)
 - Automatisk
 - Selvbetjening
 - BYOD-vuderinger
-### [Microsoft Intune](certs/Glossary/Enterprise-Desktop-Lifecycle.md#microsoft-intune)
+### [Microsoft Intune](Enterprise-Desktop-Lifecycle-(EDL).md#microsoft-intune)
 - Mange installasjontyper
 - App-policyer
 - Tilgang basert på compliance
-### [Virtual Application Delivery](certs/Glossary/Enterprise-Desktop-Lifecycle.md#virtual-application-delivery)
-- AVD/Windows 365
+### [Virtual Application Delivery](Enterprise-Desktop-Lifecycle-(EDL).md#virtual-application-delivery)
+- [AVD](Azure-Virtual-Desktop-(AVD).md)/[Windows 365](certs/Glossary/Windows-365.md)
 - For enheter som ikke kan kjøre appen lokalt
 ## [Plan for upgrades and retirement](https://learn.microsoft.com/en-us/training/modules/explore-enterprise-desktop/7-plan-upgrades-retirement/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.explore-endpoint-management)
 - Vurder alder, ytelse, kostnad
 - Oppgrader programvare lokalt
 - Versjonsoppgraderinger krever mer testing
 - Krever lagringsplass og logistikk
-### [Retirement](certs/Glossary/Enterprise-Desktop-Lifecycle.md#Retirement)
+### [Retirement](Enterprise-Desktop-Lifecycle-(EDL).md#Retirement)
 - Fjern gamle enheter uten å forstyrre drift, enheter hentes helst etter normal arbeidstid
 - Slett data sikkert, gjerne med bulkverktøy ved behov
 - Klargjør for salg eller gjenbruk
 - Administrativ registrering
 - Vurder restverdi eller donasjon
-### [BYOD and Unenrollment](certs/Glossary/Enterprise-Desktop-Lifecycle.md#byod-and-unenrollment)
+### [BYOD and Unenrollment](Enterprise-Desktop-Lifecycle-(EDL).md#byod-and-unenrollment)
 - Full wipe når enheten er tapt eller den ikke lenger er i bruk
 - BYOD enheter bør selektivt slettes via Intune
 - Plattform avgjør muligheter

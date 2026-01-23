@@ -4,6 +4,9 @@ nav_order:
 parent:
 has_children:
 nav_exclude: true
+tags:
+  - MD-102
+  - MD-102/MCM
 ---
 Mobile Content Managment (MCM) handler om administrasjon og sikring av bedriftsinnhold som aksesseres fra mobile enheter.
 MCM sørger for at sensetivt innhold er beskyttet, samtidig som at ansatte får sikker tilgang til informasjonen de trenger. 

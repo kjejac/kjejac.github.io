@@ -4,6 +4,9 @@ nav_order:
 parent:
 has_children:
 nav_exclude: true
+tags:
+  - MD-102
+  - MD-102/Autopilot
 ---
 Windows Autopilot er en samling av teknologier som brukes til å sette opp og forhåndskonfigurere nye Windows-enheter slik at de er klare til bruk med minimal innsats fra IT.
 

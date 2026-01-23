@@ -1,61 +1,44 @@
 ---
+layout: default
 title: Uke 1 – Refleksjoner
 nav_order: 1
 parent: Microsoft 365 Endpoint Administrator
 has_children: true
+tags:
+  - MD-102
+  - MD-102/EndpointManagement
 ---
-- **Læringsmål** (knyttet til Learn‑moduler)
-- **Praktiske øvelser** (lab)
-- **Dokumentasjon** (GitHub/blogg/OneNote)
-- **Refleksjon** (forståelse, utfordringer, videre arbeid)
+Gjennom modulen _Explore endpoint management_ fikk jeg et tydeligere rammeverk for hvordan moderne enhetsadministrasjon er bygget opp, og mye av innholdet speiler erfaringene jeg allerede har fra drift, brukerstøtte og skolegang.
+I tildeligere roller har jeg jobbet med hele livssyklusen til klienter, fra innkjøp, klargjøring og utrulling til vedlikehold og avhending. Dette gjør [_Enterprise Desktop Life-cycle (EDL)_](certs/Glossary/Enterprise-Desktop-Lifecycle-(EDL).md) intuitiv for meg.
 
-# Læringsmål
-- Planlegge og gjennomføre en strategi for utrulling av endepunkter 
-	- Bruk av moderne distribusjonsteknikker
-	- Bruk av gode metoder for oppdateringshåndtering
-- Forståelse av sentrale sikkerhetskonsepter for å beskytte og enheter og data i moderne IT-miljøer
+Overgangen fra tradisjonell administrasjon til moderne, skybaserte metoder som [Intune](certs/Glossary/Microsoft-Intune.md) og [Autopilot](certs/Glossary/Windows-Autopilot.md) gir også mening i lys av arbeidet mitt med SCCM, Microsoft 365 miljøer, Active Directory og dokumentasjon. Jeg har ofte vært involvert i å sikre at brukere får riktig tilgang, at enheter følger virksomhetens krav, og at prosesser er godt dokumentert og forståelig for både IT og sluttbruker.
 
-Modulen gir en innføring i grunnleggende prinsipper av Microsoft Intune
-- Moderne administrasjon 
-- Integrasjon i virksomheten
+Modulen gav også en nyttig oppfriskning av identitetsstyring i AD og [Entra ID](certs/Glossary/Microsoft-Entra-ID.md). Dette er områder jeg har jobbet med i praksis, spesielt i hybridmiljø der synkronisering og konsistent tilgangsstyring er avgjørende. Erfaringen min med å veilede brukere, støtte kollegaer og bidra til strukturert drift gjør at jeg ser tydelig hvordan [RBAC](certs/Glossary/Role-based-Access-Control-(RBAC).md), [Conditional Access](certs/Glossary/Conditional-Access.md) og moderne identitetsmodeller kan forenkle administrasjonen og øke sikkerheten.
 
-I tillegg dekker den:
-- App-distribusjon
-- Sikkerhetsområdene
-	- Autentisering
-	- Identiter
-	- Tilgangsstyring
-	- Compliance-policyer
-
-Teknologiene som utforskes er:
-- Microsoft Entra
-- Windows Autopilot
-- Microsoft Intune
-- Microsoft Endpoint
-
+Samlet sett hjelper modulen meg å sette ord på og strukturere kompetansen jeg allerede har, samtidig som den viser hvordan moderne endpoint management bygger videre på prinsipper jeg kjenner fra tidligere arbeid.
 
 ---
 
-| Tema                       | Oppgave                                                            | Status | Notater |
-| -------------------------- | ------------------------------------------------------------------ | ------ | ------- |
-| Moderne administrasjon     | Forklare hva moderne endpoint‑administrasjon innebærer             | ☐      |         |
-| Moderne administrasjon     | Beskrive forskjellen mellom tradisjonell og moderne administrasjon | ☐      |         |
-| Moderne administrasjon     | Forstå rollen til Microsoft Intune i moderne administrasjon        | ☐      |         |
-| Utrulling av endepunkter   | Planlegge en strategi for utrulling av Windows‑enheter             | ☐      |         |
-| Utrulling av endepunkter   | Kjenne til moderne distribusjonsteknikker (f.eks. Autopilot)       | ☐      |         |
-| Utrulling av endepunkter   | Forstå hvordan oppdateringsstrategier implementeres                | ☐      |         |
-| Intune‑administrasjon      | Beskrive hvordan Intune integreres i virksomheten                  | ☐      |         |
-| Intune‑administrasjon      | Administrere enheter og brukere via Intune                         | ☐      |         |
-| Intune‑administrasjon      | Konfigurere profiler og policyer i Intune                          | ☐      |         |
-| Applikasjonsadministrasjon | Distribuere apper via Intune                                       | ☐      |         |
-| Applikasjonsadministrasjon | Administrere nettleserbaserte applikasjoner                        | ☐      |         |
-| Sikkerhet                  | Forklare autentisering og identitetsstyring i Microsoft Entra      | ☐      |         |
-| Sikkerhet                  | Forstå tilgangsstyring og Conditional Access‑prinsipper            | ☐      |         |
-| Sikkerhet                  | Implementere compliance‑policyer for enheter og brukere            | ☐      |         |
-| Teknologier                | Utforske Microsoft Entra ID                                        | ☐      |         |
-| Teknologier                | Utforske Windows Autopilot                                         | ☐      |         |
-| Teknologier                | Utforske Microsoft Intune og Intune Suite                          | ☐      |         |
-| Teknologier                | Utforske Microsoft Defender for Endpoint                           | ☐      |         |
+| Tema                       | Oppgave                                                            | Status | Notater                                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------------------- | ------------------------------------------------------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Moderne administrasjon     | Forklare hva moderne endpoint‑administrasjon innebærer             | ✅      | Moderne enhetsadministrasjon er en skybasert måte å administrere enheter på, der styringen skjer gjennom tjenester som Intune. <br>- konfigurasjon og sikring<br>- Automatisk utrulling av policyer, profiler og apper<br>- kombinere ID og enhetsstyring <br>-Støtte uten bruk av VPN eller domene                                                                                      |
+| Moderne administrasjon     | Beskrive forskjellen mellom tradisjonell og moderne administrasjon | ✅      | Tradisjonell administrasjon bygger på lokale tjenester som AD, domene og GPO, og krever at enhetene befinner seg på det interne nettverket. Moderne administrasjon flytter styringen til skyen med Intune og Entra ID og tar bort behovet for domene og VPN                                                                                                                              |
+| Moderne administrasjon     | Forstå rollen til Microsoft Intune i moderne administrasjon        | ✅      | Intune er den skybaserte tjenesten som brukes til å konfigurere, sikre og administrere enheter. Den distribuerer policyer, apper og innstillinger direkte fra skyen, og gjør det mulig å håndtere ulike OS uten domene GPO eller VPN.                                                                                                                                                    |
+| Utrulling av endepunkter   | Planlegge en strategi for utrulling av Windows‑enheter             | ✅      | Å planlegge en strategi av Windows enheter handler om å velge riktig metode for klargjøring, konfigurasjon og forvaltning. Dette bygger på prinsippene i både EDL og EMM, slik at man får en strukturert, sikker og skalerbar utrulling.                                                                                                                                                 |
+| Utrulling av endepunkter   | Kjenne til moderne distribusjonsteknikker (f.eks. Autopilot)       | ✅      | Handler om å klargjøre og konfigurere Windows enheter direkte fra skyen uten behov for lokal imaging eller manuelt oppsett. Løsninger som Autopilot gjør det mulig å levere enheter rett fra leverandør til bruker. Enheten registreres, konfigureres og sikres automatisk gjennom Intune og Entra ID.                                                                                   |
+| Utrulling av endepunkter   | Forstå hvordan oppdateringsstrategier implementeres                | ✅      | Handler om å forstå hvordan oppdateringer planlegges, styres og rulles ut i en organisasjon. Verktøy som Intune, Windows Update for Business og Update Rings brukes for å kontrollere når de får oppdateringene. Hvordan oppdateringene testes og hvordan man sikrer at enhetene holdes oppdatert uten at forstyrre unødvendig.                                                          |
+| Intune‑administrasjon      | Beskrive hvordan Intune integreres i virksomheten                  | ✅      | Intune integreres i virksomheten ved å koble enhetsadministrasjon til Entra ID og styre enheter gjennom skybaserte policyer, profiler og apper. Dette gir standardisert og sikker måte å administrere OSer på, uavhengig av lokasjon.                                                                                                                                                    |
+| Intune‑administrasjon      | Administrere enheter og brukere via Intune                         | ✅      | Styre konfigurasjon, sikkerhet, apper og tilgang direkte fra skyen. Intune bruker Entra ID-identiteter og policyer for å sikre at både brukere og enheter følger virksomhetens krav.                                                                                                                                                                                                     |
+| Intune‑administrasjon      | Konfigurere profiler og policyer i Intune                          | ✅      | Innebærer å definere innstillinger for sikkerhet, konfigurasjon og brukeropplevelse som automatisk distribueres til enheter.                                                                                                                                                                                                                                                             |
+| Applikasjonsadministrasjon | Distribuere apper via Intune                                       | ✅      | Tildele, installere og oppdatere riktige apper på enheter direkte fra skyen. basert på grupper, roller og enhetstyper.                                                                                                                                                                                                                                                                   |
+| Applikasjonsadministrasjon | Administrere nettleserbaserte applikasjoner                        | ✅      | Styre tilgang, sikkerhet og brukeropplevelse gjennom Intune og Entra ID. Dette inkluderer tildeling av apper, SSO, betinget tilgang og appbeskyttelse.                                                                                                                                                                                                                                   |
+| Sikkerhet                  | Forklare autentisering og identitetsstyring i Microsoft Entra      | ✅      | Handler om hvordan brukere bekreftes og får tilgang til ressurser. Entra ID adminisrerer identiteter, passord, MFA, roller og tilgangspolicyer, og sørger for at riktig bruker får riktig tilgang på en sikker måte. Autentisering skjer i Entra ID. Identitetsstyringen omfatter hele livssyklusen til brukeren, fra opprettelse, tilgangsstyring til endringer og avslutning av konto. |
+| Sikkerhet                  | Forstå tilgangsstyring og Conditional Access‑prinsipper            | ✅      | Entra ID kontrollerer hvem som får tilgang til hvilke ressurser, på hvike vilkår. Conditional Access bruker signaler som brukerid, enhetstilstand, lokasjon og risiko for å avgjøre om tilgang skal gis, blokkere eller kreve ekstra sikkerhetstiltak. Dette gir en dynamisk og risikobasert modell for sikker tilgang.                                                                  |
+| Sikkerhet                  | Implementere compliance‑policyer for enheter og brukere            | ✅      | Definere sikkerhets- og konfigkrav som må være oppfylt for å få tilgang til ressurser. Intune vurderer enhetens tilstand mot disse kravene (kryptering, passord, oppdateringer) og kombinerer resultatet med Conditional Access for å sikre at kun enheter og brukere som oppfyller policyene får tilgang.                                                                               |
+| Teknologier                | Utforske Microsoft Entra ID                                        | ✅      | Forstå hvordan identiteter, tilgang og sikkerhet håndteres i skyen. Entra ID styrer brukere grupper, roller, autentisering og tilgangspolicyer og fungerer som grunnlaget for sikker pålogging, SSO og Condtional Access på tvers av apper og enheter.                                                                                                                                   |
+| Teknologier                | Utforske Windows Autopilot                                         | ✅      | Forstå hvordan nye Windowsenheter kan klargjøres automatisk fra skyen uten imaging eller manuelt oppsett. Den tar seg registrering, tilordning av roller og konfigurasjon gjennom Intune og Entra ID så snart bruker logger inn.                                                                                                                                                         |
+| Teknologier                | Utforske Microsoft Intune og Intune Suite                          | ✅      | Forstå hvordan Intune leverer skybasert enhets-, app- og sikkerhetsadministrasjon. De utvidede funksjonene i Intune suite, f.eks. avansert analyse, fjernhjelp og automatisk sårbarhets- og risikohåndtering bygger videre på Intune. Samlet gir de en mer komplett og proaktiv plattform.                                                                                               |
+| Teknologier                | Utforske Microsoft Defender for Endpoint                           | ✅      | Løsningen beskytter enheter mot trusler gjennom avansert overvåkning, sårbarhetesstyring, angrepsdeteksjon og automatisert respons.                                                                                                                                                                                                                                                      |
 
 ---
 

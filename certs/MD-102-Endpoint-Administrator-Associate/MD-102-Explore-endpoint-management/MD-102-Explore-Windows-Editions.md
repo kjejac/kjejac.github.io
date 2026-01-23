@@ -22,9 +22,9 @@ Den gjennomgår ulike Windows-versjoner, hvilke funksjoner de tilbyr og hvordan 
 Windows 10 og 11 benyttes på en rekke forskjellige typer enheter. Modulen gir en klar oversikt over de ulike Windows-utgavene, hvilke funksjoner de tilbyr og hvordan de installeres. Den gir også innsikt i når det er riktig å velge en bestemt versjon, basert på krav, behov og bruksområde.
 ## [Examine Windows client editions and capabilities](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/2-examine-client-editions-capabilities)
 
-[Windows finnes i flere utgaver](certs/Glossary/Windows-Edition-Details.md), utviklet for ulike målgrupper og behov. For å riktig Windows-utgaven er det viktig å ha oversikt over hvilke funksjoner hver versjon tilbyr, og vurdere hvilken som dekker kravene, behovene og bruksområdet i den aktuelle installasjonen.
+[Windows finnes i flere utgaver](certs/Glossary/Windows-Edition-Details.md), utviklet for ulike målgrupper og behov. For å velge riktig Windows-utgaven er det viktig å ha oversikt over hvilke funksjoner hver versjon tilbyr, og vurdere hvilken som dekker kravene, behovene og bruksområdet i den aktuelle installasjonen.
 
-- Windows finnes i flere utgaver, hver rettet mot ulike behov, fra privatbrukt til store organsiasjoner og spesialiserte enheter
+- Windows finnes i flere utgaver, hver rettet mot ulike behov, fra privatbrukt til store organisasjoner og spesialiserte enheter
 - Home dekker grunnleggende behov, Pro gir avansert administrasjon, og Enterprise tilbyr full kontroll og sikkerhet for større organisasjoner
 - LTSC brukes i stabile, uendrede miljøer
 - EDU-utgavene er tilpasset skolesektoren
@@ -80,6 +80,7 @@ For eldre applikasjoner anbefales virtualisering fremfor å holde fast ved 32-bi
 #### Scenarios
 ##### Scenario 1
 _Produksjonslinjer med sensitiv programvare som ikke tåler store OS‑endringer._ 
+
 **Anbefaling: Enterprise LTSC** Gir stabilitet uten funksjonsoppgraderinger.
 ##### Scenario 2
 _Selvstendig konsulent som reiser mye og har sensitiv kundedata på PC‑en._
@@ -90,7 +91,7 @@ _Bedrift med økende fjernarbeid og behov for sikre, administrerte tilkoblinger.
 
 **Anbefaling: Windows Enterprise** Tilbyr avansert sikkerhet (Credential Guard, Application Guard) og gode verktøy for fjernadministrasjon.
 ## [Examine hardware requirements](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/4-examine-hardware-requirements)
-Windows 10 og 11 har i stor grad like maskinvarekrav, og de fleste moderne bedriftmaskiner oppgyller disse uten problemer. Selv om Windows kan installeres på maskiner om ikke møter alle kravene, vil både ytelse og brukeropplevelse bli merkbart dårligere.
+Windows 10 og 11 har i stor grad like maskinvarekrav, og de fleste moderne bedriftmaskiner oppfyller disse uten problemer. Selv om Windows kan installeres på maskiner som ikke møter alle kravene, vil både ytelse og brukeropplevelse bli merkbart dårligere.
 - Windows 11 krever moderne maskinvare som UEFI, Secure Boot, TPM 2.0
 - Funksjoner som BitLocker, Hyper-V, Windows Hello og DirectStorage krever spesifikk maskinvare
 - Drivere håndteres stort sett automatisk, men spesialmaskinvare kan kreve manuell installasjon
@@ -144,35 +145,35 @@ Krever NVMe og DirectX 12 GPU med Shader Model 6.0
 
 ### Check for Hyper-V compability
 For å sjekke kompatibilitet, benytt PowerShell og kjør kommandoen `systeminfo.exe` . Hvis alle Hyper-V krav viser _Yes_, kan maskinen kjøre Hyper-V rollen.
-![](Pasted%20image%2020260119143512.png)
+![](Pasted-image-20260119143512.png)
 
 ## [Module assessment](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/5-knowledge-check)
 
-1. What is the minimum RAM requirement for installing Windows 11?
+1. _What is the minimum RAM requirement for installing Windows 11?_
 	4 gigabytes (GB)
 
-2. Which feature is unique to the Windows 11 Pro for Workstations edition and not found in the Windows 11 Pro edition?
+2. _Which feature is unique to the Windows 11 Pro for Workstations edition and not found in the Windows 11 Pro edition?_
 	ReFS (Resilient File System) support
 
-3. For a device running Windows 10 to support Client Hyper-V, which hardware feature is essential?
+3. _For a device running Windows 10 to support Client Hyper-V, which hardware feature is essential?_
 	Second-level address translation (SLAT) capabilities
 
-4. A technical team is assessing a device for Windows 10 installation. The device has 20 GB of storage, 2 GB of RAM, and a DirectX 9 graphics card. What is the bottleneck for this installation?
+4. _A technical team is assessing a device for Windows 10 installation. The device has 20 GB of storage, 2 GB of RAM, and a DirectX 9 graphics card. What is the bottleneck for this installation?_
 	Graphics card
 
-5. Your company needs a Windows edition with advanced performance and storage requirements, including support for non-volatile memory modules. Which edition should you choose?
+5. _Your company needs a Windows edition with advanced performance and storage requirements, including support for non-volatile memory modules. Which edition should you choose?_
 	Windows Pro for Workstations
 
-6. Which feature requires a Trusted Platform Module (TPM) version 2.0 for Windows 11 installation?
+6. _Which feature requires a Trusted Platform Module (TPM) version 2.0 for Windows 11 installation?_
 	Windows 11 itself
 
-7.  A user has a device with a 1 GHz processor, 2 GB RAM, and 16 GB of storage. Can they install Windows 10 64-bit?
+7.  _A user has a device with a 1 GHz processor, 2 GB RAM, and 16 GB of storage. Can they install Windows 10 64-bit?_
 	No, because the storage is insufficient for Windows 10 64-bit.
 
-8. Which Windows edition is designed for fixed-purpose devices like ATMs and industrial systems?
+8. _Which Windows edition is designed for fixed-purpose devices like ATMs and industrial systems?_
 	Windows IoT Core/Enterprise
 
-9. Which Windows edition is designed specifically for academic environments and offers features comparable to the Enterprise edition?
+9. _Which Windows edition is designed specifically for academic environments and offers features comparable to the Enterprise edition?_
 	Windows Education
 
 ---

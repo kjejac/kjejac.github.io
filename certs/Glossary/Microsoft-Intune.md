@@ -4,6 +4,9 @@ nav_order:
 parent:
 has_children:
 nav_exclude: true
+tags:
+  - MD-102
+  - MD-102/Intune
 ---
 Microsoft Intune er et skybasert verktøy for en helhetlig enhetshåndtering, app-styring og sikkerhet. 
 Støtter både BYOD- og bedriftseide-enheter. 

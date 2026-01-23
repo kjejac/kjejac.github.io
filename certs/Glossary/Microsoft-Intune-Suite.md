@@ -4,6 +4,9 @@ nav_order:
 parent:
 has_children:
 nav_exclude: true
+tags:
+  - MD-102
+  - MD-102/IntuneSuite
 ---
 En samling av avanserte add-ons til [Microsoft Intune](Microsoft-Intune.md) som gir ekstra funksjonalitet innen avansert administrasjon, support og sikkerhet. 
 

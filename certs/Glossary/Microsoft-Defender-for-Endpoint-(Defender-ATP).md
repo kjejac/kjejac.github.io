@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Endpoint
+title: Microsoft Defender for Endpoint (Defender ATP)
 nav_order:
 parent:
 has_children:

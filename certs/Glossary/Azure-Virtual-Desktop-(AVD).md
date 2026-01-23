@@ -1,5 +1,5 @@
 ---
-title: Azure Virtual Desktop
+title: Azure Virtual Desktop (AVD)
 nav_order:
 parent:
 has_children:
