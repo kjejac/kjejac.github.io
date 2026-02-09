@@ -9,7 +9,7 @@ tags:
   - MD-102/EndpointManagement
 ---
 Gjennom modulen _Explore endpoint management_ fikk jeg et tydeligere rammeverk for hvordan moderne enhetsadministrasjon er bygget opp, og mye av innholdet speiler erfaringene jeg allerede har fra drift, brukerstøtte og skolegang.
-I tildeligere roller har jeg jobbet med hele livssyklusen til klienter, fra innkjøp, klargjøring og utrulling til vedlikehold og avhending. Dette gjør [_Enterprise Desktop Life-cycle (EDL)_](../../Glossary/Enterprise-Desktop-Lifecycle.md) intuitiv for meg.
+I tidligere roller har jeg jobbet med hele livssyklusen til klienter, fra innkjøp, klargjøring og utrulling til vedlikehold og avhending. Dette gjør [_Enterprise Desktop Life-cycle (EDL)_](../../Glossary/Enterprise-Desktop-Lifecycle.md) intuitiv for meg.
 
 Overgangen fra tradisjonell administrasjon til moderne, skybaserte metoder som [Intune](../../Glossary/Microsoft-Intune.md) og [Autopilot](../../Glossary/Windows-Autopilot.md) gir også mening i lys av arbeidet mitt med SCCM, Microsoft 365 miljøer, Active Directory og dokumentasjon. Jeg har ofte vært involvert i å sikre at brukere får riktig tilgang, at enheter følger virksomhetens krav, og at prosesser er godt dokumentert og forståelig for både IT og sluttbruker.
 

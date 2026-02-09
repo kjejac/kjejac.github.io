@@ -86,7 +86,7 @@ Viktige kjennetegn ved Entra ID:
 - Er en _multi tenant_ katalogtjeneste
 - Brukere og grupper ligger i en flat struktur (har ikke OUs eller GPOer)
 - Kan ikke spørres via LDAP, bruker [_REST API_](../../Glossary/REST-API.md) over HTTP/HTTPS
-- Bruker ikke _Kerberos_, autentisering skjer via [SAML](../../Glossary/SAML.md), [WS-Federation](../../Glossary/WS-Federation.md) og [OpenID Connect](../../Glossary/OpenID-Connect.md) og autorisasjon via [OAuth](../../Glossary/OAuth.md)
+- Bruker ikke _Kerberos_, autentisering skjer via [SAML](../../Glossary/SAML.md), [WS-Fed](../../Glossary/WS-Fed.md) og [OpenID Connect](../../Glossary/OpenID-Connect.md) og autorisasjon via [OAuth](../../Glossary/OAuth.md)
 - Har innebygde federeringstjenester, og mange tredjepartsleverandører, som f.eks. Facebook som stoler på Entra ID.
 
 ### Oppsummert

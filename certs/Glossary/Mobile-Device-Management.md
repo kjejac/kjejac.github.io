@@ -7,6 +7,7 @@ nav_exclude: true
 tags:
   - MD-102
   - MD-102/MDM
+  - MD-102/Intune
 ---
 Mobile Device Management (MDM) er en grunnleggende komponent som muliggjør full livssyklusadministrasjon av mobile enheter.
 Dette omfatter blant annet:
