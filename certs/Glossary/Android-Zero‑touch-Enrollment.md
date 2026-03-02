@@ -3,9 +3,9 @@ layout: default
 title: Android Zero‑touch Enrollment
 nav_order:
 parent:
-has_children:
-nav_exclude:
-has_toc:
+has_children: false
+nav_exclude: true
+has_toc: false
 tags:
   - MD-102
   - MD-102/Android
