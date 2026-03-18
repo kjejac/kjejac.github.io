@@ -15,12 +15,15 @@ tags:
 Modulen gir en praktisk innføring i effektiv bruk av Microsoft Entra ID, inkludert [RBAC](../../Glossary/Role-based-Access-Control-(RBAC).md), brukerroller, opprettelse og administrasjon av brukere og grupper, bruk av PowerShell-cmdlets og synkronisering av objekter fra AD DS til Entra ID.
 
 [Microsoft Learn – Manage Microsoft Entra identities](https://learn.microsoft.com/en-us/training/modules/manage-azure-active-directory-identities/)
+
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/manage-azure-active-directory-identities/1-introduction)
+
 Modulen gir en praktisk innføring i administrasjon av Microsoft Entra ID:
 - roller og RBAC
 - brukere- og gruppehåndtering
 - PowerShell administrasjon 
 - synkronisering fra lokal AD DS
+
 ## [Examine RBAC and user roles in Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/manage-azure-active-directory-identities/2-examine-role-based-access-control-user-roles-azure-active-directory)
 RBAC i Microsoft Entra ID
 - Entra ID har en enklere deligeringsmodell enn AD DS fordi det ikke finnes _computer objects_ eller GPO
@@ -29,6 +32,15 @@ RBAC i Microsoft Entra ID
 - Apper kan også få delegert rettigheter, og mulighetene øker med P1 og P2 lisensene. F.eks dynamiske grupper, [PIM](certs/Glossary/Microsoft-Entra-Privileged Identity-Management-(PIM).md), selvbetjent gruppeadministrasjon
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Microsoft Entra ID Roller] --> B[Global Administrator]
     A --> C[User Administrator]
@@ -51,6 +63,15 @@ flowchart TD
 - Tilgang gis ved å benytte en rolle til et objekt (bruker, gruppe eller service principal) og et spesifikt Azure-ressursnivå
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Azure RBAC Roller] --> B[Owner]
     A --> C[Contributor]
@@ -59,12 +80,22 @@ flowchart TD
 ```
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart LR
     A[Microsoft Entra ID Roller] -->|Styrer katalogtilgang| B[Identity Management]
     C[Azure RBAC Roller] -->|Styrer ressurs-tilgang| D[Azure Resources]
 
     A -. brukes ofte sammen .-> C
 ```
+
 ### User roles in Microsoft Entra ID
 - Tre typer kontoer kan brukes:
 	- Organisasjonskontoer i tenantet
@@ -80,6 +111,15 @@ flowchart LR
 	- osv
 
 ```mermaid 
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Microsoft Entra ID Roller] --> B[Global Administrator]
     B --> C[Privileged Role Administrator]
@@ -108,6 +148,15 @@ flowchart LR
 Forskjell mellom Entra roller og Azure RBAC
 
 ```mermaid 
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Rolledefinisjon] --> B[Bruker]
     A --> C[Gruppe]
@@ -119,6 +168,15 @@ Hvordan roller tildeles (bruker, gruppe, service principal)
 
 
 ```mermaid 
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart LR
     A[Permanente roller] -->|Alltid aktiv| B[Full tilgang]
     C[PIM-aktiverte roller] -->|Aktiveres ved behov| D[Tidsbegrenset tilgang]
@@ -130,6 +188,15 @@ PIM aktiverte roller vs permanente roller
 
 
 ```mermaid 
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Azure RBAC Roller] --> B[Owner<br>Full kontroll]
     A --> C[Contributor<br>Endre, men ikke gi tilgang]
@@ -140,6 +207,15 @@ flowchart TD
 Azure RBAC, hovedrollene
 
 ```mermaid 
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Administrasjon av Entra ID] --> B[Global Administrator]
     A --> C[Privileged Role Administrator]
@@ -151,6 +227,15 @@ flowchart TD
 Roller som kan administrere Entra ID
 
 ```mermaid 
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Roller i Microsoft Entra ID og Azure] --> B[Entra ID Roller]
     A --> C[Azure RBAC Roller]
@@ -177,6 +262,7 @@ flowchart TD
 ```
 Oversikt over alle rollene 
 ## [Create and manage users in Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/manage-azure-active-directory-identities/3-create-manage-users-azure-active-directory)
+
 - Entra ID støtter både interne og eksterne brukere
 - Brukere kan være skybaserte eller synkroniserte fra AD DS
 - Azure portalen er den enkleste måten å opprette og administrere brukere på
@@ -184,6 +270,15 @@ Oversikt over alle rollene
 - Guest brukere opprettes ofte automatisk ved deling av ressurser
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Brukeradministrasjon i Entra ID] --> B[Opprette brukere]
     A --> C[Administrere grupper]
@@ -199,6 +294,15 @@ Det finnes to typer brukerkontoer:
 - _Guest users_: Eksterne brukere fra andre Entra-tenants eller _Microsoft kontoer_, ofte opprettet automatisk når man deler innhold
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart LR
     A[Member User] --> A1[Full intern tilgang]
     A --> A2[Administreres av tenantet]
@@ -216,6 +320,15 @@ Brukere kan opprettes enten som:
 Azure portalen gir en enkel måte opprette og administrere brukere på, inkludert navn, grupper og roller. Etter opprettelsen får brukeren et midlertidig passord.
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 sequenceDiagram
     participant Admin
     participant EntraID as Microsoft Entra ID
@@ -227,6 +340,7 @@ sequenceDiagram
     User->>EntraID: Logger inn første gang
     EntraID->>User: Krever passordendring
 ```
+
 ## [Create and manage groups in Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/manage-azure-active-directory-identities/4-create-manage-groups-azure-active-directory)
 
 - Entra grupper fungerer som AD DS grupper, men administreres i skyen
@@ -239,6 +353,15 @@ sequenceDiagram
 - Opprettelse skjer via Azure portalen (`Entra ID --> Groups --> New Group)
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Opprett ny gruppe] --> B[Velg type]
     B --> B1[Sikkerhetsgruppe]
@@ -255,6 +378,15 @@ Grupper i Entra ID fungerer på samme måte som grupper i lokal AD DS, de forenk
 Uten synkronisering administreres grupper kun i skyen.
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart LR
     A[On-prem AD DS-grupper] --> B[Directory Sync]
     B --> C[Microsoft Entra ID-grupper]
@@ -267,6 +399,15 @@ Entra ID har to hovedtyper av grupper:
 - _Microsoft 365 grupper_: Brukes til samarbeid i Teams, SharePoint og Outlook. Alltid epostaktiverte.
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Grupper i Microsoft Entra ID] --> B[Sikkerhetsgrupper]
     A --> C[Microsoft 365-grupper]
@@ -277,10 +418,20 @@ flowchart TD
     C --> C1[Brukes i Teams, SharePoint, Outlook]
     C --> C2[E-postaktiverte]
 ```
+
 ### Assign Membership
 Grupper kan ha _tildelt medlemskap_ (manuelt) eller _dynamisk medlemskap_ (basert på regler). Dynamiske grupper kan være bruker- eller enhetsbaserte. Dynamiske AD DS grupper synkroniseres ikke til Entra ID.
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Medlemskap i Entra-grupper] --> B[Tildelt]
     A --> C[Dynamisk]
@@ -307,6 +458,15 @@ For å bruke SDKen kreves det:
 - Microsoft Graph PowerShell SDK installert
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Start] --> B[Installer Microsoft Graph PowerShell SDK]
     B --> C[Start PowerShell 7+]
@@ -322,6 +482,15 @@ Du kobler til Entra ID med `Connect-MgGraph` og angir hvilke tillatelser (scopes
 For å masseopprette brukere kan du benytte et PowerShell script som importerer en CSV fil og bruker kommandoen `New-MgUser`.
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[CSV-fil med brukerdata] --> B[Import-Csv]
     B --> C[Løkke gjennom hver rad]
@@ -347,6 +516,15 @@ Microsoft Entra miljøer uten lokal AD DS trenger ingen synkronisering. Men for 
 _Directory synchronization_ gjør at brukere, grupper og kontakter fra AD DS replikeres til Entra ID. Med Entra ID Free går synkroniseringen en vei (AD --> Entra). Med P1 og P2 kan enkelte attributter skrives tilbake. 
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Writeback via Entra Connect] --> B[Password writeback]
     A --> C[Group writeback]
@@ -364,6 +542,15 @@ Når synkroniseringen er aktivert, kan du velge mellom flere autentiseringsmetod
 - _Federation (AD FS)_: claims basert autentisering, skjer lokalt 
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Autentiseringsmetoder med Entra Connect] --> B[Separate cloud password]
     A --> C[Password hash sync]
@@ -376,6 +563,15 @@ flowchart TD
 ```
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 sequenceDiagram
     participant User as Bruker
     participant Entra as Microsoft Entra ID
@@ -398,6 +594,15 @@ Installasjon krever lokale adminrettigheter, Entreprise Admin lokalt og Global A
 Du kan velge _Express_ installasjon eller _Custom_ for avanserte valg som PTA, AD FS, filtering og writeback.
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
     A[Installere Entra Connect] --> B[Express]
     A --> C[Custom]
@@ -417,6 +622,7 @@ Når Entra Connect kjører:
 - Endringer i AD oppdateres i Entra ID
 - Slettinger i AD slettes i Entra ID
 - Deaktiverte brukere i AD deaktiveres i Entra ID, men lisenser fjernes ikke!
+
 ## [Module assessment](https://learn.microsoft.com/en-us/training/modules/manage-azure-active-directory-identities/7-knowledge-check)
 
 1. _In Microsoft Entra ID, which role is required to manage privileged roles within the directory?_

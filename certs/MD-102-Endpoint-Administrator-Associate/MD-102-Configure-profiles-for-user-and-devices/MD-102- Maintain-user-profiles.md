@@ -51,6 +51,15 @@ Brukerens egne filer, som dokumenter og bilder.
 Alle nye profiler baseres på en _Default Profile_, som fungerer som en forhåndskonfigurert mal.
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
     A[Bruker logger inn første gang] --> B[Windows oppretter ny brukerprofil]
@@ -79,11 +88,13 @@ flowchart TD
 Windows støtter flere typer brukerprofiler for å håndtere ulike scenarioer der brukerinnstillinger og data må lagres eller flyttes mellom enheter.
 
 ### Local User Profile
+
 - Opprettes automatisk ved første innlogging
 - Gjelder kun på en datamaskin
 - Endringer og filer følger ikke brukeren til andre enheter
 
 ### Roaming User Profile
+
 - Lagres både lokalt og på nettverksplassering
 - Synkroniseres ved inn- og utlogging
 - Brukerens innstillinger og dokumenter følger mellom maskiner
@@ -92,22 +103,34 @@ Windows støtter flere typer brukerprofiler for å håndtere ulike scenarioer de
 - Ikke kompatibel mellom ulike Windows-versjoner
 
 ### Mandatory User Profile
+
 - Variant av roaming _Roaming User Profile_
 - Endringer lagres ikke
 - Opprettes ved å endre `NTUser.dat` til `NTUser.man`
 - Gir et skrivebeskyttet, standardisert brukeroppsett
 
 ### Temporary User Profile
+
 - Brukes når en vanlig profil ikke kan lastes
 - Slettet ved utlogging
 - Ingen endringer beholdes
 
 ### Profile extension for each Windows version
+
 - Profilmapper må bruke riktig versjonsutvidelse (V5, V6 osv)
 - Sikrer kompabilitet mellom Windows-klient og serverversjon
 
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
     A[Windows brukerprofiler] --> B[Local Profile]
@@ -138,24 +161,35 @@ flowchart TD
 Brukerprofiler inneholder brukerdata, og fordi brukere har skrivetilgang til sine profiler, kan profilstørrelsen vokse raskt dersom den ikke kontrolleres. Administratorer kan begrense profilstørrelsen på flere måter.
 
 ### User quotas
+
 - Sette kvoter på lokale volumer eller delte mapper
 - Hindrer brukere i å skrive mer når grensen nås
 - Roaming-profiler: lokal kopi synkroniseres ikke før profilen er under kvoten
 
 ### Redirect folders out of user profiles
+
 - Flytt store mapper (f.eks. Documents) ut av profilen
 - Reduserer profilstørrelse
 - Mapper tilgjengelig fra flere maskiner
 - Kvoter kan fortsatt brukes på omdirigerte mapper
 
 ### Use Group Policy to limit user profile sizes
+
 - Sett maksimal profilstørrelse
 - Vis varsel når grensen overskrides
 - Lokale profiler: brukeren kan fortsatt skrive data
 - Roaming-profiler: endringer synkroniseres ikke før profilen er innenfor grensen
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
     A[Minimere brukerprofilstørrelse] --> B[Bruk kvoter]
@@ -210,6 +244,7 @@ Fordelene med _Folder Redirection_ er
 - Shadow Copies gir brukere tilgang til tidligere versjoner
 
 ### Overview of Folder Redirection deployment
+
 - Verifiser lokale mappeplasseringer
 - Opprett Group Policy for omdirigering
 - Kjør `GPUpdate /force` og logg ut/inn
@@ -217,7 +252,15 @@ Fordelene med _Folder Redirection_ er
 - Test fra en annen maskin
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
     A[Folder Redirection] --> B[Formål<br>Flytte profilerte mapper<br>til nettverksplassering]
@@ -252,7 +295,15 @@ flowchart TD
 
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart LR
 
     A[Folder Redirection] --- B[Roaming Profiles]
@@ -318,7 +369,15 @@ ESR gir følgende fordeler:
 - EOL april 2026
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
     A[Enterprise State Roaming<br>ESR] --> B[Hva synkroniseres]
@@ -403,17 +462,20 @@ Ved aktivering av  Enterprise State Roaming (ESR) får organisasjonen automatisk
 ## [Summary](https://learn.microsoft.com/en-us/training/modules/maintain-user-profiles/9-summary/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.configure-profiles-user-device)
 
 ### Typer brukerprofiler
+
 _Local user profile_: lagres kun lokalt på én PC
 _Roaming user profile_: synkroniseres mellom enheter via nettverksplassering
 _Mandatory user profile_: skrivebeskyttet profil der endringer ikke lagres
 _Temporary user profile_: brukes når en vanlig profil ikke kan lastes
 
 ### Administrasjon av profilstørrelse
+
 _Kvoter_: begrenser hvor mye data brukeren kan lagre
 _Folder Redirection_: flytter store mapper ut av profilen
 _Group Policy_: kan sette maksimal profilstørrelse og varsle brukeren
 
 ### Skybaserte alternativer
+
 _Enterprise State Roaming_: synkroniserer Windows‑innstillinger og UWP‑appdata
 _Microsoft OneDrive_: synkroniserer brukerfiler og dokumenter på tvers av enheter
 

@@ -22,9 +22,13 @@ Modulen forklarer [Microsoft Entra ID](../../Glossary/Microsoft-Entra-ID.md), og
 - Beskrive Entra Domain Services
 
 [Microsoft Learn – Understand Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/)
+
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/1-introduction)
+
 Microsoft Entra ID er en skybasert løsning som samler identitets- og tilgangsadministrasjon, og sørger for å sikre tilganger og beskytte applikasjoner og data både i skyen og i lokale miljøer.
+
 ## [Examine Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/2-examine-azure-active-directory)
+
 Active Directory Domain Services, AD DS, er den tradisjonelle katalogtjenesten i Windows-miljøer. Den lagrer og publiserer informasjon om brukerkontoer, passord og enhetsdata, og kjører på Windows Server som en domenekontroller. 
 
 Entra ID er en skybasert katalogtjeneste levert som PaaS. Den driftes av Microsoft, noe som gjør at kunden ikke behøver å administrere infrastruktur, oppsett og vedlikehold selv. Tjenesten tilbyr funksjoner som ikke finnes i AD DS, som flerfaktorautentisering, identitetbeskyttelse og selvbetjent passordtilbakestilling.
@@ -54,6 +58,7 @@ For at en app skal kunne brukes på tvers av flere tenants blir de representert 
 - _servicePrincipal_ (instansen i en tenant)
 
 ### Oppsummert
+
 - _AD DS_: lokal katalogtjeneste på Windows Server, med domain join, GPO og OU-struktur
 - _Entra ID_: 
 	- skybasert katalogtjeneste (PaaS), driftet av Microsoft, uten servere og domenekontrollere
@@ -62,7 +67,9 @@ For at en app skal kunne brukes på tvers av flere tenants blir de representert 
 	- følger gratis med alle Azure- og MS 365-aboer, men avanserte funksjoner krever betalte abonnementer
 	- skjemaet har færre objekter enn AD DS og mangler _computer_-klassen. Administrasjon skjer via Intune
 	- apper defineres som _application_ og instansieres som _servicePrincipal_ i hver tenant
+
 ## [Compare Microsoft Entra ID and Active Directory Domain Services](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/3-compare-azure-active-directory-domain-services)
+
 Entra ID kan sees på som den skybaserte motparten til AD DS. Selv om de deler enkelte likheter, finnes det flere viktige forskjeller.
 
 ### Characteristics of AD DS 
@@ -79,6 +86,7 @@ Viktige kjennetegn ved AD DS:
 - Kan kjøres på Azure VMer for skalering, men dette gir ingen integrasjon med Entra ID. Ved bruk av Azure VM må egne datadisker brukes, og _Host Cache Preference_ må settes til _None_!
 
 ### Characteristics of Microsoft Entra ID
+
 Selv om Entra ID har noen likheter med AD DS, er det en helt annen tjeneste. Det er ikke det samme som å kjøre en domenekontroller i Azure.
 
 Viktige kjennetegn ved Entra ID:
@@ -102,6 +110,7 @@ Viktige kjennetegn ved Entra ID:
 	- Designet for moderne, internettbaserte apper og integrerer lett med tredjepartsleverandører
 
 ## [Examine Microsoft Entra ID as a directory service for cloud apps](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/4-examine-azure-directory-service-cloud-apps)
+
 Når du bruker skytjenester som Microsoft 365 eller Intune, trenger du en katalogtjeneste i skyen for autentisering og autorisasjon. Derfor opprettes det en Microsoft Entra-tenant for hver tjeneste som krever pålogging. Det er langt enklere for en organisasjon å bruke en felles tenant for alle Microsoft skytjenestene.
 
 Entra IDfungerer som en identitetsplattform for tjenester som Microsoft 365, Azure, Dynamics 365 og Intune. Den gir sentralisert autentisering og autorisasjon, og støtter SSO mot både Microsoft tjenester og tredjepartsapper som Google og Facebook.
@@ -114,7 +123,9 @@ Entra IDfungerer som en identitetsplattform for tjenester som Microsoft 365, Azu
 - Entra ID gir sentralisert autentisering, autorisasjon og SSO for både Microsoft-tjenester og tredjepartsapper
 - Egendefinerte apper kan integreres i Entra ID via Azure portalen og Visual Studio
 - Azure App Service kan bruke Entra autentisering for å begrense tilgang til brukere i en bestemt tenant
+
 ## [Compare Microsoft Entra ID P1 and P2 plans](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/5-compare-azure-premium-p1-p2-plans)
+
 Microsoft Entra ID P1 og P2 gir mer funksjonalitet enn Free- og Office 365 utgavene, men krever ekstra lisenskostnader per bruker.
 Lisensene kan kjøpes separat eller som en del av _Enterprise Mobility + Security_, som også inkluderer Azure Information Protection og Intune. 
 Microsoft tilbyr en gratis prøveperiode for å teste full P2 funksjonalitet.
@@ -132,9 +143,10 @@ Microsoft tilbyr en gratis prøveperiode for å teste full P2 funksjonalitet.
 
 ### Ekstra funksjoner i Entra ID P2
 - _Entra ID Protection_: Overvåker og beskytter kontoer med risikopolicyer og analyser av brukeradferd
-- _Privileged Identity Managment (PIM)_: Styrer priviligerte roller med midlertidige rettigheter og godkjenningsflyt for administrative handlinger
+- [_Privileged Identity Managment (PIM)_](../../Glossary/Microsoft-Entra-Privileged%20Identity-Management.md): Styrer privilegerte roller med midlertidige rettigheter og godkjenningsflyt for administrative handlinger
 
 ## [Examine Microsoft Entra Domain Services](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/6-examine-azure-domain-services)
+
 I mange organsiasjoner kjører forretningskritiske (LOB) apper på domain joined eneheter som bruker AD DS legitimasjon og GPO. Når disse appene flyttes til Azure, oppstår utfordringer med hvordan autentisering skal håndteres. 
 Tradisjonelle løsninger er enten:
 - _Site-to-site VPN_ mellom lokal infrastruktur og Azure (autentisering går over VPN)
@@ -187,4 +199,5 @@ Tjenesten aktiveres via Azure portalen og faktureres per time basert på katalog
 	Service principal objects for cross-tenant application usage.
 
 ## [Summary](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/8-summary)
-Active Directory håndterer identitetsadministrasjon lokalt, mens Entra ID gjør det samme i skyen. Entra ID brukes ofte først om fremst for autentisering av skyapper, men kan også dekke hele infrastrukturen. Begge løsningene utfyller hverandre og brukes ofte sammen for å gi en komplett identitetsplattform. Entra ID finnes i en gratis versjon, med betalte nivåer for mer avanserte funksjoner.
+
+Active Directory håndterer identitetsadministrasjon lokalt, mens Entra ID gjør det samme i skyen. Entra ID brukes ofte først og fremst for autentisering av skyapper, men kan også dekke hele infrastrukturen. Begge løsningene utfyller hverandre og brukes ofte sammen for å gi en komplett identitetsplattform. Entra ID finnes i en gratis versjon, med betalte nivåer for mer avanserte funksjoner.

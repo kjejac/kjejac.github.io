@@ -3,7 +3,7 @@ layout: default
 title: Android Corporate-Owned Work Profile (COPE)
 nav_order:
 parent:
-has_children:
+has_children: false
 nav_exclude: true
 has_toc: false
 tags:

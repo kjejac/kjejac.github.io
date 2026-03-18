@@ -41,6 +41,7 @@ tags:
 	- Bruke PowerShell til å konfigurere Windowsenheter utover det profilene dekker
 	- Administrere opplastning, kjøring og rapportering av skript
 	- Kombinere skript med profiler for mer fleksibel administrasjon
+
 ## [Explore Intune device profiles](https://learn.microsoft.com/en-us/training/modules/execute-device-profiles/2-explore-intune-device-profiles)
 
 Intune bruker profiler for å konfigurere og styre innstillinger på enheter i organisasjonen. Profilene gjør det mulig å standardisere nettverkstilgang, sikkerhet, funksjoner og brukeropplevelser på tvers av plattformer.
@@ -143,6 +144,7 @@ Når profilen er opprettet, konfigureres den gjennom flere faner:
 Intune har mange innebygde innstillinger, men noen ganger trenger du mer kontroll enn det malene tilbyr. Da bruker du _custom device profiles_, som lar deg konfigurere [OMA-URI](../../Glossary/Open-Mobile-Alliance-Uniform-Resource-Identifier.md) baserte innstillinger direkte mot enhetens [CSPer](../../Glossary/Configuration-Service-Provider.md). Dette gir fleksibilitet når du må styre funksjoner som ikke finnes som ferdige valg i Intune.
 
 ### Create a custom profile for Window 10 and later devices
+
 Windows støtter et stort antall [Configuration Service Providers (CSP)](../../Glossary/Configuration-Service-Provider.md), og custom profiler lar deg konfigurere disse direkte.
 
 For å opprette en Windows profil:
@@ -169,6 +171,7 @@ Viktig hensyn:
 - Sjekk alltid om funksjonen finnes som en innebygd Intune-innstilling før du lager en custom profil
 
 ### Create a custom profile for Android devices
+
 Android støtter også OMA-URI, men i et mindre omfang.
 
 Intune støtter kun noen få Android custom innstillinger:
@@ -179,6 +182,7 @@ Intune støtter kun noen få Android custom innstillinger:
 For mer avanserte behov brukes [OEMConfig](../../Glossary/OEMConfig.md) som gir tilgang til produsentspesifikke innstillinger.
 
 ### Create a custom profile for Apple devices
+
 iOS/iPadOS og macOS bruker en annen tilnærming: Du oppretter innstillingene i [Apple Configurator](../../Glossary/Apple-Configurator.md), eksporterer dem som en konfigurasjonsfil, og importerer filen i Intune.
 
 Oppsettet består av:

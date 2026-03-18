@@ -2,7 +2,7 @@
 title: Zero Trust
 nav_order:
 parent:
-has_children:
+has_children: false
 nav_exclude: true
 ---
 Zero Trust er en sikkerhetsstrategi, ikke et produkt eller en tjeneste. Det er entilnærmingen til hvordan man utformer og implementeringen sikkerhet basert på et sett med grunnleggende prinsipper. 
@@ -17,38 +17,147 @@ Handler om hvordan du
 - konfigurer
 - håndhever
 - administrerer 
+
 sikkerhet på enheter, brukere og apper gjennom _Entra ID, Intune og Defender_.
 
-#### Verify explicitly
-Sikre at tilgang baseres på alle tilgjengelige signaler for å sikre at bruker og enhet faktisk er det de utgir seg for å være:
-- Conditional Access
-- MFA
-- Entra ID-basert identitetskontroll
-- Compliance-policyer i Intune
-- Device state (compliant, hybrid join, managed)
+#### 1. Verify explicitly
 
-#### Use least privilege access
-Sørge for at brukere og enheter kun får nødvendig tilgang, særdeles viktig i BYOD-scenarioer:
+Autentiser og autoriser basert på alle tilgjengelige signaler:
+
+- Conditional Access
+- MFA og passordløse metoder
+- Identity Protection (bruker‑ og påloggingsrisiko)
+- Intune‑compliance og device state
+- App protection (MAM) som verifikasjonsmekanisme
+- Network access signals (VPN, per‑app VPN)
+- Continuous Access Evaluation (CAE)
+- Identity lifecycle (join → manage → retire)
+
+#### 2. Use least privilege access
+
+Gi brukere og enheter kun den tilgangen de trenger:
+
 - JIT/JEA
-- App-basert Conditional Access-policyer
-- Begrenset tilgang til ressurser basert på risiko
-- Intune-policyer som styrer hva enheter kan gjøre
-- [MAM-policyer](Mobile-Application-Management.md) som beskytter data uten å gi full enhetskontroll
+- RBAC i Intune
+- App‑basert Conditional Access
+- Risikobasert tilgang
+- Intune‑policyer (MDM)
+- MAM‑policyer for BYOD
+- Policy stacking: CA + compliance + MAM + config
 
-##### JIT/JEA
-> _“Least privilege access means users and devices only get the access they need, when they need it.”_
+### **3. Assume breach**
 
-Oppnås gjennom:
-- Conditional Access
-- App‑beskyttelse
-- Enhetscompliance
-- Rollebasert tilgang (RBAC) i Intune
-- Databeskyttelse (MAM/MDM)
-#### Assume breach
-Reduser skadeomfang når/hvis noe går galt:
-- Segmentering av tilgang (Conditional Access + grupper + roller)
-- Defender for Endpoint for trusseloppdagelse
-- Ende til ende kryptering (Bitlocker, app-beskyttelse)
-- Logging og overvåkning via Entra ID og Defender
+Anta at noe kan gå galt, og begrens skadeomfanget:
+
+- Segmentering av tilgang (grupper, roller, CA)
+- Defender for Endpoint (trusseloppdagelse)
+- Ende‑til‑ende kryptering (BitLocker, app‑kryptering)
+- Logging og overvåkning (Entra ID, Defender)
+- Session controls (Defender for Cloud Apps)
 - Automatiserte responser basert på risiko
 
+
+### Zero Trust i MD‑102 – hva du faktisk gjør
+
+I MD‑102 handler Zero Trust om hvordan du:
+
+### **Konfigurerer**
+
+- Entra ID identitetskontroll
+- Intune‑registrering og compliance
+- Defender‑integrasjon
+
+### **Håndhever**
+
+- Conditional Access
+- Compliance‑krav
+- App‑beskyttelse (MAM)
+- Policy stacking
+
+### **Administrerer**
+
+- Logging og overvåkning
+- Risiko‑baserte tiltak
+- Kontinuerlig evaluering av enheter og brukere
+
+```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
+
+flowchart TD
+
+    ZT["Zero Trust<br/>Never trust, always verify"]
+
+    %% PRINCIPLES
+    subgraph Principles["Zero Trust – tre prinsipper"]
+        direction TB
+        VE["Verify explicitly"]
+        LPA["Least privilege access"]
+        AB["Assume breach"]
+    end
+
+    %% MD-102 CONTEXT
+    subgraph MD102["Zero Trust i MD‑102"]
+        direction TB
+        CONF["Konfigurer<br/>• Entra ID • Intune • Defender"]
+        ENF["Håndhev<br/>• CA • Compliance • App‑beskyttelse"]
+        ADM["Administrer<br/>• Logging • Risiko • Overvåkning"]
+    end
+
+    %% VERIFY EXPLICITLY
+    subgraph Verify["Verify explicitly – mekanismer"]
+        direction TB
+        CA["Conditional Access"]
+        MFA["MFA / passordløs autentisering"]
+        IDP["Identity Protection<br/>• risiko for bruker/pålogging"]
+        COMP["Compliance‑policyer (Intune)"]
+        DEVSTATE["Device state<br/>• compliant • hybrid join • managed"]
+        MAMV["App protection (MAM) som verifikasjon"]
+        CAE["Continuous Access Evaluation (CAE)"]
+        NETSIG["Network access signals<br/>• VPN • per‑app VPN"]
+        LIFECYCLE["Identity lifecycle<br/>• join → manage → retire"]
+    end
+
+    %% LEAST PRIVILEGE
+    subgraph LeastPriv["Least privilege access – mekanismer"]
+        direction TB
+        JIT["JIT/JEA"]
+        RBAC["RBAC i Intune"]
+        APPCA["App‑basert CA"]
+        RISK["Risikobasert tilgang"]
+        INTUNE["Intune‑policyer (MDM)"]
+        MAM["MAM‑policyer<br/>• databeskyttelse uten full kontroll"]
+        STACK["Policy stacking<br/>• CA + compliance + MAM + config"]
+    end
+
+    %% ASSUME BREACH
+    subgraph Assume["Assume breach – mekanismer"]
+        direction TB
+        SEG["Segmentering av tilgang<br/>• grupper • roller • CA"]
+        DEF["Defender for Endpoint<br/>• trusseloppdagelse"]
+        ENC["Ende‑til‑ende kryptering<br/>• BitLocker • app‑kryptering"]
+        LOG["Logging og overvåkning<br/>• Entra ID • Defender"]
+        SESSION["Session controls<br/>• Defender for Cloud Apps"]
+        AUTO["Automatiserte responser basert på risiko"]
+    end
+
+    %% Connections
+    ZT --> Principles
+    ZT --> MD102
+
+    VE --> Verify
+    LPA --> LeastPriv
+    AB --> Assume
+
+    MD102 --> Verify
+    MD102 --> LeastPriv
+    MD102 --> Assume
+
+```

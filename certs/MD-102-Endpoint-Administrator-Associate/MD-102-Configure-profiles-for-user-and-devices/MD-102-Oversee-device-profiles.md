@@ -18,6 +18,7 @@ Modulen fokuserer på tre hovedområder:
 - _Overvåke profiltilordninger_: Du lærer hvordan du ser hvilke profiler som er tildelt hvilke enheter og brukere og hvordan du identifiserer feil eller konflikter
 - _Forstå synkronisering av profiler_: Du får innsikt i hvordan profiler synkroniseres automatisk og hvordan du kan tvinge frem en manuell synkronisering
 - _Bruke PowerShell skript i Intune_: Modulen viser hvordan PowerShell kan brukes til å automatisere oppgaver, kjøre skript på enheter og overvåke resultatene direkte fra Intune
+
 ## [Monitor device profiles in Intune](https://learn.microsoft.com/en-us/training/modules/oversee-device-profiles/2-monitor-device-profiles-intune)
 
 Intune har flere verktøy for å overvåke og følge opp enhetsprofiler. Du kan se status, hvilke enheter og brukere som er tildelt og identifisere feil eller konflikter.
@@ -41,6 +42,7 @@ Endre eller inspisere en profil:
 - _Per-setting status_: viser om hver enkelt innstilling er brukt riktig
 
 ### View conflicts
+
 - Gå til _Devices -> All devices_ og velg en enhet
 - Under _Device configuration_ ser du alle policyer som gjelder
 - Hvis en innstilling har konflikt, kan du åpne den og se:
@@ -49,6 +51,7 @@ Endre eller inspisere en profil:
 - Dette gjør det enklere å finne og løse policy konflikter
 
 ## [Manage device sync in Intune](https://learn.microsoft.com/en-us/training/modules/oversee-device-profiles/3-manage-device-sync-intune)
+
 For at enheter skal få de nyeste policyene og handlingene fra Intune, må de synkronisere jevnlig. _Sync-funksjonen_ lar deg tvinge en enhet til å sjekke inn umiddelbart, slik at den mottar alle ventende profiler, apper, eller endringer uten å vente på neste planlagte intervall.
 
 For å gjøre en manuell synkronisering, gjør følgende:
@@ -59,6 +62,7 @@ For å gjøre en manuell synkronisering, gjør følgende:
 - Status vises under _Devices -> Monitor -> Device actions_
 
 ### Manage settings and features on your devices with Intune Polices
+
 - _Configuration policies_: styrer innstillinger og sikkerhet
 - _Compliance policies_: definerer krav enheten må oppfylle
 - _Conditional Access_: gir eller blokkerer tilgang basert på risiko og enhetstilstand
@@ -67,6 +71,15 @@ For å gjøre en manuell synkronisering, gjør følgende:
 Når en policy eller app distribueres, prøver Intune å varsle enheten innen få minutter. Hvis enheten er offline, får den endringen ved neste planlagte check-in.
 
 ```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
     A[Intune admin gjør endring<br>Policy, app eller skript] --> B[Intune sender push-varsel]

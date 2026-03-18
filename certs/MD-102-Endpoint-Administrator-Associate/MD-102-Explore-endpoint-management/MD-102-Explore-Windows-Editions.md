@@ -18,8 +18,11 @@ Modulen gir en helhetlig forståelse av enterprise-klienter, Windows-klienter og
 Den gjennomgår ulike Windows-versjoner, hvilke funksjoner de tilbyr og hvordan de installeres. I tillegg belyser modulen Microsoft Entra ID, med fokus på likheter og forskjeller fra AD DS samt hvordan identiteter administreres i Entra ID.
 
 [Microsoft Learn – Explore Windows Editions](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/)
+
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/1-introduction)
+
 Windows 10 og 11 benyttes på en rekke forskjellige typer enheter. Modulen gir en klar oversikt over de ulike Windows-utgavene, hvilke funksjoner de tilbyr og hvordan de installeres. Den gir også innsikt i når det er riktig å velge en bestemt versjon, basert på krav, behov og bruksområde.
+
 ## [Examine Windows client editions and capabilities](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/2-examine-client-editions-capabilities)
 
 [Windows finnes i flere utgaver](../../Glossary/Windows-Edition-Details.md), utviklet for ulike målgrupper og behov. For å velge riktig Windows-utgaven er det viktig å ha oversikt over hvilke funksjoner hver versjon tilbyr, og vurdere hvilken som dekker kravene, behovene og bruksområdet i den aktuelle installasjonen.
@@ -40,6 +43,7 @@ Windows 10 og 11 benyttes på en rekke forskjellige typer enheter. Modulen gir e
 |Pro Education|Comparable to Pro for school staff, administrators, teachers, and students|Available to academic Volume License customers|
 |Education|Comparable to Enterprise for school staff, administrators, teachers, and students|Available to academic Volume License customers|
 |IoT Core/Enterprise|Fixed purpose and appliance devices|Available through Windows IoT Distributors|
+
 ## [Select client edition](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/3-select-client-edition)
 Windows 11 og tidligere versjoner kan kjøres på en rekke ulike enheter, men ikke alle Windows-utgaver støtter alle formfaktorer.
 
@@ -47,8 +51,10 @@ Windows 11 og tidligere versjoner kan kjøres på en rekke ulike enheter, men ik
 - 64-bit Windows er standard og bør brukes på alle moderne enheter
 - LTSC brukes i stabile, sensitive miljøer
 - Pro passer for avanserte brukere og småbedrifter
-- Enterprise gir maksimal sikkerhet og administrasjon for større organsisjoner
+- Enterprise gir maksimal sikkerhet og administrasjon for større organisasjoner
+
 ### Form factors
+
 #### Desktop PC
 Brukes der høy ytelse er avgjørende, som CAD eller tekniske arbeidsstasjoner
 #### Laptop
@@ -91,6 +97,7 @@ _Bedrift med økende fjernarbeid og behov for sikre, administrerte tilkoblinger.
 
 **Anbefaling: Windows Enterprise** Tilbyr avansert sikkerhet (Credential Guard, Application Guard) og gode verktøy for fjernadministrasjon.
 ## [Examine hardware requirements](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/4-examine-hardware-requirements)
+
 Windows 10 og 11 har i stor grad like maskinvarekrav, og de fleste moderne bedriftmaskiner oppfyller disse uten problemer. Selv om Windows kan installeres på maskiner som ikke møter alle kravene, vil både ytelse og brukeropplevelse bli merkbart dårligere.
 - Windows 11 krever moderne maskinvare som UEFI, Secure Boot, TPM 2.0
 - Funksjoner som BitLocker, Hyper-V, Windows Hello og DirectStorage krever spesifikk maskinvare
@@ -145,6 +152,7 @@ Krever NVMe og DirectX 12 GPU med Shader Model 6.0
 
 ### Check for Hyper-V compability
 For å sjekke kompatibilitet, benytt PowerShell og kjør kommandoen `systeminfo.exe` . Hvis alle Hyper-V krav viser _Yes_, kan maskinen kjøre Hyper-V rollen.
+
 ![](assets/Pasted-image-20260119143512.png)
 
 ## [Module assessment](https://learn.microsoft.com/en-us/training/modules/explore-windows-editions/5-knowledge-check)

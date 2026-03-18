@@ -11,6 +11,7 @@ tags:
   - MD-102/Intune
 ---
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/1-introduction)
+
 Modulen gir en grunnleggende introduksjon til hvordan [Intune](../../Glossary/Microsoft-Intune.md) settes opp og konfigureres, administrerer enheter, og hvilke hensyn som må tas for ulike OS når de registres. 
 Den gir også en oversikt over hvordan verifisering av enhetsinventar kan gjøres ved hjelp av Graph API og Power BI.
 
@@ -22,10 +23,12 @@ Den gir også en oversikt over hvordan verifisering av enhetsinventar kan gjøre
 - Overvåke og utføre fjernhandlinger på registrerte enheter.
 
 ## [Manage mobile devices with Intune](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/2-manage-mobile-devices-intune)
+
 Du administrerer mobile enheter vi Intune admin center, som finnes på https://intune.microsoft.com/. Her er alle administrasjonsfunksjonene for brukere, grupper og enheter samlet. 
 Brukere får tilgang til apper og kan registrere enheter via https://portal.manage.microsoft.com/, enten som webapp eller som app på Windows, iOS og Android.
 
 ### Device Managment Lifecycle
+
 Livssyklusen, [DML](../../Glossary/Device-Managment-Lifecycle.md), for mobil enhetsadministrasjon består av fire faser
 1. _Enroll_: Enheten registreres i Intune
 2. _Configure_: Enheter sikres og konfigureres med policyer og automatiserte oppgaver
@@ -33,6 +36,7 @@ Livssyklusen, [DML](../../Glossary/Device-Managment-Lifecycle.md), for mobil enh
 4. _Retire_: Når enheten ikke lenger brukes, kan data fjernes via full eller selektiv sletting.
 
 ## [Enable mobile device management](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/3-enable-mobile-device-management)
+
 Mobile Device Management ([MDM](../../Glossary/Mobile-Device-Management.md)) i Intune er mekanismen som gjør det mulig å håndheve sikkerhet, konfigurere enheter og beskytte bedriftsdata på tvers av alle plattformtyper. 
 MDM gir administratorer mulighet til å distribuere policyer som kryptering, passordkrav, WiFi profiler, VPN oppsett og sertifikater, samt overvåke compliance og fjernslette data ved tap eller tyveri.
 
@@ -45,7 +49,15 @@ Før enheter kan registreres må Intune settes som _MDM Authority_. Dette aktive
 For Apple enheter kreves et _Apple MDM Push Certificate_. Dette gjør det mulig å kommunisere med Apple enheter. Apple-ID som benyttes må være organisasjons eid, ikke personlig!
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
 A[Start i Intune admin center] --> B[Naviger til Devices > iOS/iPadOS enrollment]
@@ -68,6 +80,7 @@ L --> M[Enheter kan nå registreres i Intune]
 ```
 
 ## [Explain considerations for device enrollment](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/4-explain-considerations-device-enrollment)
+
 Det er noen viktige hensyn som må tas før enheter registreres i Intune. De ulike OSene har forskjellige krav, registreringsmetoder og avhengigheter.
 Det må planlegges for 
 - MDM autoritet
@@ -124,7 +137,15 @@ CNAME-poster som anbefales:
 Disse må verifiseres i Intune.
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
 A[Start: Organisasjon registrerer seg for Microsoft‑skytjenester] --> B[Standarddomene opprettes: <tenant>.onmicrosoft.com]
@@ -139,7 +160,15 @@ _Domeneregistrering og verifisering (DNS + Entra ID)_
 
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
 A[Intune admin center] --> B[Naviger til Devices > Windows enrollment]
@@ -153,7 +182,15 @@ _Aktivering av automatisk MDM registrering (Windows)_
 
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
 A[Start: Ønsker enklere Windows‑registrering] --> B[Opprett CNAME‑poster i DNS]
@@ -169,7 +206,9 @@ E --> F[Brukere slipper å skrive inn MDM‑server manuelt]
 
 ```
 _DNS-CNAME oppsett for sømløs registrering._
+
 ## [Enroll Windows devices in Intune](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/6-enroll-windows-devices-intune)
+
 Registrering av Windows enheter i Intune kobler enheten til Intune slik at den kan motta policyer, profiler, apper, WiFi, epost, sikkerhetsinnstillinger. Det fungerer både for _personlige_ og _bedriftseide_ enheter. Dette gir IT kontroll uten å få tilgang til brukerns private data.
 
 ### Enrolling Windows devices
@@ -183,6 +222,7 @@ Registrering av Windows enheter i Intune kobler enheten til Intune slik at den k
 8. _Entra Join / Bulk enrollment_: Bruker provisioning package for å registrere mange enheter uten re-imaging![](assets/Pasted-image-20260202160214.jpg)
 
 ## [Enroll Android devices in Intune](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/7-enroll-android-devices-intune)
+
 Både BYOD og bedriftseide Android enheter kan registreres i Intune. 
 1. _BYOD registrering_
 	1. Brukeren installerer _Intune Company Portal_ fra Google Play
@@ -210,10 +250,19 @@ For å bruke Android Enterprise må du:
 
 [Enroll Android devices](https://learn.microsoft.com/en-us/intune/intune-service/user-help/enroll-device-android-company-portal)
 ## [Enroll iOS devices in Intune](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/8-enroll-ios-devices-intune)
+
 Både personlige og bedriftseide iOS enheter kan registreres i Intune.
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart LR
 
 BYOD[BYOD<br/>Personlig enhet] -->|Krever| CP[Company Portal installasjon]
@@ -229,7 +278,15 @@ ADE -->|Brukeropplevelse| AUTO[Automatisk registrering<br/>Ingen manuelle steg]
 Brukere med BYOD kan installere _Intune Company Portal_ fra App Store og følge veiviseren for å registrere enheten. Opplevelsen varierer basert på hvilke policyer som er tildelt brukeren.
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
 A[Start: Velg iOS‑registreringsscenario] --> B1[BYOD<br/>Personlige enheter]
@@ -273,8 +330,16 @@ Apples Device Enrollment Program (DEP/ADE) gjør det mulig å konfigurere og reg
 _[Apple-Supervised-Mode](../../Glossary/Apple-Supervised-Mode.md)_ gir flere administrasjonsmuligheter og anbefales for alle bedriftseide enheter. Fra iOS 11 og nyere er _unsupervised mode_ avviklet.
 
 ```mermaid
-	  
-	  flowchart TD
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%	  
+flowchart TD
 
 A[Start: Bedrift kjøper iOS‑enheter] --> B[Enheter vises i Apple Business Manager]
 B --> C[Administrator tilordner enheter til Intune MDM‑server]
@@ -288,7 +353,9 @@ I --> J[Policyer, apper og restriksjoner pushes automatisk]
 ```
 
 [Automatically enroll iOS devices with Apple's Device Enrollment Program](https://learn.microsoft.com/en-us/intune/intune-service/enrollment/tutorial-use-device-enrollment-program-enroll-ios)
+
 ## [Explore device enrollment manager](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/9-explore-device-enrollment-manager)
+
 En [DEM](../../Glossary/Microsoft-Intune-Enrollment-Manager.md)-konto er:
 - en _spesiell Intune brukerkonto_ som kan registrere opptil 1000 enheter
 - brukes når IT skal klaregjøre mange enheter før de deles ut til brukere
@@ -312,6 +379,7 @@ DEM er _ikke_ egnet når
 - Du bruker _Android Enterprise Work Profile_ i stor skala (Begrensing på 10 enheter pr DEM konto)
 
 ### DEM har generelle begrensninger 
+
 - DEM kontoen kan ikke:
 	- Utføre _unenroll_ fra Company Portal
 	- Motta brukerbaserte apper (kun enhetsbaserte)
@@ -319,6 +387,7 @@ DEM er _ikke_ egnet når
 - Enheten vises som _shared device_, ikke personlig
 
 ### iOS/iPadOS begrensninger
+
 - ADE/DEP støttes med DEM
 - Apple Configurator støttes ikke
 - VPP-apper (Volume Purchase Program)
@@ -328,6 +397,7 @@ DEM er _ikke_ egnet når
 - DEM registrerte iOS enheter får begrenset funksjonalitet sammenlignet med ADE
 
 ### Android begrensninger
+
 - Android Enterprise Work Profile
 	- DEM kan kun registrere 10 enheter i Work Profile modus
 - Android Enterprise Fully Managed / Dedicated
@@ -335,18 +405,21 @@ DEM er _ikke_ egnet når
 - AOSP enheter støttes ikke med DEM
 
 ### Windows begrensninger
+
 - DEM fungerer, men 
 	- Enheten blir ikke knyttet til en bestemt bruker
 	- Brukerbaserte apper og policyer fungerer ikke
 	- DEM kontoen kan ikke unenrolle enheten
 
 ### Fordeler med DEM
+
 - Rask masse-registrering av enheter
 - Perfekt for delte enheter og frontline-scenarier
 - DEM-konto kan registrere 1000 enheter, mot 15 for vanlige brukere
 - IT kan klargjøre enheter før brukere mottar dem
 
 ### Ulemper med DEM
+
 - Mange funksjoner krever en personlig bruker og fungerer derfor ikke
 - Begrenset app-distribusjon (kun enhetsbaserte apper)
 - Ikke kompatibelt med Appe ADE/DEP eller Configurator
@@ -354,6 +427,7 @@ DEM er _ikke_ egnet når
 - Begrensninger på Android Work Profile
 
 ### Krav for å bruke DEM
+
 - DEM brukeren må eksistere i Entra ID
 - DEM brukeren må ha Intune lisens
 - Administrator må være 
@@ -362,7 +436,15 @@ DEM er _ikke_ egnet når
 - DEM kontoen legges under: Devices → Enroll devices → Device enrollment managers
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
 A[Opprett DEM‑bruker i Entra ID] --> B[Tildel Intune‑lisens til DEM‑brukeren]
@@ -375,7 +457,15 @@ F --> G[Enheten er klar for utlevering til sluttbruker]
 ```
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
 %% Start
@@ -413,7 +503,15 @@ _Utvidet registreringsflyt_
 
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
 A[Trenger du å registrere mange enheter?] -->|Ja| B[Skal enhetene brukes av flere personer?]
@@ -438,7 +536,15 @@ I -->|Nei| K[DEM er anbefalt løsning]
 _Beslutningstre, når skal DEM brukes_
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart LR
 
 DEM[Device Enrollment Manager] --- ADE[Automated Device Enrollment] --- AC[Apple Configurator]
@@ -456,7 +562,15 @@ AC --> AC2[Brukes for små batcher eller ikke‑ABM‑enheter]
 _DEM vs ADE vs Configurator_
 
 ```mermaid
-
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor": "#1e1e1e",
+    "primaryTextColor": "#ffffff",
+    "lineColor": "#ffffff",
+    "secondaryColor": "#333333"
+  }
+}}%%
 flowchart TD
 
 A[DEM‑begrensninger] --> B[iOS‑begrensninger]
@@ -480,9 +594,11 @@ D --> D3[DEM‑konto kan ikke unenrolle enheter]
 ```
 _DEM begrensninger_
 ## [Monitor device enrollment](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/10-monitor-device-enrollment)
+
 Intune portalen gir innsikt i alle administrative enheter og du kan utføre fjernhandlinger.
 
 ### Monitoring enrolled devices
+
 I Intune-adminportalen, under _Devices_ får du 
 - _Overview_: Et visuelt sammendrag av alle registrerte enheter, inkludert pr OS![](assets/Pasted-image-20260202182905.jpg)
 - _All devices_: En full liste over alle enheter![](assets/Pasted-image-20260202182922.jpg)
@@ -497,6 +613,7 @@ I Intune-adminportalen, under _Devices_ får du
 	- _Incomplete user enrollments_: Viser hvor brukere stopper i registreringsprossen. Dette kan brukes for å forbedre onboarding dokumentasjon (f.eks. hvis mange stopper ved Terms of use)
 
 ### Monitoring Microsoft Entra joined devices
+
 Ikke alle enheter vises i Intune, kun de som faktisk er registrert i Intune. Enheter som kun er Entra-joined (ikke Intune-enrolled) vises i Azure portalen.
 - Microsoft Entra ID → Devices → All Devices viser alle registrerte/joinede enheter![](assets/Pasted-image-20260202183737.jpg)
 - _Device Settings_ styrer
@@ -512,6 +629,7 @@ Ikke alle enheter vises i Intune, kun de som faktisk er registrert i Intune. Enh
 	- Graph API kan hente opptil ett år med hendelser
 
 ## [Manage devices remotely](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/11-manage-devices-remotely)
+
 Intune gir deg mulighet til å se detaljer om alle enheter du administrerer, inkluderte maskinvare, apper og status.
 For å se enheter går du til _Devices → All devices_, og velger en enheter for å åpne _Overview_. Her kan du blant annet se
 - Enhetsnavn
@@ -546,6 +664,7 @@ I tillegg kan du se
 - _Device configuration_: status for konfigurasjonspolicyer
 
 ## [Module assessment](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/12-knowledge-check)
+
 1. _What are the four phases of the mobile device management lifecycle?_
 	Enroll, Configure, Protect, Retire
 
@@ -553,6 +672,7 @@ I tillegg kan du se
 	Enroll in Intune, get company applications, and configure access to company data by deploying role-specific applications
 
 ## [Summary](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/13-summary)
+
 Modulen tar for seg hvordan du registrerer enheter i Intune, hvilke metoder som finnes, og hvordan du velger riktig registreringstrategi for bedriften. Den gir viser hvordan Intune støtter flere plattformer (Windows, iOS/iPadOS, Android, macOS), og hvordan registreringen varierer mellom BYOD enheter og bedrifts enheter.
 
 Modulen har også vist hvordan Intune integrerer med Entra ID og hvordan enheter kan bli Entra joined, registrert eller hybrid joined. Dette påvirker administrasjon og sikkerhet. 
@@ -594,6 +714,7 @@ Work Profile = delt jobb/profil. Fully Managed = full kontroll. Dedicated = kios
 - Begrenset kontroll
 - Fokus på personvern
 - Work Profile (Android) og Company Portal (iOS/Windows)
+
 #### Corporate
 - Full kontroll
 - Supervised mode (iOS)
@@ -601,6 +722,7 @@ Work Profile = delt jobb/profil. Fully Managed = full kontroll. Dedicated = kios
 - Autopilot (Windows)
 
 Eierskap styrer hvilke policyer du kan bruke.
+
 ### 3. Device Enrollment Manager (DEM)
 - Kan registrere 1000 enheter
 - Brukes for shared devices
@@ -610,6 +732,7 @@ Eierskap styrer hvilke policyer du kan bruke.
 DEM = masse‑registrering, ikke personlig bruk.
 
 ### 4. Identitet og Entra‑integrasjon
+
 - Enheter kan være:
     - Entra ID Registered (BYOD)
     - Entra ID Joined** (corporate)
@@ -618,6 +741,7 @@ DEM = masse‑registrering, ikke personlig bruk.
 Registreringsmetoden påvirker compliance, policyer og tilgang.
 
 ## 5. Velge riktig registreringsmetode
+
 Modulen lærer deg å velge basert på:
 - Eierskap (BYOD vs. corporate)
 - Plattform
