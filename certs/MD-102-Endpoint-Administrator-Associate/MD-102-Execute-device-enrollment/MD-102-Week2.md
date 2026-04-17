@@ -13,6 +13,8 @@ tags:
   - MD-102/Authentication
   - MD-102/EntraID
 ---
+# Execute device enrollment
+
 Arbeidet med Execute Device Enrollment har gitt meg et tydeligere bilde av hvordan moderne enhetsadministrasjon fungerer i [Intune](../../Glossary/Microsoft-Intune.md), og hvor annerledes dette er sammenlignet med SCCM‑miljøet jeg kjenner. I SCCM har jeg jobbet ut fra en modell der administrasjonen starter når klienten er installert og registrert mot site‑serveren. I Intune er det motsatt: administrasjonen starter idet enheten registreres, og hele prosessen er bygget rundt identitet i Entra ID og skybasert policyflyt.
 
 Når jeg gjennomførte en Entra join på en test‑VM, fikk jeg se første del av denne prosessen i praksis. Enheten fikk en identitet og kunne autentisere seg, men uten MDM‑auto‑enrollment var det tydelig at jeg bare hadde sett “halvparten” av Intune‑modellen. Det gjorde det klart for meg at registrering og administrasjon er to sider av samme sak i Intune – og at jeg må forstå begge for å jobbe effektivt i et moderne miljø.

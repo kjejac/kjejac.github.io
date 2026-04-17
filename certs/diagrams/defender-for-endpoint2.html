@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Manage Microsoft Defender for Endpoint]
+
+            A --> B[Behavioral sensors]
+            B --> B1[Samler prosess og nettverksdata]
+            B --> B2[Sender signaler til skyen]
+
+            A --> C[Analytics and threat intelligence]
+            C --> C1[Skybasert analyse]
+            C --> C2[Identifiserer angrepsmønstre]
+
+            A --> D[Windows Defender Application Control]
+            D --> D1[Kun klarert kode får kjøre]
+
+            A --> E[Windows Defender Device Guard]
+            E --> E1[Beskyttelse av kjernen med VBS]
+
+            A --> F[Application Guard]
+            F --> F1[Isolasjon av utrygge nettsteder]
+
+            A --> G[Microsoft Defender Exploit Guard]
+            G --> G1[Reduserer angrepsflate]
+            G --> G2[ASR, Network protection, CFA]
+
+            A --> H[Windows Defender System Guard]
+            H --> H1[Sikrer integritet ved oppstart]
+            H --> H2[Attestasjon og maskinvarebasert tillit]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>Planning WIP</h1>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Plan Windows Information Protection] --> B[Forstå hvorfor WIP trengs]
+            B --> B1[Skiller privat og arbeidsrelatert data]
+            B --> B2[Beskyttelse for LOB apper uten endringer]
+            B --> B3[Selektiv sletting av organisasjonsdata]
+            B --> B4[Rapportering og revisjon]
+            B --> B5[Integrasjon med Intune og andre MDM systemer]
+
+            A --> C[Planlegg hvordan data skal beskyttes]
+            C --> C1[Kryptering av data som kopieres eller lastes ned]
+            C --> C2[Beskyttelse også på privat eide enheter]
+            C --> C3[Definer hvilke datakilder som omfattes]
+
+            A --> D[Planlegg app kontroll]
+            D --> D1[Velg apper som skal være tillatt]
+            D --> D2[Begrens apper som ikke er godkjent]
+            D --> D3[Håndter forsøk på å flytte data til personlige apper]
+
+            A --> E[Bruk opplyste apper]
+            E --> E1[Automatisk gjenkjenning av organisasjonsdata]
+            E --> E2[Beholder beskyttelse ved lagring og navneendring]
+
+            A --> F[Planlegg blokkering av personlige tjenester]
+            F --> F1[Hindre lagring i personlig OneDrive]
+            F --> F2[Hindre deling til sosiale medier]
+
+            A --> G[Planlegg selektiv sletting]
+            G --> G1[Fjern organisasjonsdata fra tapte enheter]
+            G --> G2[Fjern data fra enheter til ansatte som slutter]
+            G --> G3[Behold privat innhold urørt]
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

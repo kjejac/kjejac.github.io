@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>Planning WIP</h1>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Microsoft Defender Application Guard]
+
+            A --> B[Isolasjon i Hyper V container]
+            B --> B1[Utrygge nettsteder åpnes isolert]
+            B --> B2[Utrygge Office filer åpnes isolert]
+            B --> B3[Angrep kan ikke nå virksomhetsdata]
+
+            A --> C[Trusted vs untrusted]
+            C --> C1[Administrator definerer betrodde ressurser]
+            C --> C2[Alt annet åpnes i container]
+
+            A --> D[Device types]
+            D --> D1[Enterprise desktops]
+            D --> D2[Enterprise mobile laptops]
+            D --> D3[BYOD laptops]
+            D --> D4[Personal devices]
+
+            A --> E[Licensing]
+            E --> E1[Windows Pro og Enterprise]
+            E --> E2[Education utgaver]
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

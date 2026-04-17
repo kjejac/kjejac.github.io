@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Microsoft Defender SmartScreen]
+
+            A --> B[URL kontroll]
+            B --> B1[Sjekker mot dynamiske phishing og malware lister]
+            B --> B2[Analyserer nettsideatferd]
+
+            A --> C[Nedlastingskontroll]
+            C --> C1[Sjekker filer mot kjente farlige programmer]
+            C --> C2[Varsler om ukjente eller lite nedlastede filer]
+
+            A --> D[App og filreputasjon]
+            D --> D1[Kontrollerer digital signatur]
+            D --> D2[Blokkerer lav omdømme programvare]
+
+            A --> E[Integrasjon]
+            E --> E1[Windows 10 og 11]
+            E --> E2[Microsoft Edge og Microsoft Store]
+            E --> E3[Outlook og andre Microsoft tjenester]
+
+            A --> F[Beskyttelseseffekt]
+            F --> F1[Stopper phishing]
+            F --> F2[Stopper malware]
+            F --> F3[Stopper drive by angrep]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

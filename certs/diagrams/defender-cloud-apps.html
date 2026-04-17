@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+
+            flowchart TB
+
+            A[Microsoft Defender for Cloud Apps]
+
+            A --> B[Oversikt]
+            B --> B1[Skyapp bruk]
+            B --> B2[Risikovurdering]
+            B --> B3[Databeskyttelse]
+
+            A --> C[Kontroll]
+            C --> C1[Policyer]
+            C --> C2[Varsler]
+            C --> C3[Håndheving]
+
+            A --> D[Trusselbeskyttelse]
+            D --> D1[Oppdage mistenkelig aktivitet]
+            D --> D2[Analyser]
+            D --> D3[Respons]
+
+            A --> E[MD 102 relevans]
+            E --> E1[Forstå løsningen]
+            E --> E2[Planlegge bruk]
+            E --> E3[Implementere i praksis]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

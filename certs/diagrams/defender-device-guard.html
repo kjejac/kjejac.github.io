@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Device Guard]
+
+            A --> B[Hovedprinsipp]
+            B --> B1[Kun klarert og signert kode får kjøre]
+            B --> B2[Blokkerer usignert og ukjent kode]
+
+            A --> C[Kjernekomponenter]
+            C --> C1[Application Control]
+            C --> C2[VBS Virtualiseringsbasert sikkerhet]
+            C --> C3[HVCI Hypervisor beskyttet kodeintegritet]
+
+            A --> D[Beskyttelse]
+            D --> D1[Isolasjon av kodeintegritetstjenesten]
+            D --> D2[Hindrer kjernemodus injeksjon]
+            D --> D3[Sikrer Trusted Boot]
+
+            A --> E[Krav]
+            E --> E1[Secure Boot]
+            E --> E2[SLAT og virtualisering]
+            E --> E3[Kompatible drivere]
+
+            A --> F[Bruksverdi]
+            F --> F1[Høy sikkerhet i Enterprise]
+            F --> F2[Beskyttelse mot zero day angrep]
+            F --> F3[Styrker Zero Trust]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

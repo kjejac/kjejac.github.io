@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart TB
+
+            A[Bruker]
+
+            A --> B[Conditional Access]
+            B --> C[Reverse proxy]
+            C --> D[Skyapp]
+
+            C --> E[Sanntidskontroll]
+            E --> E1[Blokkere nedlasting]
+            E --> E2[Overvåke opplasting]
+            E --> E3[Kontrollere deling]
+
+            C --> F[Databeskyttelse]
+            F --> F1[DLP]
+            F --> F2[Sensitivitetsetiketter]
+
+            C --> G[Trusseldeteksjon]
+            G --> G1[Unormal aktivitet]
+            G --> G2[Store datanedlastinger]
+            G --> G3[Uvanlige pålogginger]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

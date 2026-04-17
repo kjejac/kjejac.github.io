@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #111;
+      color: #eee;
+      font-family: system-ui, sans-serif;
+    }
+
+    .diagram-container {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    h1 {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "dark",
+      securityLevel: "loose"
+    });
+  </script>
+</head>
+
+<body>
+
+  <h1>{{ page.title }}</h1>
+
+  <div class="diagram-container">
+    <div class="mermaid">
+
+      flowchart TB
+
+      subgraph EFS["EFS – Fil- og mappekryptering"]
+      E1[Beskyttelse på filnivå]
+      E2[Knyttet til brukerens sertifikat]
+      E3[Hindrer tilgang ved filkopiering]
+      E4[Data i hvile]
+      end
+
+      subgraph BL["BitLocker – Diskkryptering"]
+      B1[Krypterer hele volumet]
+      B2[Beskyttelse ved fysisk tilgang]
+      B3[TPM-basert nøkkelhåndtering]
+      B4[Data i hvile]
+      end
+
+      subgraph WIP["WIP – Dataseparasjon og lekkasjebeskyttelse"]
+      W1[Skiller jobb- og privatdata]
+      W2[Kontrollerer app-tilgang]
+      W3[Hindrer kopiering/deling til feil steder]
+      W4[Data i bruk og i bevegelse]
+      end
+
+      E4 -->|Beskytter data i hvile| BL
+      BL -->|Beskytter hele disken| EFS
+
+      W1 -->|Fokuserer på datalekkasjer| EFS
+      W1 -->|Fokuserer på datalekkasjer| BL
+
+    </div>
+  </div>
+
+</body>
+
+</html>

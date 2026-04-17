@@ -13,6 +13,8 @@ tags:
   - MD-102/SCCM
   - MD-102/Intune
 ---
+# Configure profiles for user and devices
+
 Denne modulen har vist meg hvor stor forskjell det er mellom klassisk AD-basert klientdrift og skybasert administrasjon. I tradisjonelle AD-miljøer er brukerprofiler, GPOer, roaming-profiler, Folder Redirection og lokale profilstyringsmekanismer helt sentrale. De fungerer, men de tunge og avhengig av lokal infrastruktur.
 
 Moderne administrasjon går i en helt annen retning, der enhets- og brukeropplevelse flyttes gradvis fra lokal kontroll til [Entra ID](../../Glossary/Microsoft-Entra-ID.md), [Intune](../../Glossary/Microsoft-Intune.md), OneDrive og [Enterprise State Roaming](../../Glossary/Enterprise-State-Roaming.md). I stedet for å håndtere store profiler, NTUSER.DAT-feil og treg innlogging, bruker man skybasert synkronisering av innstillinger og filer. Det gir en mer forutsigbar og robust brukeropplevelse, spesielt når brukere bytter enheter eller jobber hybrid.

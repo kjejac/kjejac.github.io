@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Explore Windows Defender System Guard]
+
+            A --> B[Maintain the integrity of the system as it starts]
+            B --> B1[Secure Boot og UEFI etablerer rot av tillit]
+            B --> B2[Bare signerte og sikre filer og drivere lastes]
+            B --> B3[Antimalware skanner tredjepartsdrivere]
+
+            A --> C[Maintain integrity of the system after it is running]
+            C --> C1[Virtualiseringsbasert sikkerhet]
+            C --> C2[Isolasjon av Credential Guard og Device Guard]
+            C --> C3[Beskyttelse selv ved SYSTEM nivå kompromiss]
+
+            A --> D[Validate platform integrity after Windows is running]
+            D --> D1[TPM 2.0 lagrer integritetsmålinger]
+            D --> D2[Målinger signeres og kan hentes eksternt]
+            D --> D3[Brukes til å nekte tilgang ved manglende integritet]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

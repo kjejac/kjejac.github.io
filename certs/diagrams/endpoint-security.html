@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart LR
+
+            %% Hovedstruktur
+            A[Manage endpoint security] --> B[Beskytte data]
+            A --> C[Beskytte enheten mot angrep]
+            A --> D[Oppdage og reagere]
+
+            %% Beskytte data
+            B --> B1[BitLocker]
+            B --> B2[TPM]
+            B --> B3[Secure Boot]
+            B --> B4[Credential Guard]
+
+            %% Beskytte enheten
+            C --> C1[Defender Antivirus]
+            C --> C2[ASR-regler]
+            C --> C3[Exploit Protection]
+            C --> C4[SmartScreen]
+            C --> C5[Firewall]
+
+            %% Oppdage og reagere
+            D --> D1[Defender for Endpoint]
+            D --> D2[EDR]
+            D --> D3[XDR]
+            D --> D4[Rapporter og innsikt]
+
+            %% Intune som kontrollsenter
+            A --> E[Intune – policy og styring]
+
+            E --> E1[Distribuere krav]
+            E --> E2[Håndheve policyer]
+            E --> E3[Overvåke status]
+            E --> E4[Feilsøke avvik]
+
+            %% Underliggende sikkerhetsteknologier
+            A --> F[Grunnleggende sikkerhetslag]
+
+            F --> F1[Antivirus]
+            F --> F2[Brannmur]
+            F --> F3[Kryptering]
+            F --> F4[Legitimasjonsisolasjon]
+            F --> F5[Utnyttelsesbeskyttelse]
+            F --> F6[App- og enhetskontroll]
+            F --> F7[Overvåking og respons]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

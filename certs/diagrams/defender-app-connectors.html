@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart TB
+
+            A[Defender for Cloud Apps] --> B[App connector]
+
+            B --> C[Authentication]
+            C --> C1[OAuth tokens]
+            C --> C2[API keys]
+
+            B --> D[Data collection]
+            D --> D1[Users and groups]
+            D --> D2[Activities and logs]
+            D --> D3[Files and metadata]
+            D --> D4[App configuration]
+
+            B --> E[Analysis]
+            E --> E1[DLP scanning]
+            E --> E2[Sensitivitetsetiketter]
+            E --> E3[Anomali og trusseldeteksjon]
+
+            B --> F[Governance actions]
+            F --> F1[Suspend user]
+            F --> F2[Revoke OAuth permissions]
+            F --> F3[Quarantine files]
+
+            A --> G[Policies]
+            G --> G1[File policies]
+            G --> G2[Activity policies]
+            G --> G3[App governance]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

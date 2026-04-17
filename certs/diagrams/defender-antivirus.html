@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Microsoft Defender Antivirus]
+
+            A --> B[Sanntidsbeskyttelse]
+            B --> B1[Overvåker filer og prosesser]
+            B --> B2[Stopper skadelig aktivitet i sanntid]
+
+            A --> C[Skybasert beskyttelse]
+            C --> C1[Rask blokkering av nye trusler]
+            C --> C2[Intelligent Security Graph]
+
+            A --> D[Maskinlæring]
+            D --> D1[Prediktiv analyse]
+            D --> D2[Oppdager ukjent malware]
+
+            A --> E[Integrasjon i Windows]
+            E --> E1[Innebygd i Windows 10 og 11]
+            E --> E2[Fungerer med Defender for Endpoint]
+
+            A --> F[Offline og online]
+            F --> F1[Lokal intelligens]
+            F --> F2[Skyoppdateringer når tilgjengelig]
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+<a href="/certs/diagrams/" target="_blank" rel="noopener">Stort diagram</a>

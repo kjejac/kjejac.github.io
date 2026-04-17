@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Examine key capabilities of Microsoft Defender for Endpoint]
+
+            %% Attack surface reduction
+            A --> B[Attack surface reduction]
+            B --> B1[Hardware based isolation]
+            B1 --> B1a[Integritet ved oppstart og i drift]
+            B1 --> B1b[Attestasjon av systemtilstand]
+
+            B --> B2[Application control]
+            B2 --> B2a[Apper må bevise at de er til å stole på]
+
+            B --> B3[Exploit protection]
+            B3 --> B3a[Mitigeringer for apper]
+            B3 --> B3b[Fungerer med Defender Antivirus og tredjeparts antivirus]
+
+            B --> B4[Network protection]
+            B4 --> B4a[Blokkerer skadelig trafikk]
+            B4 --> B4b[Utvider SmartScreen beskyttelse]
+
+            B --> B5[Controlled folder access]
+            B5 --> B5a[Beskytter viktige mapper]
+            B5 --> B5b[Stopper ransomware]
+
+            B --> B6[Attack surface reduction rules]
+            B6 --> B6a[Stopper Office og skriptbaserte angrep]
+
+            B --> B7[Network firewall]
+            B7 --> B7a[Filtrerer inn og utgående trafikk]
+
+            %% Next generation protection
+            A --> C[Next generation protection]
+            C --> C1[Cloud delivered protection]
+            C --> C2[Sanntidsbeskyttelse]
+            C --> C3[Kontinuerlige oppdateringer]
+
+            %% Endpoint detection and response
+            A --> D[Endpoint detection and response]
+            D --> D1[Varsler og hendelser]
+            D --> D2[Angrepsforløp og analyse]
+            D --> D3[Seks måneders telemetri]
+
+            %% Auto investigation and remediation
+            A --> E[Auto investigation and remediation]
+            E --> E1[Automatisert analyse]
+            E --> E2[Automatisert utbedring]
+            E --> E3[Reduserer varselmengde]
+
+            %% Secure score
+            A --> F[Secure score]
+            F --> F1[Vurdering av sikkerhetstilstand]
+            F --> F2[Anbefalte tiltak]
+            F --> F3[Oversikt over maskiner som krever oppmerksomhet]
+
+            %% Advanced hunting
+            A --> G[Advanced hunting]
+            G --> G1[Spørringer mot telemetri]
+            G --> G2[Egne deteksjoner]
+            G --> G3[Direkte navigasjon til objekter]
+
+            %% Management and APIs
+            A --> H[Management and APIs]
+            H --> H1[Integrasjon med Intune og Configuration Manager]
+            H --> H2[Støtte for gruppepolicy]
+            H --> H3[Rollebasert tilgangskontroll]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

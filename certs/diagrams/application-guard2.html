@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>Planning WIP</h1>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Explore Microsoft Defender Application Guard]
+
+            A --> B[Isolasjon]
+            B --> B1[Utrygge nettsteder åpnes i Hyper V container]
+            B --> B2[Containeren er adskilt fra operativsystemet]
+            B --> B3[Beskytter virksomhetsdata og legitimasjon]
+
+            A --> C[Trusted vs untrusted]
+            C --> C1[Administrator definerer klarerte ressurser]
+            C --> C2[Alt annet åpnes isolert]
+
+            A --> D[Device types]
+            D --> D1[Enterprise desktops]
+            D --> D2[Enterprise mobile laptops]
+            D --> D3[BYOD laptops]
+            D --> D4[Personal devices]
+
+            A --> E[Konfigurasjon]
+            E --> E1[Aktiveres via Windows funksjoner]
+            E --> E2[Administreres i Intune]
+            E --> E3[Støtte for Office isolasjon]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

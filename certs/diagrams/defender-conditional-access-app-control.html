@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart TB
+
+            A[User] --> B[Conditional Access policy]
+            B --> C[Route session to Defender for Cloud Apps]
+            C --> D[Reverse proxy]
+
+            D --> E[Access policies]
+            E --> E1[Block access]
+            E --> E2[Allow limited access]
+
+            D --> F[Session policies]
+            F --> F1[Block download]
+            F --> F2[Block upload]
+            F --> F3[Require MFA]
+
+            D --> G[Cloud app]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

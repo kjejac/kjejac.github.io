@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart TB
+
+            A[Windows Defender Firewall with Advanced Security]
+
+            A --> B[Profiler]
+            B --> B1[Domain]
+            B --> B2[Private]
+            B --> B3[Public]
+
+            A --> C[Regler]
+            C --> C1[Inbound rules]
+            C --> C2[Outbound rules]
+            C --> C3[Connection security rules]
+
+            A --> D[Regeltyper]
+            D --> D1[Program]
+            D --> D2[Port]
+            D --> D3[Predefined]
+            D --> D4[Custom]
+
+            A --> E[IPsec]
+            E --> E1[Autentisering]
+            E --> E2[Kryptering]
+
+            A --> F[Monitoring]
+            F --> F1[Aktive profiler]
+            F --> F2[Regler]
+            F --> F3[Security associations]
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

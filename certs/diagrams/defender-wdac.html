@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Application Control]
+
+            A --> B[Hovedprinsipp]
+            B --> B1[Bare klarert kode får kjøre]
+            B --> B2[Alt annet blokkeres]
+
+            A --> C[Hvordan avgjøres tillit]
+            C --> C1[Signert kode]
+            C --> C2[Filhash]
+            C --> C3[Sertifikat og metadata]
+            C --> C4[Filbane]
+            C --> C5[ISG omdømme]
+            C --> C6[Managed Installer]
+
+            A --> D[Hva kontrolleres]
+            D --> D1[Exe og dll]
+            D --> D2[Skript og PowerShell]
+            D --> D3[MSI og batch]
+
+            A --> E[Sikkerhetsverdi]
+            E --> E1[Stopper ukjent malware]
+            E --> E2[Reduserer angrepsflate]
+            E --> E3[Styrker Zero Trust]
+
+            A --> F[Bruksområder]
+            F --> F1[VDI]
+            F --> F2[PoS]
+            F --> F3[Helse og finans]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

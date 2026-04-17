@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart TB
+
+            A[Core isolation]
+
+            A --> B[Virtualiseringsbasert sikkerhet]
+            B --> B1[Isolerer viktige prosesser]
+            B --> B2[Beskytter Windows kjernen]
+
+            A --> C[Memory integrity]
+            C --> C1[Hindrer usignerte drivere]
+            C --> C2[Stopper kodeinjeksjon]
+
+            A --> D[Krav]
+            D --> D1[TPM 2.0]
+            D --> D2[Secure Boot]
+            D --> D3[CPU virtualisering]
+
+            A --> E[Fordeler]
+            E --> E1[Styrket plattformintegritet]
+            E --> E2[Motstand mot avanserte angrep]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

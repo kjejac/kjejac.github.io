@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+<div class="diagram-container">
+    <div class="mermaid">
+
+        %%{init: {
+        "theme": "dark",
+        "themeVariables": {
+        "primaryColor": "#1e1e1e",
+        "primaryTextColor": "#ffffff",
+        "lineColor": "#ffffff",
+        "secondaryColor": "#333333"
+        }
+        }}%%
+
+        flowchart TB
+
+        A[Dynamic Lock]
+
+        A --> B[Forutsetninger]
+        B --> B1[Bluetooth aktivert]
+        B --> B2[Paret telefon]
+
+        A --> C[Hvordan det fungerer]
+        C --> C1[Overvåker Bluetooth signal]
+        C --> C2[Låser når signalet svekkes]
+        C --> C3[Krever at PCen er i hvile]
+
+        A --> D[Fordeler]
+        D --> D1[Automatisk låsing]
+        D --> D2[Redusert risiko]
+        D --> D3[Ingen ekstra maskinvare]
+
+        A --> E[Konfigurasjon]
+        E --> E1[Settings]
+        E --> E2[Group Policy]
+
+    </div>
+</div>
+
+</body>
+
+</html>

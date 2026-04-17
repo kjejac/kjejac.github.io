@@ -10,6 +10,8 @@ tags:
   - MD-102
   - MD-102/EndpointManagement
 ---
+# Mange authentication and compliance
+
 Arbeidet med autentisering og compliance i MD‑102 handler om å skape en trygg, forutsigbar og brukervennlig plattform for både organisasjonen og sluttbrukerne.
 
 Gjennom modulen blir det tydelig at moderne endepunktadministrasjon ikke handler om å “låse ned” systemer, men om å etablere en _rettferdig og transparent sikkerhetsmodell_. Tilgang skal ikke være basert på tilfeldigheter eller gamle tillitsmodeller, men være fortjent. Det er her Intune, compliance‑policyer og Conditional Access smelter sammen til en helhetlig sikkerhetsarkitektur basert på Zero Trust-prinsipper. Intune vurderer enhetens tilstand, compliance-policyene definerer kravene og Condtional Access håndhever dem.

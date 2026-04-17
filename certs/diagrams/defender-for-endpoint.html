@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Explore Microsoft Defender for Endpoint]
+
+            A --> B[Endpoint behavioral sensors]
+            B --> B1[Samler atferdsdata fra Windows]
+            B --> B2[Sender data til isolert skyinstans]
+
+            A --> C[Cloud security analytics]
+            C --> C1[Bruker big data og maskinlæring]
+            C --> C2[Oversetter signaler til funn og tiltak]
+
+            A --> D[Threat intelligence]
+            D --> D1[Basert på Microsoft sikkerhetsteam]
+            D --> D2[Identifiserer verktøy og teknikker brukt av angripere]
+
+            A --> E[Microsoft 365 Security Center]
+            E --> E1[Visning og prioritering av varsler]
+            E --> E2[Søk etter filer og IP adresser]
+            E --> E3[Administrasjon av innstillinger og lisensinformasjon]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

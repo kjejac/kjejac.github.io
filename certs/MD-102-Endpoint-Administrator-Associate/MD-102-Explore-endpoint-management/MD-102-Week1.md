@@ -8,6 +8,8 @@ tags:
   - MD-102
   - MD-102/EndpointManagement
 ---
+# Explore endpoint management
+
 Gjennom modulen _Explore endpoint management_ fikk jeg et tydeligere rammeverk for hvordan moderne enhetsadministrasjon er bygget opp, og mye av innholdet speiler erfaringene jeg allerede har fra drift, brukerstøtte og skolegang.
 I tidligere roller har jeg jobbet med hele livssyklusen til klienter, fra innkjøp, klargjøring og utrulling til vedlikehold og avhending. Dette gjør [_Enterprise Desktop Life-cycle (EDL)_](../../Glossary/Enterprise-Desktop-Lifecycle.md) intuitiv for meg.
 

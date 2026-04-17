@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Explore Windows Defender Application Control and Device Guard]
+
+            A --> B[Windows Defender Application Control]
+            B --> B1[Krever signert og verifisert kode]
+            B --> B2[Blokkerer usignerte apper og skript]
+            B --> B3[Policy styrer hva som får kjøre]
+            B --> B4[Godt egnet for stabile miljøer]
+
+            A --> C[Windows Defender Device Guard]
+            C --> C1[Kombinerer Application Control med Hyper V]
+            C --> C2[Beskytter kjernemodus prosesser]
+            C --> C3[Hindrer injeksjon av skadelig kode]
+
+            A --> D[MD 102 relevans]
+            D --> D1[Forstå tillitsmodellen]
+            D --> D2[Kjenne til signering og policyer]
+            D --> D3[Se bruksområder og sikkerhetsverdi]
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

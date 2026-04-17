@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart TB
+
+            A[Windows Security]
+
+            A --> B[Virus and threat protection]
+            B --> B1[Defender Antivirus]
+            B --> B2[Sanntidsbeskyttelse og skanning]
+
+            A --> C[Account protection]
+            C --> C1[Windows Hello]
+            C --> C2[Dynamic Lock]
+
+            A --> D[Firewall and network protection]
+            D --> D1[Brannmurstatus]
+            D --> D2[Nettverksprofiler]
+
+            A --> E[App and browser control]
+            E --> E1[SmartScreen]
+            E --> E2[Exploit protection]
+
+            A --> F[Device security]
+            F --> F1[TPM og Secure Boot]
+            F --> F2[Core Isolation]
+
+            A --> G[Device performance and health]
+            G --> G1[Helsesjekk]
+            G --> G2[Anbefalte tiltak]
+
+            A --> H[Family options]
+            H --> H1[Foreldrekontroll]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart TB
+
+            A[Windows Defender Firewall]
+
+            A --> B[Administrasjon]
+            B --> B1[Windows Security]
+            B --> B2[Control Panel]
+            B --> B3[Intune]
+
+            A --> C[Firewall exceptions]
+            C --> C1[Tillate programmer]
+            C --> C2[Åpne porter]
+            C --> C3[Redusere risiko]
+
+            A --> D[Nettverksprofiler]
+            D --> D1[Domain]
+            D --> D2[Private]
+            D --> D3[Public]
+
+            A --> E[Funksjoner]
+            E --> E1[Blokkere innkommende trafikk]
+            E --> E2[Varsler ved blokkering]
+            E --> E3[Flere aktive profiler]
+
+            A --> F[Network location awareness]
+            F --> F1[Identifiserer nettverk]
+            F --> F2[Velger riktig profil]
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

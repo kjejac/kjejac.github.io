@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Explore Encrypting File System in Windows client]
+
+            A --> B[Manage EFS certificates]
+            B --> B1[EFS bruker offentlige og private nøkler]
+            B --> B2[Sertifikater kan utstedes av en sertifikatutsteder]
+            B --> B3[Brukere kan gi andre tilgang ved å legge til sertifikater]
+
+            A --> C[Issue a certificate for a DRA]
+            C --> C1[DRA kan dekryptere alle filer kryptert etter utstedelse]
+            C --> C2[DRA må være på plass før EFS tas i bruk]
+
+            A --> D[CAs can archive and recover CA issued EFS certificates]
+            D --> D1[Private nøkler kan arkiveres sentralt]
+            D --> D2[Arkivering må være aktivert før EFS tas i bruk]
+            D --> D3[Uten arkivering må brukere selv eksportere nøkler]
+
+            A --> E[Export the client EFS certificate without the private key]
+            E --> E1[Offentlig sertifikat kan eksporteres for deling]
+            E --> E2[Privat nøkkel ligger i brukerprofilen og må beskyttes]
+
+            A --> F[Export certificates with the MMC Certificates snap in]
+            F --> F1[MMC kan eksportere sertifikater og private nøkler]
+            F --> F2[Nøkler for filer på nettverksressurser lagres på filserver]
+
+            A --> G[How EFS works]
+            G --> G1[Fil krypteres med en symmetrisk nøkkel]
+            G --> G2[Nøkkelen krypteres med brukerens offentlige nøkkel]
+            G --> G3[Privat nøkkel kreves for dekryptering]
+            G --> G4[Uten DRA eller arkivert nøkkel er filen tapt]
+            G --> G5[EFS krypterer filer lokalt, ikke over nettverk]
+            G --> G6[EFS bruker AES med 256 bit nøkkel]
+
+            A --> H[EFS features in Windows 10]
+            H --> H1[Støtte for lagring av private nøkler på smartkort]
+            H --> H2[Rekeying Wizard migrerer filer til nye sertifikater]
+            H --> H3[Gruppepolicy kan styre EFS sentralt]
+            H --> H4[EFS kan kryptere filer som lagres offline]
+            H --> H5[Selective Wipe kan tilbakekalle nøkler på tapte enheter]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

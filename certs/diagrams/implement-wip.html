@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>{{ page.title }}</h1>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            flowchart TB
+
+            A[Implement and use Windows Information Protection] --> B[Create a WIP policy in Intune]
+            A --> C[Allowed and exempt apps]
+            A --> D[Corporate identity]
+            A --> E[Network perimeter]
+            A --> F[Data Recovery Agent DRA certificate]
+            A --> G[Optional WIP related settings]
+
+            B --> B1[Velg plattform og registreringskrav]
+            B --> B2[Legg til beskyttede apper]
+            B --> B3[Velg beskyttelsesmodus]
+
+            C --> C1[Tillatte apper får full tilgang]
+            C --> C2[Unntatte apper omfattes ikke av WIP]
+            C --> C3[Bruk maler for ulike app typer]
+
+            D --> D1[Definer organisasjonsdomener]
+            D --> D2[Skille mellom privat og arbeidsrelatert innhold]
+
+            E --> E1[Definer skyressurser]
+            E --> E2[Definer interne domener]
+            E --> E3[Definer proxyer og IP områder]
+
+            F --> F1[Legg til DRA sertifikat]
+            F --> F2[Sikrer gjenoppretting av kryptert innhold]
+
+            G --> G1[Tilbakekall nøkler ved avregistrering]
+            G --> G2[Vis ikoner for beskyttede filer]
+            G --> G3[Bruk Azure RMS for kryptering]
+            G --> G4[Aktiver Windows Hello for Business]
+
+        </div>
+    </div>
+
+</body>
+
+</html>
