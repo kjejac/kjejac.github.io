@@ -57,7 +57,7 @@ tags:
   - MD-102/DeploymentWorkbench
   - MD-102/Image
 ---
-# # Deploy using on-premises based tools
+# Deploy using on-premises based tools
 
 Når jeg går gjennom denne modulen, kjenner jeg igjen mye av det jeg jobbet med da jeg satte opp og vedlikeholdt både MDT og Configuration Manager på Krigsskolen. Arbeidsflyten, tankesettet og strukturen er i stor grad den samme: bygge image, teste i kontrollerte grupper, bruke task sequences for å sikre forutsigbarhet og håndtere drivere og apper på en ryddig måte. Det føles nesten som å lese en oppsummering av praksisen jeg hadde i hverdagen.
 
