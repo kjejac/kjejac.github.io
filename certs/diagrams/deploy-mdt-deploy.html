@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[MDT i utrulling] --> B[Forbered infrastruktur]
+            B --> B1[Active Directory]
+            B --> B2[Windows Server med MDT]
+            B --> B3[Windows ADK]
+            B --> B4[WDS og WSUS ved behov]
+
+            A --> C[Planlegg utrulling]
+            C --> C1[Velg OS kilde eller tilpasset image]
+            C --> C2[Legg til apper og drivere]
+            C --> C3[Legg til språk og pakker]
+
+            A --> D[Bygg oppstartsimage]
+            D --> D1[Windows PE x86 og x64]
+            D --> D2[Driverbehov vurderes]
+
+            A --> E[Task sequences]
+            E --> E1[Formatering og partisjonering]
+            E --> E2[Driverinjeksjon]
+            E --> E3[Installering av OS]
+            E --> E4[Oppdateringer og apper]
+
+            A --> F[Bruksscenarier]
+            F --> F1[Bare metal]
+            F --> F2[Maskinvarebytte]
+            F --> F3[Korrupte installasjoner]
+            F --> F4[Tilpassede valg for brukere]
+
+            A --> G[Integrasjon]
+            G --> G1[Configuration Manager]
+            G --> G2[Autopilot og Intune i moderne miljøer]
+
+        </div>
+    </div>
+
+</body>

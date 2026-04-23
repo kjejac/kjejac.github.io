@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Tradisjonell utrulling] --> B[Valg av image]
+            B --> C[Standard image]
+            B --> D[Tilpasset image]
+
+            C --> C1[Apper og innstillinger legges til etterpå]
+            D --> D1[Inneholder apper og konfigurasjoner]
+            D --> D2[Krever hyppig vedlikehold]
+
+            A --> E[Tynn eller tykk modell]
+            E --> F[Tynn modell]
+            E --> G[Tykk modell]
+
+            F --> F1[Enklere å vedlikeholde]
+            G --> G1[Blir raskt utdatert]
+
+            A --> H[Boot from VHD]
+            H --> H1[Fleksibel test og spesialbruk]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

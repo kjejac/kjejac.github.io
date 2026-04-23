@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart LR
+
+            A[Start: Plan deployment] --> B[Assess network capacity]
+
+            B --> C[Delivery Optimization]
+            C --> C1[Peer sharing of updates]
+            C --> C2[Reduces internet bandwidth]
+            C --> C3[Cloud managed]
+
+            B --> D[BranchCache]
+            D --> D1[Distributed Cache]
+            D --> D2[Hosted Cache]
+            D --> D3[Local retrieval reduces WAN load]
+
+            B --> E[BITS]
+            E --> E1[Uses idle bandwidth]
+            E --> E2[Auto resume and throttling]
+            E --> E3[Can use BranchCache]
+
+            B --> F[LEDBAT]
+            F --> F1[Uses only unused bandwidth]
+            F --> F2[Backs off when latency increases]
+
+            B --> G[Migration data size]
+            G --> G1[Large data slows device availability]
+            G --> G2[Use OneDrive, SharePoint, Work Folders]
+            G --> G3[Known Folder Move for user files]
+
+            A --> H[Directory planning]
+            H --> H1[AD DS on premises]
+            H --> H2[Entra ID for cloud identity]
+            H --> H3[Integrate with Entra Connect]
+            H --> H4[Simplifies modern deployment]
+
+            H4 --> I[Ready for deployment]
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

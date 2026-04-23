@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart LR
+
+            A[Start vurdering] --> B[Kartlegg miljø]
+            B --> B1[Maskinvare]
+            B --> B2[Programvare]
+            B --> B3[Nettverk og lokasjoner]
+
+            B --> C[Vurder maskinvare]
+            C --> C1[Hva kan gjenbrukes]
+            C --> C2[Hva må erstattes]
+
+            B --> D[Vurder applikasjoner]
+            D --> D1[Kan installeres på nytt]
+            D --> D2[Må pakkes eller skriptes]
+            D --> D3[Ikke støttet på ny plattform]
+            D3 --> D4[Bruk virtualisering eller RemoteApp]
+
+            A --> E[Reduser kostnader]
+            E --> E1[Hyper V]
+            E --> E2[Windows Virtual Desktop]
+            E --> E3[Remote Desktop Services]
+            E --> E4[Endpoint Manager og System Center]
+
+            A --> F[Håndter brukerdata]
+            F --> F1[Fange data og innstillinger]
+            F --> F2[Gjenopprette på nye systemer]
+            F --> F3[Sikkerhetskopi før utrulling]
+
+            A --> G[Planlegg utrulling]
+            G --> G1[Automatiserte verktøy]
+            G --> G2[End to end prosess]
+            G --> G3[Opplæring av brukere]
+
+            G --> H[Ferdig vurdert]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

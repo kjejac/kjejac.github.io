@@ -53,7 +53,7 @@ Intune bruker profiler for å konfigurere og styre innstillinger på enheter i o
 - Moderne erstatning for GPOer
 
 #### Certificates
-- Konfigurerer betrodde [SCEP](../../Glossary/Simple%20Certificate%20Enrollment%20Protocol.md) og [PKCS](../../Glossary/PKCS.md)-sertifikater
+- Konfigurerer betrodde [SCEP](../../Glossary/Simple-Certificate-Enrollment-Protocol.md) og [PKCS](../../Glossary/PKCS.md)-sertifikater
 - Brukes for autentisering mot WiFi, VPN og epost
 - Sikrer enheter uten manuell sertifikathåndtering
 

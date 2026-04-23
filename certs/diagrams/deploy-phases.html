@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {'theme':'dark'}}%%
+            flowchart LR
+
+            %% Hovedflyt
+            A[Plan pilot] --> B[Phased deployment]
+
+            B --> C[Phase 1 IT team og early adopters]
+            C --> C1[Test av kommunikasjon og endringer]
+            C1 --> C2[Erfaring med feilsøking og automatisering]
+            C2 --> C3[Tilbakemeldinger forbedrer prosessen]
+
+            B --> D[Phase 2 Pilot]
+            D --> D1[Representativ brukergruppe]
+            D1 --> D2[Diagnostikk til Analytics]
+            D2 --> D3[Identifisering av problemer og kandidater]
+            D3 --> D4[Planlegging av videre utrulling]
+
+            B --> E[Phase 3 Broad deployment]
+            E --> E1[Refinerte prosesser og kommunikasjon]
+            E1 --> E2[Utrulling i håndterbart tempo]
+            E2 --> E3[Kontinuerlig opplæring og oppfølging]
+
+            %% Nettverkskrav
+            subgraph NET[Nettverkskrav og optimalisering]
+            N1[Peer to peer cache]
+            N2[LEDBAT]
+            N3[Overvåking av båndbredde]
+            N4[Optimalisering ved høy belastning]
+            end
+
+            %% Avhengigheter
+            C3 --> NET
+            D2 --> NET
+            E2 --> NET
+
+            %% Tilbakekoblinger
+            D3 -->|Problemer funnet| C
+            E2 -->|Kapasitet eller støtte utfordringer| D
+            NET -->|Nettverksflaskehalser| D
+
+            %% Slutt
+            E3 --> Z[Stabil bred utrulling]
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

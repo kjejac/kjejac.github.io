@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart LR
+
+            A[Start: App compatibility issue] --> B[Identify issue type]
+
+            B --> C[Use ACT]
+            C --> C1[Database of known issues]
+            C --> C2[Create fixes with Compatibility Administrator]
+            C --> C3[Use Standard User Analyzer]
+            C --> C4[Apply shims to redirect calls]
+
+            B --> D[Use Client Hyper V]
+            D --> D1[Run older Windows version locally]
+            D --> D2[Requires SLAT and sufficient hardware]
+
+            B --> E[Use Remote Desktop Services]
+            E --> E1[Run app on remote OS]
+            E --> E2[RemoteApp for seamless window]
+
+            B --> F[Use Windows 365 or Azure Virtual Desktop]
+            F --> F1[OS hosted in Azure]
+            F --> F2[Dedicated or pooled VMs]
+            F --> F3[No dependency on local hardware]
+
+            C4 --> G[App works]
+            D2 --> G
+            E2 --> G
+            F3 --> G
+
+            G[End: Compatibility achieved]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

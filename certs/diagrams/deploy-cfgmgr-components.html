@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Boot image] --> A1[Windows PE basert]
+            A --> A2[Riktige drivere må inkluderes]
+            A --> A3[Brukes til å starte utrulling]
+
+            B[OS image] --> B1[WIM format]
+            B --> B2[Standard eller reference image]
+
+            C[Upgrade packages] --> C1[Kilde for OS oppgradering]
+
+            D[Device drivers] --> D1[Driverkatalog]
+            D --> D2[Oppdateres jevnlig]
+
+            E[Software updates] --> E1[Grupper og distribusjoner]
+
+            F[Task sequences] --> F1[Automatisert utrulling]
+            F --> F2[Zero touch installasjon]
+            F --> F3[Støtte for moderne funksjoner]
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

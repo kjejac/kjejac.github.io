@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Configuration Manager] --> B[OS utrulling]
+            A --> C[Apper og oppdateringer]
+            A --> D[Klienthelse og inventar]
+            A --> E[Rapportering og innsikt]
+
+            B --> B1[Task sequences]
+            C --> C1[Distribusjon og vedlikehold]
+            D --> D1[Entra integrasjon og sikkerhet]
+            E --> E1[Sanntidsdata og analyser]
+
+            A --> F[Co management]
+            F --> G[Intune integrasjon]
+            F --> H[Moderne administrasjon]
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

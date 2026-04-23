@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Imaging i organisasjoner] --> B[Standard image]
+            A --> C[Custom image]
+
+            B --> B1[Legg til apper og drivere under utrulling]
+            C --> C1[Konfigurasjoner og apper innebygd i image]
+
+            A --> D[MDT som verktøy]
+            D --> E[Standalone bruk]
+            D --> F[Integrasjon med Configuration Manager]
+
+            F --> G[Mer avansert automatisering]
+
+            A --> H[MDT ikke for daglig administrasjon]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

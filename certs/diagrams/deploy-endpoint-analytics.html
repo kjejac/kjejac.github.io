@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart LR
+
+            A[Endpoint Analytics] --> B[Samler data fra Windows klienter]
+            B --> C[Intune eller ConfigMgr]
+            C --> D[Analyserer ytelse og brukeropplevelse]
+
+            D --> E[Startup performance]
+            D --> F[Application reliability]
+            D --> G[Work from anywhere]
+            D --> H[Advanced Analytics]
+
+            E --> E1[Identifiserer treg oppstart]
+            F --> F1[Overvåker app krasj og stabilitet]
+            G --> G1[Vurderer klarhet for fjernarbeid]
+            H --> H1[Dypere innsikt og anbefalinger]
+
+            D --> I[Anbefalte tiltak]
+            I --> J[Forbedre konfigurasjon]
+            I --> K[Proaktiv feilsøking]
+            I --> L[Redusere støttebehov]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

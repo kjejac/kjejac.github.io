@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>{{ page.title }}</h1>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="utf-8">
+
+                <style>
+                    body {
+                        margin: 0;
+                        padding: 20px;
+                        background: #111;
+                        color: #eee;
+                        font-family: system-ui, sans-serif;
+                    }
+
+                    .diagram-container {
+                        width: 100%;
+                        overflow-x: auto;
+                    }
+
+                    h1 {
+                        color: #fff;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+                </style>
+
+                <!-- Mermaid -->
+                <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+                <script>
+                    mermaid.initialize({
+                        startOnLoad: true,
+                        theme: "dark",
+                        securityLevel: "loose"
+                    });
+                </script>
+            </head>
+
+            <body>
+
+                <h1>{{ page.title }}</h1>
+
+                <div class="diagram-container">
+                    <div class="mermaid">
+
+                        %%{init: {
+                        "theme": "dark",
+                        "themeVariables": {
+                        "primaryColor": "#1e1e1e",
+                        "primaryTextColor": "#ffffff",
+                        "lineColor": "#ffffff",
+                        "secondaryColor": "#333333"
+                        }
+                        }}%%
+
+                        flowchart LR
+
+                        A[Bruker eller app starter handling] --> B[Handling krever høyere rettigheter]
+                        B --> C[UAC vurderer om elevasjon er nødvendig]
+
+                        C --> D[Viser UAC varsel]
+                        D --> E[Bruker godkjenner]
+                        D --> F[Bruker avslår]
+
+                        E --> G[Handling utføres med forhøyede rettigheter]
+                        F --> H[Handling blokkeres]
+
+                        C --> I[Ingen elevasjon nødvendig]
+                        I --> J[Handling utføres med standard rettigheter]
+
+                    </div>
+                </div>
+
+            </body>
+
+            </html>

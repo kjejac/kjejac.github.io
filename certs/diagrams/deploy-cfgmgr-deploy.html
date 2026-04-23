@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Configuration Manager] --> B[Task sequences]
+            A --> C[Deployment collections]
+            A --> D[Troubleshooting]
+
+            B --> B1[OS utrulling]
+            B --> B2[Windows oppgraderinger]
+            B --> B3[Fange image]
+            B --> B4[Migrere brukerdata]
+
+            C --> C1[Innebygde collections]
+            C --> C2[Egendefinerte collections]
+            C --> C3[Styring av målgrupper]
+
+            D --> D1[Rapporter i SSRS og Power BI]
+            D --> D2[Loggfiler som SMSTS.log]
+            D --> D3[SetupDiag og CMTrace]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

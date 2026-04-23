@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Start in place upgrade] --> B[Kompatibilitetssjekker]
+            B --> C[Behold apper og brukerdata]
+            C --> D[Oppgrader til Windows 11]
+            D --> E[Mulighet for rollback]
+
+            B --> F[Kompatibilitetsfeil]
+            F --> G[Stopp eller bruk ren installasjon]
+
+            A --> H[Krav]
+            H --> H1[Riktig utgave]
+            H --> H2[Maskinvarekrav]
+            H --> H3[Kompatible drivere og apper]
+            H --> H4[Samme språk]
+
+        </div>
+    </div>
+
+</body>
+
+</html>
