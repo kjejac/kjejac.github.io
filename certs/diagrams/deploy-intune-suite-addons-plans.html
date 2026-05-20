@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Intune Suite] --> B[Available add-ons]
+            B --> B1[Standalone add-ons]
+            B --> B2[Intune Plan 2]
+            B --> B3[Intune Suite]
+
+            A --> C[Key features]
+
+            %% Standalone blokk
+            B1 --> S1[Endpoint Privilege Management]
+            B1 --> S2[Enterprise App Management]
+            B1 --> S3[Advanced Analytics]
+            B1 --> S4[Remote Help]
+            B1 --> S5[Microsoft Tunnel for MAM]
+            B1 --> S6[Microsoft Cloud PKI]
+            B1 --> S7[Firmware over the air]
+            B1 --> S8[Specialized devices management]
+
+            %% Plan 2 blokk
+            B2 --> P1[Endpoint Privilege Management]
+            B2 --> P2[Enterprise App Management]
+            B2 --> P3[Advanced Analytics]
+            B2 --> P4[Remote Help]
+            B2 --> P5[Microsoft Tunnel for MAM]
+            B2 --> P6[Microsoft Cloud PKI]
+            B2 --> P7[Firmware over the air]
+            B2 --> P8[Specialized devices management]
+
+            %% Suite blokk
+            B3 --> U1[Endpoint Privilege Management]
+            B3 --> U2[Enterprise App Management]
+            B3 --> U3[Advanced Analytics]
+            B3 --> U4[Remote Help]
+            B3 --> U5[Microsoft Tunnel for MAM]
+            B3 --> U6[Microsoft Cloud PKI]
+            B3 --> U7[Firmware over the air]
+            B3 --> U8[Specialized devices management]
+
+            A --> D[Formål]
+            D --> D1[Styrket sikkerhet]
+            D --> D2[Bedre innsikt]
+            D --> D3[Effektiv administrasjon]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

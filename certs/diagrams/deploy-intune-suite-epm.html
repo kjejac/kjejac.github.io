@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Endpoint Privilege Management] --> B[Produktivitet]
+            B --> B1[Midlertidige rettigheter]
+            B --> B2[Automatiserte elevasjoner]
+            B --> B3[Raskere feilsøking]
+
+            A --> C[Sikkerhet]
+            C --> C1[Redusert permanent tilgang]
+            C --> C2[Kontinuerlig logging]
+            C --> C3[Støtte for Zero Trust]
+
+            A --> D[RBAC]
+
+            %% Policy Authoring
+            D --> PA[Policy Authoring]
+            PA --> PA1[View Reports]
+            PA --> PA2[Read]
+            PA --> PA3[Create]
+            PA --> PA4[Update]
+            PA --> PA5[Delete]
+            PA --> PA6[Assign]
+
+            %% Elevation Requests
+            D --> ER[Elevation Requests]
+            ER --> ER1[View elevation requests]
+            ER --> ER2[Modify elevation requests]
+
+            %% Built-in roles
+            D --> R1[Endpoint Privilege Manager]
+            R1 --> PA
+            R1 --> ER
+
+            D --> R2[Endpoint Privilege Reader]
+            R2 --> PA1
+            R2 --> PA2
+            R2 --> ER1
+
+            D --> R3[Endpoint Security Manager]
+            R3 --> PA
+            R3 --> ER
+
+            D --> R4[Read Only Operator]
+            R4 --> PA1
+            R4 --> PA2
+            R4 --> ER1
+
+        </div>
+    </div>
+
+</body>
+
+</html>

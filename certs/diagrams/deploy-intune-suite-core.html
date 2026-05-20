@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Intune Suite] --> B[Core Capabilities]
+            A --> C[Zero Trust]
+            A --> D[Endpoint Privilege Management]
+            A --> E[Enterprise App Management]
+            A --> F[Advanced Analytics]
+            A --> G[Remote Help]
+            A --> H[Microsoft Tunnel]
+            A --> I[RBAC]
+
+            %% Zero Trust prinsipper
+            C --> Z1[Least Privilege]
+            C --> Z2[Continuous Verification]
+            C --> Z3[Identity as Control Plane]
+
+            %% Andre prinsipper
+            CA[Conditional Access]
+            AP[App Protection Policies]
+            CO[Compliance]
+            TI[Threat Intelligence]
+            PA[Per App Access]
+
+            %% Core Capabilities
+            B --> B1[Enhetsadministrasjon]
+            B --> B2[Appadministrasjon]
+            C --> B1
+            C --> B2
+            I --> B1
+            I --> B2
+            CO --> B1
+
+            %% Endpoint Privilege Management
+            D --> D1[Midlertidige rettigheter]
+            D --> D2[Least Privilege]
+            Z1 --> D
+            I --> D
+            CA --> D
+
+            %% Enterprise App Management
+            E --> E1[Distribusjon]
+            E --> E2[Oppdateringer]
+            E --> E3[Datakontroll]
+            AP --> E
+            CA --> E
+            CO --> E
+            Z2 --> E
+
+            %% Advanced Analytics
+            F --> F1[Dashboards]
+            F --> F2[Samsvar]
+            F --> F3[Trusselinnsikt]
+            CO --> F
+            TI --> F
+            Z2 --> F
+
+            %% Remote Help
+            G --> G1[Sikker støtte]
+            G --> G2[RBAC kontroll]
+            I --> G
+            CA --> G
+            CO --> G
+            Z2 --> G
+
+            %% Microsoft Tunnel
+            H --> H1[Per app VPN]
+            H --> H2[BYOD støtte]
+            H --> H3[Sikker tilgang]
+            PA --> H
+            CA --> H
+            AP --> H
+            Z3 --> H
+
+        </div>
+    </div>
+
+</body>
+
+</html>

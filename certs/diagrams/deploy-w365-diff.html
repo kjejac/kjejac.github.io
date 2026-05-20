@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Windows 365] --> B[Cloud PC for hver bruker]
+            A --> C[Full Windows opplevelse i skyen]
+            A --> D[Tilgang fra hvilken som helst enhet]
+
+            B --> E[Windows 365 Business]
+            E --> E1[For mindre organisasjoner]
+            E --> E2[Ingen krav til Azure eller AD]
+            E --> E3[Automatisk provisjonering med standard image]
+            E --> E4[Enkel administrasjon og begrenset styring]
+
+            B --> F[Windows 365 Enterprise]
+            F --> F1[For større organisasjoner]
+            F --> F2[Egendefinerte images og avansert provisjonering]
+            F --> F3[Intune integrasjon og full administrasjon]
+            F --> F4[Bruk av Entra ID og AD DS]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

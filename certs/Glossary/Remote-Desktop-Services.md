@@ -12,9 +12,13 @@ tags:
   - MD-102/WindowsServer
   - MD-102/RemoteApp
 ---
-Remote Desktop Services er en plattform i Windows Server som gjør det mulig å levere skrivebord og applikasjoner fra sentrale servere til brukere uansett hvor de befinner seg. RDS sender bare brukergrensesnittet til klienten, mens all behandling skjer på serveren. Dette reduserer administrasjonsbehov, gir bedre sikkerhet og gjør det enklere å standardisere applikasjoner og arbeidsflater.
+Remote Desktop Services er en rollebasert infrastruktur i Windows Server som lar autoriserte brukere koble seg til enten et fullstendig skrivebord eller enkeltapplikasjoner via RemoteApp. All kjøring skjer på serveren, mens klienten kun mottar brukergrensesnittet gjennom Remote Desktop Protocol. Dette reduserer administrasjon fordi apper installeres og vedlikeholdes ett sted, og brukere får en konsistent opplevelse uansett enhet. 
 
-RDS støtter både fullstendige skrivebordssesjoner og publiserte apper gjennom RemoteApp. Det gir fleksibilitet i valg av ytelse, kostnad og kompatibilitet. Data forblir i datasenteret, og sikkerheten styrkes gjennom kryptert tilgang, flerfaktorautentisering og sentralisert administrasjon.
+RDS støtter både multi session serverbaserte skrivebord og VDI baserte enkeltsesjonsmaskiner, slik at organisasjoner kan velge riktig modell for kostnad, ytelse og kompatibilitet. Data forblir i datasenteret, og sikkerheten styrkes gjennom kryptert tilgang, MFA og sentralisert kontroll. 
+
+En komplett RDS infrastruktur består av flere roller: RD Session Host for å kjøre sesjoner, RD Connection Broker for lastbalansering og sesjonsgjenoppretting, RD Web Access for portaltilgang, RD Gateway for sikker ekstern tilgang og RD Licensing for lisenshåndtering. Disse rollene kan skaleres og distribueres etter behov. 
+
+RDS brukes ofte når organisasjoner ønsker full kontroll over miljøet, data og infrastruktur, eller når applikasjoner krever serverbasert kjøring. Det gir høy tetthet per server, god kostnadseffektivitet og mulighet for avansert tilpasning og integrasjon. 
 
 ```mermaid
 %%{init: {
@@ -26,19 +30,36 @@ RDS støtter både fullstendige skrivebordssesjoner og publiserte apper gjennom 
     "secondaryColor": "#333333"
   }
 }}%%
+flowchart LR
 
-flowchart TB
+    A[Remote Desktop Services] --> B[Sentralisert kjøring]
+    B --> B1[Apper og skrivebord kjøres på server]
+    B --> B2[Klient mottar kun UI via RDP]
 
-    A[Bruker starter RDP tilkobling] --> B[Autentisering og tilgangskontroll]
-    B --> C[RD Gateway eller direkte til server]
-    C --> D[RD Connection Broker fordeler belastning]
-    D --> E[RD Session Host eller VDI maskin]
-    E --> F[Apper og skrivebord kjøres på server]
-    F --> G[UI sendes til klient via RDP]
-    G --> H[Bruker arbeider som om alt kjører lokalt]
+    A --> C[Kjernekomponenter]
+    C --> C1[RD Session Host]
+    C --> C2[RD Connection Broker]
+    C --> C3[RD Web Access]
+    C --> C4[RD Gateway]
+    C --> C5[RD Licensing]
+
+    A --> D[Sikkerhet]
+    D --> D1[Kryptert tilgang]
+    D --> D2[MFA og tilgangskontroll]
+    D --> D3[Data forblir i datasenter]
+
+    A --> E[Bruksscenarier]
+    E --> E1[Multi session skrivebord]
+    E --> E2[RemoteApp publisering]
+    E --> E3[VDI for enkeltbrukere]
+
+    A --> F[Fordeler]
+    F --> F1[Redusert administrasjon]
+    F --> F2[Kostnadseffektivitet]
+    F --> F3[Konsistent brukeropplevelse]
 
 ```
 
-<a href="/certs/diagrams/deploy-rds.html" target="_blank" rel="noopener">Stort diagram</a>
+
 
 [Remote Desktop Services overview in Windows Server | Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/overview)

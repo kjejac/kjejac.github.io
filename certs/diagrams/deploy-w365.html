@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+
+            flowchart LR
+
+            A[Windows 365] --> B[Cloud PC for hver bruker]
+            A --> C[Økt produktivitet og sikkerhet]
+            A --> D[Fleksibel og skalerbar løsning]
+
+            B --> E[To utgaver: Business og Enterprise]
+
+            %% Business
+            E --> F[Windows 365 Business]
+            F --> F1[Laget for små organisasjoner]
+            F --> F2[Ingen krav til Azure eller AD]
+            F --> F3[Kjøpes via Microsoft 365 Admin Center]
+            F --> F4[Automatisk provisjonering med standard image]
+            F --> F5[Begrenset administrasjon]
+
+            %% Enterprise
+            E --> G[Windows 365 Enterprise]
+            G --> G1[Laget for større organisasjoner]
+            G --> G2[Støtter egne images og avansert provisjonering]
+            G --> G3[Integrert med Intune]
+            G --> G4[Bruker Microsoft Entra ID og AD DS]
+            G --> G5[Ubegrenset antall brukere]
+
+            %% Sammenligning
+            A --> H[Administrasjon og funksjoner]
+            H --> H1[Business: enkel administrasjon]
+            H --> H2[Enterprise: full Intune styring]
+            H --> H3[Enterprise støtter GPO, MDM, resizing, overvåking]
+
+            %% Sikkerhet
+            A --> I[Sikkerhet]
+            I --> I1[Conditional Access]
+            I --> I2[Microsoft Defender for Endpoint]
+            I --> I3[Sikkerhetsbaselines i Enterprise]
+
+            %% End user
+            A --> J[Brukeropplevelse]
+            J --> J1[Standard brukerrolle som kan endres]
+            J --> J2[Tilgang via Windows 365 portal eller Remote Desktop]
+            J --> J3[Fungerer på alle plattformer]
+
+            %% Nettverk og lisens
+            A --> K[Lisens og nettverk]
+            K --> K1[Business: ingen lisenskrav]
+            K --> K2[Enterprise: krever Windows Enterprise, Intune og Entra ID P1]
+            K --> K3[Ulike datagrense nivåer basert på RAM]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

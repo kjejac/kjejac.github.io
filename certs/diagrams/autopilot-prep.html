@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Start forberedelse] --> B[Hent hardware ID]
+            B --> B1[Fra OEM partner]
+            B --> B2[Generert via PowerShell]
+
+            A --> C[Bygg CSV fil]
+            C --> D[Last opp i Intune eller Store for Business]
+            D --> E[Validering av fil]
+            E --> F[Plasser i grupper]
+            F --> G[Synkroniser enheter]
+            G --> H[Klar for Autopilot profil]
+
+            A --> I[Direkte import fra OOBE]
+            I --> J[PowerShell import med Group Tag]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -212,7 +212,7 @@ _DNS-CNAME oppsett for sømløs registrering._
 Registrering av Windows enheter i Intune kobler enheten til Intune slik at den kan motta policyer, profiler, apper, WiFi, epost, sikkerhetsinnstillinger. Det fungerer både for _personlige_ og _bedriftseide_ enheter. Dette gir IT kontroll uten å få tilgang til brukerns private data.
 
 ### Enrolling Windows devices
-1. _Add work or school account_: [Entra Join](../../Glossary/Microsoft-Entra-Join.md.md) via _Innstillinger_. Auto-enrollment hvis P1/P2 er aktivert. ![](assets/Pasted-image-20260202152229.jpg)
+1. _Add work or school account_: [Entra Join](../../Glossary/Microsoft-Entra-Join.md) via _Innstillinger_. Auto-enrollment hvis P1/P2 er aktivert. ![](assets/Pasted-image-20260202152229.jpg)
 2. _Enroll in MDM only (user-driven)_: Kun Intune registrering, ikke Entra Join. Brukes når man ikke har P1/P2![](assets/Pasted-image-20260202152511.jpg)
 3. _Entra Join (OOBE)_: Brukeren velger _Set up for an organization_ under første oppstart. Auto-enrollment hvis aktivert![](assets/Pasted-image-20260202152725.jpg)
 4. _Autopilot – user driven_: Tilpasset OOBE, færre steg for brukeren. Krever P1/P2 og auto-enrollment![](assets/Pasted-image-20260202152855.jpg)
