@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[App lifecycle] --> B[Intune]
+            A --> C[Configuration Manager]
+            A --> D[Group Policy]
+
+            %% Intune
+            B --> B1[Microsoft Store integrasjon]
+            B1 --> B1a[UWP]
+            B1 --> B1b[Win32 Store]
+            B --> B2[Win32 via IME]
+            B2 --> B2a[Detection rules]
+            B2 --> B2b[Install commands]
+            B --> B3[Assignments]
+            B3 --> B3a[Required]
+            B3 --> B3b[Available]
+            B3 --> B3c[Uninstall]
+
+            %% ConfigMgr
+            C --> C1[Deployment types]
+            C --> C2[Requirements]
+            C --> C3[Detection method]
+            C --> C4[Supersedence]
+            C --> C5[Dependencies]
+
+            %% Group Policy
+            D --> D1[Assign]
+            D --> D2[Publish]
+            D --> D3[MSI only]
+
+            %% Updates
+            A --> E[Updates]
+            E --> E1[Store automatic]
+            E --> E2[Win32 vendor updates]
+            E --> E3[Mobile platform updates]
+        </div>
+    </div>
+
+</body>
+
+</html>

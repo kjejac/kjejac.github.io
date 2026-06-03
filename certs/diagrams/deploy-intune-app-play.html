@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Android apps] --> B[Managed Google Play]
+            B --> B1[Søk og godkjenn apper]
+            B --> B2[Offentlige og private apper]
+            B --> B3[Intune sync]
+
+            A --> C[Intune distribusjon]
+            C --> C1[Required install]
+            C --> C2[Available i Company Portal]
+            C --> C3[Appkonfigurasjon]
+
+            A --> D[Oppdateringer]
+            D --> D1[Håndteres av Google Play]
+            D --> D2[Intune overvåker status]
+
+            A --> E[Enterprise funksjoner]
+            E --> E1[Appbeskyttelsespolicyer]
+            E --> E2[Work profile, COPE, Fully managed]
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>

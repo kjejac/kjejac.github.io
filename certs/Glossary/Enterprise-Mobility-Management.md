@@ -1,5 +1,5 @@
 ---
-title: Enterprise Mobility Management
+title: Enterprise Mobility Management (EMM)
 nav_order:
 parent:
 has_children:

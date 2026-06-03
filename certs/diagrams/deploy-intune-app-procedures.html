@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Manage apps with Intune] --> B[Ensure support]
+            A --> C[Create groups]
+            A --> D[Add the app]
+            A --> E[Assign the app]
+            A --> F[Configure policies]
+            A --> G[Monitor deployment]
+            A --> H[App categories]
+
+            %% Ensure support
+            B --> B1[Stille installasjon]
+            B --> B2[Støttet apptype]
+            B --> B3[Intune Management Extension ved Win32]
+
+            %% Groups
+            C --> C1[User groups]
+            C --> C2[Device groups]
+            C --> C3[Kobling mellom bruker og maskin]
+
+            %% Add the app expanded
+            D --> D1[LOB app]
+            D1 --> D1a[Last opp pakke]
+            D1 --> D1b[Krav]
+            D1 --> D1c[Detection rules]
+            D1 --> D1d[Install kommando]
+            D1 --> D1e[Uninstall kommando]
+
+            D --> D2[Store app]
+            D2 --> D2a[Koble fra katalog]
+            D2 --> D2b[Metadata automatisk]
+
+            D --> D3[Web app]
+            D3 --> D3a[URL]
+            D3 --> D3b[Ikke lokal installasjon]
+
+            D --> D4[Win32 app]
+            D4 --> D4a[IntuneWin format]
+            D4 --> D4b[Intune Management Extension]
+
+            %% Assign
+            E --> E1[Available]
+            E --> E2[Required]
+            E --> E3[Uninstall]
+            E --> E4[Available for enrolled]
+            E --> E5[Available with or without enrollment]
+
+            %% Policies
+            F --> F1[App configuration]
+            F --> F2[App protection]
+
+            %% Monitor
+            G --> G1[Status per user]
+            G --> G2[Status per device]
+
+            %% Categories
+            H --> H1[Forhåndsdefinerte]
+            H --> H2[Egendefinerte]
+            H --> H3[Flere kategorier per app]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

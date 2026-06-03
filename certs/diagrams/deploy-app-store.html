@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Moderne Microsoft Store] --> B[Intune integrasjon]
+            B --> B1[Søk etter apper]
+            B --> B2[Legg til direkte i Intune]
+            B --> B3[Overvåk installasjon]
+
+            A --> C[App typer]
+            C --> C1[UWP]
+            C --> C2[Win32 Store apps]
+
+            A --> D[Fordeler]
+            D --> D1[Automatiske oppdateringer]
+            D --> D2[System eller bruker kontekst]
+            D --> D3[Ingen lisenshåndtering]
+
+            A --> E[Begrensninger]
+            E --> E1[Ikke alle apper tilgjengelige]
+            E --> E2[Region og aldersfiltre]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

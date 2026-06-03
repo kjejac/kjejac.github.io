@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Add] --> B[Assign]
+            B --> C[Install]
+            C --> D[Monitor]
+            D --> E[Retire / Uninstall]
+
+            A --> A1[Win32, Store, LOB, Mobile]
+            B --> B1[Required]
+            B --> B2[Available]
+            B --> B3[Uninstall]
+
+            C --> C1[Intune Management Extension]
+            C --> C2[Store installasjon]
+            C --> C3[Mobile app stores]
+
+            D --> D1[Statusrapportering]
+            D --> D2[Feil og logger]
+
+            E --> E1[Fjern via Uninstall]
+            E --> E2[Fjern ved Retire/Wipe]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

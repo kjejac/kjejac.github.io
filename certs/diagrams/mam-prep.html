@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[LOB app preparation] --> B[Intune App Wrapping Tool]
+            A --> C[Intune App SDK]
+
+            B --> B1[Internal apps]
+            B --> B2[No source code needed]
+            B --> B3[Limited platform support]
+
+            C --> C1[Integrated in code]
+            C --> C2[Public app stores]
+            C --> C3[Frequent updates]
+
+            A --> D[App protection policies]
+            D --> D1[Prevent data leakage]
+            D --> D2[Restrict sharing]
+            D --> D3[PIN and device integrity]
+
+            D --> E[MDM managed]
+            E --> E1[Device compliance]
+            E --> E2[App deployment]
+
+            D --> F[Without enrollment]
+            F --> F1[Store based app install]
+            F --> F2[No cert or Wi Fi config]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[App assignments] --> B[Available]
+            B --> B1[Enrolled devices]
+            B --> B2[With or without enrollment]
+
+            A --> C[Required]
+            C --> C1[Automatisk installasjon]
+
+            A --> D[Uninstall]
+            D --> D1[Fjerning hvis tidligere installert]
+
+            A --> E[Platform notes]
+
+            %% iOS
+            E --> E1[iOS]
+            E1 --> E1a[Uninstall on device removal]
+            E1 --> E1b[Per app VPN]
+            E1 --> E1c[Install as removable]
+
+            %% Android
+            E --> E2[Android]
+            E2 --> E2a[Reporting kun for enrolled]
+            E2 --> E2b[Available vises kun for primary user]
+            E2 --> E2c[Pre production workaround]
+
+            %% Win32
+            E --> E3[Win32]
+            E3 --> E3a[User eller device groups]
+
+            A --> F[Group targeting]
+            F --> F1[Include]
+            F --> F2[Exclude]
+            F --> F3[Nested groups]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

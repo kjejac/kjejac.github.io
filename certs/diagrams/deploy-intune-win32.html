@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Win32 app management] --> B[Intune Management Extension]
+            A --> C[LOB apps]
+
+            B --> B1[Installerer Win32 apper]
+            B --> B2[Håndterer krav og regler]
+            B --> B3[Støtter komplekse installasjoner]
+
+            C --> C1[Bruker også IME]
+            C --> C2[Kan feile under Autopilot]
+
+            A --> D[Requirements]
+            D --> D1[Windows 10 1607+]
+            D --> D2[Entra joined]
+            D --> D3[Maks 30 GB]
+
+            A --> E[Prep]
+            E --> E1[Content Prep Tool]
+            E --> E2[intunewin format]
+
+            A --> F[Configuration]
+            F --> F1[Install commands]
+            F --> F2[Requirements]
+            F --> F3[Detection rules]
+            F --> F4[Return codes]
+
+            A --> G[Deployment]
+            G --> G1[Assignments]
+            G --> G2[Delivery Optimization]
+
+            B --> H[Autopilot anbefaling]
+            H --> H1[Bruk IME eksklusivt for Win32 og LOB]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Office Click to Run] --> B[Streaming installasjon]
+            B --> B1[Rask oppstart]
+            B --> B2[Bruk mens filer lastes]
+
+            A --> C[Automatiske oppdateringer]
+            C --> C1[Sikkerhet]
+            C --> C2[Funksjoner]
+
+            A --> D[Virtualisering]
+            D --> D1[Færre konflikter]
+            D --> D2[Enkel rollback]
+
+            A --> E[Enterprise funksjoner]
+            E --> E1[Oppdateringskanaler]
+            E --> E2[Intune og ConfigMgr støtte]
+
+            A --> F[Begrensninger]
+            F --> F1[Mindre tilpasning enn MSI]
+            F --> F2[Krever nettverk]
+            F --> F3[MSIX ikke støttet]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

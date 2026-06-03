@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Android Enterprise] --> B[Fully Managed]
+            B --> B1[Hele enheten administrert]
+            B --> B2[Ingen privat profil]
+            B --> B3[Managed Google Play]
+            B --> B4[Required og Available]
+            B --> B5[Appkonfigurasjon og beskyttelse]
+
+            A --> C[COBO]
+            C --> C1[Bedriftseid]
+            C --> C2[Kun jobbbruk]
+            C --> C3[Ingen privat bruk]
+
+            B --> D[Forhold]
+            D --> D1[Fully Managed er teknisk modell]
+            D --> D2[COBO er policy]
+            D --> D3[COBO bruker ofte Fully Managed]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

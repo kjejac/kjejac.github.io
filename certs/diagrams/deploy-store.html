@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Microsoft Store for Business] --> B[Faset ut]
+            B --> B1[Koblet fra Intune]
+            B --> B2[Slutt på håndheving]
+            B --> B3[Fjernet fra admin center]
+
+            A --> C[Erstattes av]
+            C --> C1[Ny Store integrasjon i Intune]
+            C1 --> C2[Søk og distribusjon i Intune]
+            C1 --> C3[Install status]
+            C1 --> C4[Win32 støtte]
+            C1 --> C5[System og bruker kontekst]
+
+            C --> D[Prerequisites]
+            D --> D1[To kjerner]
+            D --> D2[IME støtte]
+            D --> D3[Tilgang til Store]
+
+        </div>
+    </div>
+
+</body>
+
+</html>

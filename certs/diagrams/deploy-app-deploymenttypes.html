@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+            font-family: system-ui, sans-serif;
+        }
+
+        .diagram-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "dark",
+            securityLevel: "loose"
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="diagram-container">
+        <div class="mermaid">
+
+            %%{init: {
+            "theme": "dark",
+            "themeVariables": {
+            "primaryColor": "#1e1e1e",
+            "primaryTextColor": "#ffffff",
+            "lineColor": "#ffffff",
+            "secondaryColor": "#333333"
+            }
+            }}%%
+            flowchart LR
+
+            A[Application] --> B[Deployment types]
+
+            B --> C[Installeringsmetode]
+            C --> C1[MSI]
+            C --> C2[EXE]
+            C --> C3[MSIX]
+            C --> C4[App V]
+
+            B --> D[Detection method]
+            D --> D1[Sjekker om appen finnes]
+
+            B --> E[Requirements]
+            E --> E1[OS versjon]
+            E --> E2[Arkitektur]
+            E --> E3[Maskinvare]
+
+            B --> F[Dependencies]
+            F --> F1[Krever andre apper]
+
+            B --> G[Prioritet]
+            G --> G1[Evalueres i rekkefølge]
+            G --> G2[Første gyldige installeres]
+
+        </div>
+    </div>
+
+</body>
+
+</html>
