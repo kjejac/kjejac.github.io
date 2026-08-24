@@ -4,7 +4,7 @@ title: Manage endpoint security
 nav_order: 6
 parent: Labs
 has_children: true
-nav_exclude: false
+nav_exclude: true
 has_toc: false
 tags:
   - MD-102

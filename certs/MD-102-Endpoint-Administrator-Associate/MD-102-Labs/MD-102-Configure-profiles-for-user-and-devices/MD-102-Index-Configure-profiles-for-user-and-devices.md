@@ -4,7 +4,7 @@ title: Configure profiles for user and devices
 nav_order: 3
 parent: Labs
 has_children: true
-nav_exclude: false
+nav_exclude: true
 has_toc: false
 tags:
   - MD-102

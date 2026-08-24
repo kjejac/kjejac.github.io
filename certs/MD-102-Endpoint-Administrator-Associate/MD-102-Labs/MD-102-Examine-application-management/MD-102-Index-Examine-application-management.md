@@ -4,7 +4,7 @@ title: Examine application management (se uke 8)
 nav_order: 4
 parent: Labs
 has_children: true
-nav_exclude: false
+nav_exclude: true
 has_toc: false
 tags:
   - MD-102

@@ -4,8 +4,8 @@ title: Execute device enrollment
 nav_order: 2
 parent: Labs
 has_children: true
-nav_exclude:
-has_toc:
+nav_exclude: true
+has_toc: false
 tags:
   - MD-102
   - MD-102/MDM

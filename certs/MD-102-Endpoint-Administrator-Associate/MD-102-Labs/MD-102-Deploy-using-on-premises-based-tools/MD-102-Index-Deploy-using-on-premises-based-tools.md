@@ -4,7 +4,7 @@ title: Deploy using on-premises based tools
 nav_order: 7
 parent: Labs
 has_children: true
-nav_exclude: false
+nav_exclude: true
 has_toc: false
 tags:
   - MD-102
