@@ -12,6 +12,8 @@ tags:
   - MD-102/DeviceJoin
   - MD-102/Authentication
 ---
+# Manage device authentication
+
 Modulen tar for seg enhetsautentisering  og administrasjon i [Microsoft Entra ID](../../Glossary/Microsoft-Entra-ID.md).
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/administer-device-authentication/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.execute-device-enrollment)
 

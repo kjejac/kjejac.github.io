@@ -12,6 +12,8 @@ tags:
   - MD-102/Windows10
   - MD-102/Windows11
 ---
+# Maintain user profiles
+
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/maintain-user-profiles/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.configure-profiles-user-device)
 
   Modulen gir et grunnlag for å forstå hvordan Windows håndterer brukerprofiler og at valget av profiltype vil påvirke ytelse, lagring og brukeropplevelse. 

@@ -10,6 +10,7 @@ tags:
   - MD-102
   - MD-102/Intune
 ---
+# Enroll devices using  Microsoft Intune
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-intune/1-introduction)
 
 Modulen gir en grunnleggende introduksjon til hvordan [Intune](../../Glossary/Microsoft-Intune.md) settes opp og konfigureres, administrerer enheter, og hvilke hensyn som må tas for ulike OS når de registres. 

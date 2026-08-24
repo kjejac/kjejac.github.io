@@ -10,7 +10,7 @@ tags:
   - MD-102/EntraConnect
   - MD-102/AzurePortal
 ---
-# MD-102 – Manage Microsoft Entra identities
+# Manage Microsoft Entra identities
 
 Modulen gir en praktisk innføring i effektiv bruk av Microsoft Entra ID, inkludert [RBAC](../../Glossary/Role-based-Access-Control-(RBAC).md), brukerroller, opprettelse og administrasjon av brukere og grupper, bruk av PowerShell-cmdlets og synkronisering av objekter fra AD DS til Entra ID.
 

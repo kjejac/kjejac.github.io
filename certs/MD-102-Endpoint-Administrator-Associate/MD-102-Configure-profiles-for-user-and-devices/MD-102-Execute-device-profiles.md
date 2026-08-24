@@ -20,6 +20,8 @@ tags:
   - MD-102/OEMConfig
   - MD-102/AppleConfigurator
 ---
+# Execute device profiles
+
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/execute-device-profiles/1-introduction)
 
 [Intune](../../Glossary/Microsoft-Intune.md)-profiler er en sentral del av moderne enhetsadministrasjon. De brukes for å konfigurere, standardisere og sikre enheter på tvers av plattformer. Modulen gir en oversikt over hvilke profiltyper som finnes, hvordan de brukes og hvordan PowerShell-skript kan administreres i Intune.

@@ -10,7 +10,7 @@ tags:
   - MD-102/EntraID/DomainServices
   - MD-102/ADDS
 ---
-# MD-102 – Understand Microsoft Entra ID
+# Understand Microsoft Entra ID
 
 Modulen forklarer [Microsoft Entra ID](../../Glossary/Microsoft-Entra-ID.md), og sammenligner Entra ID med Active Directory Domain Services. Den gir også en oversikt over abonnementene Entra ID P1 og P2, samt Entra Domain Services for administrasjon av domain-joined enheter og apper i skyen.
 

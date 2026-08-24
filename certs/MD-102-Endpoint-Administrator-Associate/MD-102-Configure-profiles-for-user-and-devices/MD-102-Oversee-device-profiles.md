@@ -10,6 +10,8 @@ tags:
   - MD-102
   - MD-102/Intune
 ---
+# Oversee device profiles
+
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/oversee-device-profiles/1-introduction)
 
 Modulen introduserer hvordan administratorer kan _overvåke, forstå_ og _feilsøke_ enhetsprofiler i [Intune](../../Glossary/Microsoft-Intune.md). I en organisasjon kan enheter ha flere profiler samtidig, og det er derfor viktig å ha kontroll på hvilke profiler som er tildelt, hvordan de brukes og om det oppstår konflikter.

@@ -12,7 +12,7 @@ tags:
   - MD-102/Windows10
   - MD-102/Windows11
 ---
-# MD-102 – Explore Windows Editions
+# Explore Windows Editions
 
 Modulen gir en helhetlig forståelse av enterprise-klienter, Windows-klienter og [Microsoft Entra ID](../../Glossary/Microsoft-Entra-ID.md).
 Den gjennomgår ulike Windows-versjoner, hvilke funksjoner de tilbyr og hvordan de installeres. I tillegg belyser modulen Microsoft Entra ID, med fokus på likheter og forskjeller fra AD DS samt hvordan identiteter administreres i Entra ID.

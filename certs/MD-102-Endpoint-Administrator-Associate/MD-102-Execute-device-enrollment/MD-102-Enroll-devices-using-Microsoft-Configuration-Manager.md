@@ -11,6 +11,7 @@ tags:
   - MD-102/SCCM
   - MD-102/ConfigurationManager
 ---
+# Enroll devices using Microsoft Configuration Manager
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/enroll-devices-use-endpoint-configuration-manager/1-introduction)
 
 Modulen introduserer alternativer for klientutrulling, administrasjon og overvåkning som er tilgjengelige når du bruker Configuration Manager.

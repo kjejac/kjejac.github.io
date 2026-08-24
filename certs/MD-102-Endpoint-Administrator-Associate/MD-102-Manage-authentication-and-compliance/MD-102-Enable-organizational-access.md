@@ -14,6 +14,7 @@ tags:
   - MD-102/L2TP
   - MD-102/SSTP
 ---
+# Enable organizational access
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/organizational-access/1-introduction)
 
 Behovet for å jobbe eksternt og samtidig få sikker tilgang til organisasjonsressurser er nå helt vanlig. Selv om tjenester som OneDrive og SharePoint Online gjør det enkelt å jobbe i skyen, finnes det fortsatt mange ressurser som kun er tilgjengelige på det interne bedriftsnettverket. For å nå disse ressursene må brukeren etablere en VPN‑tilkobling.

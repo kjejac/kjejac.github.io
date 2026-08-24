@@ -36,6 +36,7 @@ tags:
   - MD-102/COPE
   - MD-102/COBO
 ---
+# Deploy and update applications
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/deploy-applications/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-application-management)
 
 Modulen gir en oversikt over hvordan apper kan distribueres og administreres i en organisasjon ved hjelp av [Intune](../../Glossary/Microsoft-Intune.md), [Configuration Manager](../../Glossary/Microsoft-Configuration-Manager.md), GPO og [Microsoft Store Apps](../../Glossary/Microsoft-Store.md). Fokus er å gi admins ferdigheter til å håndtere ulike distribusjonsmetoder slik at apper kan leveres effektivt og sikkert til brukere. Dette er sentralt da appdistribusjon er en kjerneoppgave for en endepunktadmin.

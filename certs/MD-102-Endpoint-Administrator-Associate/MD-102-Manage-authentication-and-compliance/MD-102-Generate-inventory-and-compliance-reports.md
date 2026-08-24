@@ -12,6 +12,7 @@ tags:
   - MD-102/ConfigurationManager
   - MD-102/PowerBI
 ---
+# Generate inventory and compliance reports
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/inventory-complinace-reports/1-introduction)
 
 Modulen introduserer hvordan [Microsoft Intune](../../Glossary/Microsoft-Intune.md) og [Configuration Manager](../../Glossary/Microsoft-Configuration-Manager.md) kan brukes til å _generere og vise rapporter_ om enheter i organisasjonen. Intune tilbyr flere innebygde rapporttyper, og du kan også lage _egendefinerte rapporter_ ved hjelp av [Intune Data Warehouse](../../Glossary/Microsoft-Intune-Data-Warehouse.md) og verktøy som [Power BI](../../Glossary/Power-BI.md).

@@ -20,6 +20,7 @@ tags:
   - MD-102/iOS
   - MD-102/WIP
 ---
+# Execute mobile application management
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/execute-mobile-application-management/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-application-management)
 
 [Mobile Application Management (MAM)](../../Glossary/Mobile-Application-Management.md) beskrives som en sentral del av moderne administrasjon. Det handler om å bruke [Intune](../../Glossary/Microsoft-Intune.md) til å publisere, konfigurere, sikre og oppdatere mobilapper. MAM beskytter virksomhetsdata i apper gjennom policyer som hindrer datatap og kontrollerer hvordan data kan deles mellom apper. Dette gjelder både på BYOD og bedriftsenheter, siden MAM kan brukes uten at enheten er registrert i en MDM løsning.

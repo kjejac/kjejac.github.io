@@ -16,4 +16,6 @@ Thumbs.db
 # Obsidian
 .obsidian/
 _ob_templates/
-ToDo.md
+PRIVATE/ToDo.md
+PRIVATE/Log.md
+PRIVATE/

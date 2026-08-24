@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Uke 8 – Refleksjoner
-nav_order:
+nav_order: 8
 parent: Microsoft 365 Endpoint Administrator
 has_children: true
 nav_exclude: false

@@ -31,6 +31,7 @@ tags:
   - MS-102/Trident
   - MD-102/Edge
 ---
+# Administer endpoint applications
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/administer-endpoint-applications/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.examine-application-management)
 
 Modulen gir en oversikt over hvordan apper distribueres i Intune og hvordan organisasjoner kan håndtere apper på både registrerte og ikke-registrerte enheter. Det legger grunnlaget ved å vise hvilke verktøy og metoder som finnes for moderne appadministrasjon i Microsoft 365 miljøer. 

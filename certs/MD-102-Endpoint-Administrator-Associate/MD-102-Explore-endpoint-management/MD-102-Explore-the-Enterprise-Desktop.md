@@ -14,6 +14,8 @@ tags:
   - MD-102/EMS
   - MD-102/Windows-Hello
 ---
+# Explore the Enterprise Desktop
+
 Modulen gir en utvidet forståelse for Windows klienter og Microsoft Entra ID. Den utforsker forskjellige Windows-versjoner, funksjoner og installasjonsmetoder.
 Entra ID delen sammenligner likheter og forskjeller opp mot AD DS, og hvordan de to kan synkroniseres.
 Du får også en innsikt i administrasjon av Entra-identiter og hvordan du støtter enterprise-klienter på en effektiv måte.

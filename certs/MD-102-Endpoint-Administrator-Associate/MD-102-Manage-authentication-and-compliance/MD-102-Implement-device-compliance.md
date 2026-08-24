@@ -14,6 +14,7 @@ tags:
   - MD-102/MDM
   - MD-102/EntraID
 ---
+# Implement device compliance
 ## [Introduction](https://learn.microsoft.com/en-us/training/modules/implement-device-compliance/1-introduction)
 
 Modulen gir en introdukusjon til _[device compliance](../../Glossary/Compliance‑Policy.md) i Intune_, altså hvordan du definerer, håndhever og følger krav som enheter må oppfylle for å få tilgang til organisasjonens ressurser. 
