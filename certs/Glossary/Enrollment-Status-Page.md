@@ -8,6 +8,9 @@ nav_exclude: true
 has_toc: false
 tags:
   - MD-102
+  - MD-102/OOBE
+  - MD-102/Autopilot
+  - MD-102/Apps
 ---
 Enrollment Status Page (ESP) brukes under Windows‑enhetsoppsett for å **vise fremdrift og sikre at enheten er korrekt konfigurert før brukeren får tilgang til skrivebordet**. ESP sørger for at nødvendige apper, policyer, sertifikater og nettverkskonfigurasjoner er installert før enheten tas i bruk.
 

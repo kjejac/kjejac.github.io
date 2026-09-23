@@ -4,7 +4,7 @@ title: Labs
 nav_order: 9
 parent: Microsoft 365 Endpoint Administrator
 has_children: true
-nav_exclude:
+nav_exclude: false
 has_toc: false
 tags:
   - MD-102
@@ -13,30 +13,38 @@ tags:
 ---
 # Explore Endpoint Management
 
+Lab-miljøet for å løse de praktiske oppgavene: 
+- Ett M365 Business Premium abonnement
+	- En admin konto
+	- En brukerkonto
+	- En Break-glass konto
+- To VMer med Windows 11 Enterprise  i Hyper V eller VirtualBox
+- Miljøet brukes til å teste Entra‑tilknytning, Intune‑registrering, policy‑levering, sikkerhetsstyring og klientadministrasjon i et isolert og forutsigbart testmiljø.
+
 
 | **Hovedaktivitet**                                                                                                            | **Mål**                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [Finn administrasjonsstatus for en Windows‑enhet](MD-102-Explore-endpoint-management/MD-102-Client-administration-status.md)  | Forstå hvordan Windows‑enheter identifiserer administrasjonsmodell.         |
-| [Analyser enhetens sikkerhetsstatus i Windows Security](MD-102-Explore-endpoint-management/MD-102-Client-Windows-Security.md) | Forstå hvordan Windows Security fungerer som samlet sikkerhetsflate.        |
-| [Utforsk Intune‑portalen og enhetsoversikten](MD-102-Explore-endpoint-management/MD-102-Intune-portal.md)                     | Forstå hvordan Intune presenterer enhetsstatus og policy‑anvendelse.        |
-| [Undersøk enhetens MDM‑diagnostikk](MD-102-Explore-endpoint-management/MD-102-MDM-Diagnostics.md)                             | Forstå hvordan MDM‑registrering og policy‑henting kan feilsøkes.            |
-| [Test administrasjon via Company Portal](MD-102-Explore-endpoint-management/MD-102-Company-Portal-App-Web.md)                 | Forstå brukeropplevelsen i moderne administrasjon.                          |
-| [Sjekk policy‑anvendelse på klienten](MD-102-Explore-endpoint-management/MD-102-Policies.md)                                  | Forstå hvordan policyer leveres og oppdateres på klienten.                  |
-| [Analyser forskjellen mellom MDM og GPO](MD-102-Explore-endpoint-management/MD-102-MDM-vs-GPO)                                | Forstå hvorfor moderne administrasjon erstatter tradisjonell GPO‑styring.   |
-| [Utforsk Endpoint Security‑oversikten i Intune](MD-102-Explore-endpoint-management/MD-102-Endpoint-Security-portal)           | Forstå hvordan Intune samler sikkerhetsstyring i én portal.                 |
-| [Test enhetsinformasjon via Entra ID](MD-102-Explore-endpoint-management/MD-102-Device-information-EntraID.md)                | Forstå hvordan Entra ID fungerer som identitetsfundament for enhetsstyring. |
+| [Finn administrasjonsstatus for en Windows‑enhet](MD-102-Lab-Explore-endpoint-management/MD-102-Client-administration-status.md)  | Forstå hvordan Windows‑enheter identifiserer administrasjonsmodell.         |
+| [Analyser enhetens sikkerhetsstatus i Windows Security](MD-102-Lab-Explore-endpoint-management/MD-102-Client-Windows-Security.md) | Forstå hvordan Windows Security fungerer som samlet sikkerhetsflate.        |
+| [Utforsk Intune‑portalen og enhetsoversikten](MD-102-Lab-Explore-endpoint-management/MD-102-Intune-portal.md)                     | Forstå hvordan Intune presenterer enhetsstatus og policy‑anvendelse.        |
+| [Undersøk enhetens MDM‑diagnostikk](MD-102-Lab-Explore-endpoint-management/MD-102-MDM-Diagnostics.md)                             | Forstå hvordan MDM‑registrering og policy‑henting kan feilsøkes.            |
+| [Test administrasjon via Company Portal](MD-102-Lab-Explore-endpoint-management/MD-102-Company-Portal-App-Web.md)                 | Forstå brukeropplevelsen i moderne administrasjon.                          |
+| [Sjekk policy‑anvendelse på klienten](MD-102-Lab-Explore-endpoint-management/MD-102-Policies.md)                                  | Forstå hvordan policyer leveres og oppdateres på klienten.                  |
+| [Analyser forskjellen mellom MDM og GPO](MD-102-Lab-Explore-endpoint-management/MD-102-MDM-vs-GPO.md)                                | Forstå hvorfor moderne administrasjon erstatter tradisjonell GPO‑styring.   |
+| [Utforsk Endpoint Security‑oversikten i Intune](MD-102-Lab-Explore-endpoint-management/MD-102-Endpoint-Security-portal.md)           | Forstå hvordan Intune samler sikkerhetsstyring i én portal.                 |
+| [Test enhetsinformasjon via Entra ID](MD-102-Lab-Explore-endpoint-management/MD-102-Device-information-EntraID.md)                | Forstå hvordan Entra ID fungerer som identitetsfundament for enhetsstyring. |
 
 # Execute Device Enrollment
 
-| **Hovedaktivitet**                               | **Mål**                                                                       |
-| ------------------------------------------------ | ----------------------------------------------------------------------------- |
-| Konfigurer automatisk MDM‑registrering           | Forstå hvordan enheter automatisk registreres i Intune ved Entra‑tilknytning. |
-| Utfør en ren Entra join                          | Forstå hvordan Entra join fungerer som fundament for moderne administrasjon.  |
-| Test Entra ID‑registrering (Azure AD Registered) | Forstå forskjellen mellom registrering og full Entra join.                    |
-| Konfigurer Enrollment Status Page (ESP)          | Forstå hvordan ESP styrer brukeropplevelsen under utrulling.                  |
-| Importer en enhet til Autopilot                  | Forstå hvordan enheter registreres i Autopilot før utrulling.                 |
-| Test Autopilot Device Preparation                | Forstå hvordan Device Preparation forenkler utrulling uten imaging.           |
-| Analyser MDM‑diagnostikk etter enrollment        | Forstå hvordan enrollment‑problemer feilsøkes i praksis.                      |
+| **Hovedaktivitet**                                                                                                         | **Mål**                                                                       |
+| -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [Konfigurer automatisk MDM‑registrering](MD-102-Lab-Execute-device-enrollment/MD-102-Automatic-MDM.md)                     | Forstå hvordan enheter automatisk registreres i Intune ved Entra‑tilknytning. |
+| [Utfør en ren Entra join](MD-102-Lab-Execute-device-enrollment/MD-102-Entra-join.md)                                       | Forstå hvordan Entra join fungerer som fundament for moderne administrasjon.  |
+| [Test Entra ID‑registrering (Azure AD Registered)](MD-102-Lab-Execute-device-enrollment/MD-102-Entra-registered.md)        | Forstå forskjellen mellom registrering og full Entra join.                    |
+| [Konfigurer Enrollment Status Page (ESP)](MD-102-Lab-Execute-device-enrollment/MD-102-Configure-Enrollment-Status-Page.md) | Forstå hvordan ESP styrer brukeropplevelsen under utrulling.                  |
+| [Importer en enhet til Autopilot](MD-102-Lab-Execute-device-enrollment/MD-102-Import-til-Autopilot.md)                     | Forstå hvordan enheter registreres i Autopilot før utrulling.                 |
+| [Test Autopilot Device Preparation](MD-102-Lab-Execute-device-enrollment/MD-102-Autopilot-Device-Preparation)              | Forstå hvordan Device Preparation forenkler utrulling uten imaging.           |
+| [Analyser MDM‑diagnostikk etter enrollment](MD-102-Lab-Execute-device-enrollment/MD-102-MDM-diagnostics.md)                | Forstå hvordan enrollment‑problemer feilsøkes i praksis.                      |
 
 # Configure profiles for user and devices
 

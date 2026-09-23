@@ -26,15 +26,15 @@ Samlet sett hjelper modulen meg å sette ord på og strukturere kompetansen jeg 
 
 | **Hovedaktivitet**                                                                                                                           | **Mål**                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [Finn administrasjonsstatus for en Windows‑enhet](../MD-102-Labs/MD-102-Explore-endpoint-management/MD-102-Client-administration-status.md)  | Forstå hvordan Windows‑enheter identifiserer administrasjonsmodell.         |
-| [Analyser enhetens sikkerhetsstatus i Windows Security](../MD-102-Labs/MD-102-Explore-endpoint-management/MD-102-Client-Windows-Security.md) | Forstå hvordan Windows Security fungerer som samlet sikkerhetsflate.        |
-| [Utforsk Intune‑portalen og enhetsoversikten](../MD-102-Labs/MD-102-Explore-endpoint-management/MD-102-Intune-portal.md)                     | Forstå hvordan Intune presenterer enhetsstatus og policy‑anvendelse.        |
-| [Undersøk enhetens MDM‑diagnostikk](../MD-102-Labs/MD-102-Explore-endpoint-management/MD-102-MDM-Diagnostics.md)                             | Forstå hvordan MDM‑registrering og policy‑henting kan feilsøkes.            |
-| [Test administrasjon via Company Portal](../MD-102-Labs/MD-102-Explore-endpoint-management/MD-102-Company-Portal-App-Web.md)                 | Forstå brukeropplevelsen i moderne administrasjon.                          |
-| [Sjekk policy‑anvendelse på klienten](../MD-102-Labs/MD-102-Explore-endpoint-management/MD-102-Policies.md)                                  | Forstå hvordan policyer leveres og oppdateres på klienten.                  |
-| [Analyser forskjellen mellom MDM og GPO](../MD-102-Labs/MD-102-Explore-endpoint-management/MD-102-MDM-vs-GPO)                                | Forstå hvorfor moderne administrasjon erstatter tradisjonell GPO‑styring.   |
-| [Utforsk Endpoint Security‑oversikten i Intune](../MD-102-Labs/MD-102-Explore-endpoint-management/MD-102-Endpoint-Security-portal)           | Forstå hvordan Intune samler sikkerhetsstyring i én portal.                 |
-| [Test enhetsinformasjon via Entra ID](../MD-102-Labs/MD-102-Explore-endpoint-management/MD-102-Device-information-EntraID.md)                | Forstå hvordan Entra ID fungerer som identitetsfundament for enhetsstyring. |
+| [Finn administrasjonsstatus for en Windows‑enhet](../MD-102-Labs/MD-102-Lab-Explore-endpoint-management/MD-102-Client-administration-status.md)  | Forstå hvordan Windows‑enheter identifiserer administrasjonsmodell.         |
+| [Analyser enhetens sikkerhetsstatus i Windows Security](../MD-102-Labs/MD-102-Lab-Explore-endpoint-management/MD-102-Client-Windows-Security.md) | Forstå hvordan Windows Security fungerer som samlet sikkerhetsflate.        |
+| [Utforsk Intune‑portalen og enhetsoversikten](../MD-102-Labs/MD-102-Lab-Explore-endpoint-management/MD-102-Intune-portal.md)                     | Forstå hvordan Intune presenterer enhetsstatus og policy‑anvendelse.        |
+| [Undersøk enhetens MDM‑diagnostikk](../MD-102-Labs/MD-102-Lab-Explore-endpoint-management/MD-102-MDM-Diagnostics.md)                             | Forstå hvordan MDM‑registrering og policy‑henting kan feilsøkes.            |
+| [Test administrasjon via Company Portal](../MD-102-Labs/MD-102-Lab-Explore-endpoint-management/MD-102-Company-Portal-App-Web.md)                 | Forstå brukeropplevelsen i moderne administrasjon.                          |
+| [Sjekk policy‑anvendelse på klienten](../MD-102-Labs/MD-102-Lab-Explore-endpoint-management/MD-102-Policies.md)                                  | Forstå hvordan policyer leveres og oppdateres på klienten.                  |
+| [Analyser forskjellen mellom MDM og GPO](../MD-102-Labs/MD-102-Lab-Explore-endpoint-management/MD-102-MDM-vs-GPO.md)                                | Forstå hvorfor moderne administrasjon erstatter tradisjonell GPO‑styring.   |
+| [Utforsk Endpoint Security‑oversikten i Intune](../MD-102-Labs/MD-102-Lab-Explore-endpoint-management/MD-102-Endpoint-Security-portal.md)           | Forstå hvordan Intune samler sikkerhetsstyring i én portal.                 |
+| [Test enhetsinformasjon via Entra ID](../MD-102-Labs/MD-102-Lab-Explore-endpoint-management/MD-102-Device-information-EntraID.md)                | Forstå hvordan Entra ID fungerer som identitetsfundament for enhetsstyring. |
 
 
 ---

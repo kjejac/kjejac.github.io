@@ -309,9 +309,9 @@ De samme loggene finnes også i MDM‑diagnostikk‑CAB‑filen (`mdmdiagnostics
 
 ##### Settings
 
-![](assets/Pasted%20image%2020260817135356.png)
+![](assets/Pasted-image-20260817135356.png)
 
-![](assets/Pasted%20image%2020260817143239.png)
+![](assets/Pasted-image-20260817143239.png)
 
 Grafisk måte å se MDM-diagnostikk på, viser tre av de _viktigste klient-sidene_ i moderne administrasjon, og gir en rask bekreftelse på om enheten faktisk mottar og anvender Intune-policyer.
 

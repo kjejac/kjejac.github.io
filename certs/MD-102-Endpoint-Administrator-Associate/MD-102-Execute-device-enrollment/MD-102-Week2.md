@@ -26,6 +26,16 @@ Det er også en overgang i hvordan jeg må tenke rundt feilsøking. I SCCM er je
 
 Alt i alt har Execute Device Enrollment gitt meg en bedre forståelse av hvordan Intune forventer at enheter kommer inn i systemet, og hva som må være på plass for at administrasjonen skal fungere. Det har også gjort det tydelig at jeg må bygge kompetanse på tvers av plattformer, ikke bare Windows, for å kunne jobbe helhetlig med [moderne enhetsadministrasjon](../../Glossary/Modern-Endpoint-Administration.md). Dette er en overgang fra infrastruktur‑styrt administrasjon til identitets‑ og plattformstyrt administrasjon, og det er en utvikling jeg både må og ønsker å ta del i.
 
+| **Hovedaktivitet**                                                                                                                        | **Mål**                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [Konfigurer automatisk MDM‑registrering](../MD-102-Labs/MD-102-Lab-Execute-device-enrollment/MD-102-Automatic-MDM.md)                     | Forstå hvordan enheter automatisk registreres i Intune ved Entra‑tilknytning. |
+| [Utfør en ren Entra join](../MD-102-Labs/MD-102-Lab-Execute-device-enrollment/MD-102-Entra-join.md)                                       | Forstå hvordan Entra join fungerer som fundament for moderne administrasjon.  |
+| [Test Entra ID‑registrering (Azure AD Registered)](../MD-102-Labs/MD-102-Lab-Execute-device-enrollment/MD-102-Entra-registered.md)        | Forstå forskjellen mellom registrering og full Entra join.                    |
+| [Konfigurer Enrollment Status Page (ESP)](../MD-102-Labs/MD-102-Lab-Execute-device-enrollment/MD-102-Configure-Enrollment-Status-Page.md) | Forstå hvordan ESP styrer brukeropplevelsen under utrulling.                  |
+| [Importer en enhet til Autopilot](../MD-102-Labs/MD-102-Lab-Execute-device-enrollment/MD-102-Import-til-Autopilot.md)                     | Forstå hvordan enheter registreres i Autopilot før utrulling.                 |
+| [Test Autopilot Device Preparation](../MD-102-Labs/MD-102-Lab-Execute-device-enrollment/MD-102-Autopilot-Device-Preparation)              | Forstå hvordan Device Preparation forenkler utrulling uten imaging.           |
+| [Analyser MDM‑diagnostikk etter enrollment](../MD-102-Labs/MD-102-Lab-Execute-device-enrollment/MD-102-MDM-diagnostics.md)                | Forstå hvordan enrollment‑problemer feilsøkes i praksis.                      |
+
 ---
 
 | Tema                                                 | Oppgave                                                                                        | Status | Notater                                                                                                                                                                                                                                                                                                                                                                                                     |

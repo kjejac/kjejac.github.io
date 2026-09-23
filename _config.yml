@@ -99,7 +99,7 @@ defaults:
 # Exlude files
 exclude:
   - PRIVATE/
-  
+
 # Google Analytics
 # ga_tracking:
 # ga_tracking_anonymize_ip: true

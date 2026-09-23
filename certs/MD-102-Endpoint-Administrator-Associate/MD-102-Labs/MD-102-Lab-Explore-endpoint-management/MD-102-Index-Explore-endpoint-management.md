@@ -45,6 +45,6 @@ tags:
 | [Undersøk enhetens MDM‑diagnostikk](MD-102-MDM-Diagnostics.md)                             | Forstå hvordan MDM‑registrering og policy‑henting kan feilsøkes.            |
 | [Test administrasjon via Company Portal](MD-102-Company-Portal-App-Web.md)                 | Forstå brukeropplevelsen i moderne administrasjon.                          |
 | [Sjekk policy‑anvendelse på klienten](MD-102-Policies.md)                                  | Forstå hvordan policyer leveres og oppdateres på klienten.                  |
-| [Analyser forskjellen mellom MDM og GPO](MD-102-MDM-vs-GPO)                                | Forstå hvorfor moderne administrasjon erstatter tradisjonell GPO‑styring.   |
-| [Utforsk Endpoint Security‑oversikten i Intune](MD-102-Endpoint-Security-portal)           | Forstå hvordan Intune samler sikkerhetsstyring i én portal.                 |
+| [Analyser forskjellen mellom MDM og GPO](MD-102-MDM-vs-GPO.md)                                | Forstå hvorfor moderne administrasjon erstatter tradisjonell GPO‑styring.   |
+| [Utforsk Endpoint Security‑oversikten i Intune](MD-102-Endpoint-Security-portal.md)           | Forstå hvordan Intune samler sikkerhetsstyring i én portal.                 |
 | [Test enhetsinformasjon via Entra ID](MD-102-Device-information-EntraID.md)                | Forstå hvordan Entra ID fungerer som identitetsfundament for enhetsstyring. |
