@@ -37,7 +37,7 @@ Intune bruker tre mekanismer for delegert administrasjon:
 
 - _Entra‑roller_ avgjør om en bruker i det hele tatt får logge inn i Intune
 - _RBAC‑rollen_ avgjør hvilke handlinger brukeren kan utføre
-- __scope tags__ avgjør hvilke objekter brukeren får se
+- _scope tags_ avgjør hvilke objekter brukeren får se
 
 RBAC gir rettigheter, mens _scope tags_ gir synlighet. 
 
@@ -97,21 +97,21 @@ _Løsning:_ Bruk én konsistent Scope tag per team/område.
 
 ## Steg for steg
 
-- _Intune admin center → Tenant administration → Roles_
+- `Intune admin center > Tenant administration > Roles`
 - _Opprett RBAC‑rolle:_
-    -  Create > Intune role > Custom role
+    -  `Create > Intune role > Custom role`
     - Gi rollen et navn
     - Velg kun nødvendige permissions (f.eks. Read/Update på Devices)![](assets/phoney-20261005.png)
     - Under _Scope (Tags)_: velg _ingen_ ennå (gjøres senere)![](assets/phoney-20261005-1.png)
 - _Opprett Scope tag:_
-    - Tenant administration → _scope tags_
-    - Create → Navn: “Oslo”
+    - `Tenant administration > _scope tags_`
+    - `Create > Navn: “Oslo”`
     - Tilordne tag til enhetsgruppe (f.eks. “Devices – Oslo”)![](assets/phoney-20261005-7.png)
 - _Tilordne Scope tag til objekter:_
-    - (Gå til Devices, hvis enheten ikke ligger i valgt device-group → velg enheter → Properties → _scope tags_ → legg til “Oslo”)
-    - Gå til Configuration profiles → velg policy → Properties → _scope tags_ → legg til “Oslo”![](assets/phoney-20261005-3.png)
+    - (Gå til Devices, hvis enheten ikke ligger i valgt device-group > velg enheter > Properties > _scope tags_ > legg til “Oslo”)
+    - Gå til `Configuration profiles > velg policy > Properties > _scope tags_ > legg til “Oslo”`![](assets/phoney-20261005-3.png)
 - _Tilordne RBAC‑rolle til admin:_
-    - Tenant administration → Roles → velg rollen → Assignments
+    - `Tenant administration > Roles > velg rollen > Assignments`
     - Velg grupper for admin og scope (device)
     - Under _Scope (Tags)_: velg “Oslo”![](assets/phoney-20261005-6.png)
 - _Logg inn som delegert admin og test:_

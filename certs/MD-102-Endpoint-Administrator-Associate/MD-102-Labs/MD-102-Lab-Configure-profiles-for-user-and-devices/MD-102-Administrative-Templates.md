@@ -21,8 +21,6 @@ Mestre ADMX‑basert styring i Intune.
 
 ## Refleksjon
 
-## Refleksjon
-
 I denne oppgaven opprettet jeg en ren Administrative Templates‑policy i Intune, med en Email‑innstilling som eksempel. Målet var ikke bare å forstå AT som konsept, men å se hvordan en ADMX‑basert innstilling oppfører seg i praksis sammenlignet med Settings catalog‑policyer.
 
 Når jeg velger _Administrative Templates_ som profiltype, får jeg tilgang til ADMX‑baserte innstillinger som er organisert etter applikasjon og komponent. Email‑policyen viser dette godt, siden den kommer direkte fra Microsofts ADMX‑maler og ikke fra CSP‑noder slik Settings catalog gjør.

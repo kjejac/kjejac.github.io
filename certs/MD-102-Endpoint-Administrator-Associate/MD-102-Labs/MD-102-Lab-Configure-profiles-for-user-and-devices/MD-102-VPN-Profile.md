@@ -21,8 +21,6 @@ Forstå hvordan VPN‑konfigurasjon leveres via MDM.
 
 ## Refleksjon
 
-## Refleksjon
-
 I denne oppgaven opprettet jeg en VPN‑profil i Intune som en Template‑policy, og brukte en konkret tilkobling mot en definert VPN‑server som eksempel. VPN‑konfigurasjon leveres via MDM‑kanalen, og ligger ikke i Settings catalog, da den må konfigureres som egen mal.
 
 Når jeg oppretter profilen med `Templates > VPN`, ser jeg at Intune ikke bare lagrer innstillingene, men bygger en full VPN‑tilkoblingsprofil som Windows kan bruke direkte. Oppgaven viser hvordan parametere som connection name, serveradresse, tilkoblingstype (IKEv2, L2TP osv.) og autentisering (bruker/passord eller sertifikat) til sammen utgjør en komplett profil som brukeren kan koble seg til uten manuell konfigurasjon.

@@ -22,8 +22,6 @@ Forstå hvordan nettverksprofiler distribueres via Intune.
 
 ## Refleksjon
 
-## Refleksjon
-
 I denne oppgaven opprettet jeg en Wi‑Fi‑profil i Intune som en Template‑policy, og brukte et konkret SSID som eksempel. Målet var å se hvordan nettverksprofiler distribueres via MDM‑kanalen, og hvordan Intune kan standardisere tilkobling til et bestemt trådløst nettverk uten at brukeren trenger å konfigurere noe manuelt.
 
 Når jeg velger `Templates > Wi‑Fi` som profiltype, får jeg mulighet til å definere SSID, sikkerhetstype (for eksempel WPA2‑Personal med PSK eller WPA2‑Enterprise) og eventuelle autentiseringsparametere. Disse verdiene til sammen utgjør en komplett nettverksprofil som Windows lagrer som en “known network”, og som enheten kan koble seg automatisk til når nettverket er tilgjengelig.

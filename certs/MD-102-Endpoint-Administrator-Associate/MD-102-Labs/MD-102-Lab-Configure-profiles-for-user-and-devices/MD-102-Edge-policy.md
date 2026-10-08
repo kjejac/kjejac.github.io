@@ -80,7 +80,7 @@ _Løsning:_ Opprett ny testbruker eller slett Edge‑profilen.
 
 ## Steg for steg
 
-- _Devices > Windows > Configuration profiles_
+- `Devices > Windows > Configuration profiles`
 - _Opprett profil:_ _Create profile_
     - _Platform:_ Windows 10 and later
     - _Profile type:_ Settings catalog
